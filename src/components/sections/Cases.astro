@@ -52,19 +52,19 @@ import SectionTitle from "../ui/SectionTitle.astro";
               <h3 class="text-3xl font-bold mb-2">{story.title}</h3>
               <p class="text-md">{story.summary}</p>
             </div>
-            <div class="relative">
+            <div class="relative pt-6 lg:pt-0">
               <div class="absolute z-[-1] bottom-0 animate-spin-slow">
                 <Image
                   src={story.shape}
                   alt="Star Shape"
-                  class="max-w-[15rem] w-[15rem]"
+                  class="max-w-[10rem] w-[10rem] lg:max-w-[15rem] lg:w-[15rem]"
                 />
               </div>
               <div class="z-10">
                 <Image
                   src={story.image}
                   alt={story.title}
-                  class="max-w-[15rem] "
+                  class="max-w-[10rem] w-[10rem] lg:max-w-[15rem] lg:w-[15rem] "
                 />
               </div>
             </div>

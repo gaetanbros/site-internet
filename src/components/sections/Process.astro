@@ -51,7 +51,7 @@ const steps = [
         // You can adjust the trigger point
         step.classList.add("step-visible");
         stepsAnim[index].classList.add("animate-fadein");
-        if (index >= 0) {
+        if (index >= 0 && lines.length) {
           lines[index].classList.add("line-visible");
           lines[index].classList.add("animate-grow");
         }
@@ -60,7 +60,7 @@ const steps = [
         step.classList.remove("step-visible");
         stepsAnim[index].classList.remove("animate-fadein");
 
-        if (index >= 0) {
+        if (index >= 0 && lines.length) {
           lines[index].classList.remove("line-visible");
           lines[index].classList.remove("animate-grow");
         }
@@ -76,8 +76,10 @@ const steps = [
       sectionTitle="Notre mode opératoire"
       description={description}
     />
-    <div class="relative flex flex-col w-full items-center mt-[60px] mb-10">
-      <div class="flex flex-col w-2/3">
+    <div
+      class="relative flex flex-col w-full items-center mt-[30px] lg:mt-[60px] mb-10"
+    >
+      <div class="flex flex-col w-full lg:w-2/3 lg:gap-0 gap-3">
         {
           steps.map((step, index) => (
             <div class="animate-fadein step-anim">
@@ -89,12 +91,19 @@ const steps = [
                 id={"step" + index}
               >
                 <div
-                  class={`p-4 animate-glow text-center content-center min-w-[16rem] min-h-[16rem] w-[16rem] h-[16rem] rounded-full ${step.circleColor}`}
+                  class={`p-4 animate-glow text-center content-center min-w-[10rem] min-h-[10rem] w-[10rem] h-[10rem] lg:min-w-[16rem] lg:min-h-[16rem] lg:w-[16rem] lg:h-[16rem] rounded-full ${step.circleColor}`}
                 >
-                  <h3 class="text-3xl font-bold mb-2 ">{step.title}</h3>
+                  <h3 class="text-xl lg:text-3xl font-bold mb-2 ">
+                    {step.title}
+                  </h3>
                 </div>{" "}
-                <p class="text-md text-left px-5 ">{step.description}</p>
-                <div class="line  delay-1000 " id={`"line-" + ${index}`} />
+                <p class="text-md text-left px-5 pt-5 lg:pt-0">
+                  {step.description}
+                </p>
+                <div
+                  class="line hidden lg:block delay-1000 "
+                  id={`"line-" + ${index}`}
+                />
               </div>
             </div>
           ))
