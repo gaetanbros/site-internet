@@ -8,4 +8,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://alessandroma.github.io",
   integrations: [tailwind()],
+  base: "/projet-gb",
 });
