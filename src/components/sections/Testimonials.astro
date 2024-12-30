@@ -1,17 +1,140 @@
 ---
-import SectionTitle from "../ui/SectionTitle.astro";
-import SwiperSlider from "../ui/SwiperSlider.astro";
+import { Image } from "astro:assets";
 import Section from "./Section.astro";
+//increment the logo import to 6
+import companyLogo1 from "../../assets/company/company-logo1.svg";
+import companyLogo3 from "../../assets/company/company-logo11.svg";
+import companyLogo5 from "../../assets/company/company-logo12.svg";
+import companyLogo2 from "../../assets/company/company-logo2.svg";
+import companyLogo4 from "../../assets/company/company-logo4.svg";
+import companyLogo6 from "../../assets/company/company-logo6.svg";
+
+const testimonials = [
+  {
+    company: "Suez",
+    description:
+      "L’intervention de Gaëtan Bros a bouleversé notre manière de travailler. Grâce à ses performances artistiques, nos équipes ont trouvé de nouvelles façons de collaborer et d’innover.",
+    logo: companyLogo6,
+    employee: "Marc Lefevre",
+    position: "Directeur des opérations",
+  },
+
+  {
+    company: "Total",
+    description:
+      "Nous cherchions une activité qui ait de l’impact, et Gaëtan Bros a dépassé nos attentes : au-delà du simple team building, c’est une expérience humaine et artistique mémorable.",
+    logo: companyLogo2,
+    employee: "Pierre Durand",
+    position: "Responsable des ressources humaines",
+  },
+  {
+    company: "Novartis",
+    description:
+      "J’ai été impressionné par la qualité et la pertinence du coaching individuel proposé. Les parallèles avec l’art m’ont permis d’aborder mes défis managériaux sous un angle complètement neuf.",
+    logo: companyLogo1,
+    employee: "Julien Charrier",
+    position: "Directeur financier",
+  },
+  {
+    company: "Groupama",
+    description:
+      "Qui aurait cru qu’une performance théâtralisée pourrait autant motiver mes développeurs ? Aujourd’hui, ils parlent encore des enseignements tirés de cette expérience.",
+    logo: companyLogo3,
+    employee: "Sophie Bernard",
+    position: "Directrice de la communication",
+  },
+  {
+    company: "IBM",
+    description:
+      "Grâce à Gaëtan Bros, nous avons découvert comment l’art peut renforcer l’esprit d’équipe et la fierté d’appartenance à l’entreprise. Un moment chaleureux et instructif.",
+    logo: companyLogo4,
+    employee: "Émilie Roux",
+    position: "Responsable de la stratégie",
+  },
+  {
+    company: "AXA",
+    description:
+      "La méthodologie en quatre étapes est limpide et efficace. Nous savions exactement à quoi nous attendre et le résultat final a été un véritable catalyseur de cohésion.",
+    logo: companyLogo5,
+    employee: "Claire Martin",
+    position: "Chef de projet innovation",
+  },
+];
+console.log(
+  Array.from(Array(testimonials.length / 2), (_, i) => i + 2).map((e, i) =>
+    console.log(i)
+  )
+);
 ---
 
 <Section id="testimonials">
   <div class="mt-20">
-    <SectionTitle
-      sectionTitle="Testimonials"
-      description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
-    />
-    <div class="rounded-[45px] bg-dark mb-[150px] text-gray">
-      <SwiperSlider />
+    <!--  <SectionTitle
+      sectionTitle="Témoignages"
+      description="Découvrez ce que nos clients satisfaits disent de nous : lisez nos témoignages pour en savoir plus sur nos services"
+    /> -->
+    <div
+      class="min-w-screen min-h-screen bg-gray-50 flex items-center justify-center py-5"
+    >
+      <div class="w-full bg-white px-5 py-16 md:py-24 text-gray-800">
+        <div class="w-full max-w-6xl mx-auto">
+          <div class="text-center max-w-xl mx-auto">
+            <h1 class="text-6xl md:text-7xl font-bold mb-5 text-gray-600">
+              Ce que nos clients <br />disent de nous.
+            </h1>
+
+            <div class="text-center mb-10">
+              <span class="inline-block w-1 h-1 rounded-full bg-green ml-1"
+              ></span>
+              <span class="inline-block w-3 h-1 rounded-full bg-green ml-1"
+              ></span>
+              <span class="inline-block w-40 h-1 rounded-full bg-green"></span>
+              <span class="inline-block w-3 h-1 rounded-full bg-green ml-1"
+              ></span>
+              <span class="inline-block w-1 h-1 rounded-full bg-green ml-1"
+              ></span>
+            </div>
+          </div>
+          <div class="-mx-3 md:flex items-start">
+            {
+              Array.from(
+                Array(testimonials.length / 2).keys(),
+                (_, i) => i * 2
+              ).map((i) => (
+                <div class="px-3 md:w-1/3">
+                  {Array.from([i, i + 1]).map((j) => (
+                    <div class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                      <div class="relative w-full flex mb-4 items-center">
+                        <Image src={testimonials[j].logo} alt="" />
+                      </div>
+                      <div class="w-full">
+                        <p class="text-sm leading-tight">
+                          <span class="text-lg leading-none italic font-bold text-gray-400 mr-1">
+                            "
+                          </span>
+                          {testimonials[j].description}
+                          <span class="text-lg leading-none italic font-bold text-gray-400 ml-1">
+                            "
+                          </span>
+                        </p>
+                      </div>{" "}
+                      <div class="flex-grow p-3 text-end">
+                        <h6 class="text-dark">{testimonials[j].employee}</h6>{" "}
+                        <h6 class="font-bold text-sm text-gray-600">
+                          {testimonials[j].position}
+                        </h6>
+                        <h6 class="font-extrabold">
+                          {testimonials[j].company}
+                        </h6>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </Section>
