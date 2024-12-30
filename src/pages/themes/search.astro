@@ -11,13 +11,14 @@ const allThemes: CollectionEntry<"blog">[] = await getCollection("blog");
 
 // Filter themes based on query
 const searchResults = allThemes.filter((theme) => {
-  const titleMatch: boolean = theme.data.title
-    .toLowerCase()
-    .includes(query!.toLowerCase());
+  const titleMatch: boolean =
+    (query && theme.data.title.toLowerCase().includes(query!?.toLowerCase())) ||
+    false;
 
-  const summaryMatch: boolean = theme.data.summary
-    .toLowerCase()
-    .includes(query!.toLowerCase());
+  const summaryMatch: boolean =
+    (query &&
+      theme.data.summary.toLowerCase().includes(query!.toLowerCase())) ||
+    false;
 
   return titleMatch || summaryMatch;
 });
