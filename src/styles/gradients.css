@@ -1,0 +1,143 @@
+.grad-down {
+  background-image: linear-gradient(
+    to bottom,
+    #d16ba5,
+    #d17eb9,
+    #d190cb,
+    #d0a2db,
+    #d1b3e8,
+    #e2bbe6,
+    #f0c5e6,
+    #fbcfe6,
+    #ffd9dc,
+    #ffe6da,
+    #fff3e1,
+    #fffff0
+  );
+}
+
+.grad-up {
+  background-image: linear-gradient(
+    to top,
+    #d16ba5,
+    #d17eb9,
+    #d190cb,
+    #d0a2db,
+    #d1b3e8,
+    #e2bbe6,
+    #f0c5e6,
+    #fbcfe6,
+    #ffd9dc,
+    #ffe6da,
+    #fff3e1,
+    #fffff0
+  );
+}
+
+.grad-right {
+  background-image: linear-gradient(
+    to right,
+    #d16ba5,
+    #d17eb9,
+    #d190cb,
+    #d0a2db,
+    #d1b3e8,
+    #e2bbe6,
+    #f0c5e6,
+    #fbcfe6,
+    #ffd9dc,
+    #ffe6da,
+    #fff3e1,
+    #fffff0
+  );
+}
+
+.grad-left {
+  background-image: linear-gradient(
+    to left,
+    #d16ba5,
+    #d17eb9,
+    #d190cb,
+    #d0a2db,
+    #d1b3e8,
+    #e2bbe6,
+    #f0c5e6,
+    #fbcfe6,
+    #ffd9dc,
+    #ffe6da,
+    #fff3e1,
+    #fffff0
+  );
+}
+
+.grad-left-top {
+  background-image: linear-gradient(
+    to left top,
+    #d16ba5,
+    #d17eb9,
+    #d190cb,
+    #d0a2db,
+    #d1b3e8,
+    #e2bbe6,
+    #f0c5e6,
+    #fbcfe6,
+    #ffd9dc,
+    #ffe6da,
+    #fff3e1,
+    #fffff0
+  );
+}
+
+.grad-right-top {
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #d17eb9,
+    #d190cb,
+    #d0a2db,
+    #d1b3e8,
+    #e2bbe6,
+    #f0c5e6,
+    #fbcfe6,
+    #ffd9dc,
+    #ffe6da,
+    #fff3e1,
+    #fffff0
+  );
+}
+
+.grad-right-bottom {
+  background-image: linear-gradient(
+    to right bottom,
+    #d16ba5,
+    #d17eb9,
+    #d190cb,
+    #d0a2db,
+    #d1b3e8,
+    #e2bbe6,
+    #f0c5e6,
+    #fbcfe6,
+    #ffd9dc,
+    #ffe6da,
+    #fff3e1,
+    #fffff0
+  );
+}
+
+.grad-left-bottom {
+  background-image: linear-gradient(
+    to left bottom,
+    #d16ba5,
+    #d17eb9,
+    #d190cb,
+    #d0a2db,
+    #d1b3e8,
+    #e2bbe6,
+    #f0c5e6,
+    #fbcfe6,
+    #ffd9dc,
+    #ffe6da,
+    #fff3e1,
+    #fffff0
+  );
+}

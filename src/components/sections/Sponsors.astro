@@ -1,14 +1,45 @@
 ---
 import { Image } from "astro:assets";
 import s1 from "../../assets/company/company-logo1.svg";
+import s10 from "../../assets/company/company-logo10.svg";
+import s11 from "../../assets/company/company-logo11.svg";
+import s12 from "../../assets/company/company-logo12.svg";
+import s13 from "../../assets/company/company-logo13.svg";
+import s14 from "../../assets/company/company-logo14.svg";
+import s15 from "../../assets/company/company-logo15.svg";
+import s16 from "../../assets/company/company-logo16.svg";
+import s17 from "../../assets/company/company-logo17.svg";
+import s18 from "../../assets/company/company-logo18.svg";
+import s19 from "../../assets/company/company-logo19.svg";
 import s2 from "../../assets/company/company-logo2.svg";
+import s20 from "../../assets/company/company-logo20.svg";
+import s21 from "../../assets/company/company-logo21.png";
 import s3 from "../../assets/company/company-logo3.svg";
 import s4 from "../../assets/company/company-logo4.svg";
 import s5 from "../../assets/company/company-logo5.svg";
 import s6 from "../../assets/company/company-logo6.svg";
+import s7 from "../../assets/company/company-logo7.svg";
+import s8 from "../../assets/company/company-logo8.svg";
+import s9 from "../../assets/company/company-logo9.svg";
+
 import Section from "./Section.astro";
 
 const sponsors = [
+  { logo: s21, alt: "Slack logo" },
+  { logo: s20, alt: "Shopify logo" },
+  { logo: s19, alt: "Spotify logo" },
+  { logo: s18, alt: "Twitch logo" },
+  { logo: s17, alt: "Twitter logo" },
+  { logo: s16, alt: "Uber logo" },
+  { logo: s15, alt: "WhatsApp logo" },
+  { logo: s14, alt: "YouTube logo" },
+  { logo: s13, alt: "Airbnb logo" },
+  { logo: s12, alt: "Apple logo" },
+  { logo: s11, alt: "Dropbox logo" },
+  { logo: s10, alt: "Facebook logo" },
+  { logo: s9, alt: "Google logo" },
+  { logo: s8, alt: "Instagram logo" },
+  { logo: s7, alt: "M6 logo" },
   { logo: s6, alt: "Amazon logo" },
   { logo: s5, alt: "Dribble logo" },
   { logo: s4, alt: "HubSpot logo" },
@@ -16,20 +47,48 @@ const sponsors = [
   { logo: s2, alt: "Netflix logo" },
   { logo: s1, alt: "Zoom logo" },
 ];
+const { isReversed } = Astro.props;
+
+const animate = isReversed
+  ? "flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-reverse-infinite-scroll"
+  : "flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll";
 ---
 
 <Section id="sponsors">
-  <div class="flex-row items-center">
-  <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6">
-    {
-      sponsors.map((sponsor) => {
-        return (
-          <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-            <Image src={sponsor.logo} class="h-12 w-auto mx-auto" alt={sponsor.alt} loading="lazy" />
-          </div>
-        );
-      })
-    }
+  <div
+    class="py-5 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
+  >
+    <ul class={animate}>
+      {
+        sponsors.map((sponsor) => {
+          return (
+            <li class="p-4  transition duration-200 hover:grayscale-0 ">
+              <Image
+                src={sponsor.logo}
+                class="h-12 w-auto mx-auto max-w-8 min-w-40"
+                alt={sponsor.alt}
+                loading="lazy"
+              />
+            </li>
+          );
+        })
+      }
+    </ul>
+    <ul class={animate} aria-hidden="true">
+      {
+        sponsors.map((sponsor) => {
+          return (
+            <li class="p-4  transition duration-200 hover:grayscale-0">
+              <Image
+                src={sponsor.logo}
+                class="h-12 w-auto mx-auto max-w-8 min-w-40"
+                alt={sponsor.alt}
+                loading="lazy"
+              />
+            </li>
+          );
+        })
+      }
+    </ul>
   </div>
-  </div> 
 </Section>

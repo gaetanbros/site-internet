@@ -1,14 +1,12 @@
 ---
-import Cases from "../components/sections/Cases.astro";
-import Contact from "../components/sections/Contact.astro";
-import Hero from "../components/sections/Hero.astro";
-import Process from "../components/sections/Process.astro";
-import Proposal from "../components/sections/Proposal.astro";
-import Services from "../components/sections/Services.astro";
-import Sponsors from "../components/sections/Sponsors.astro";
-import Team from "../components/sections/Team.astro";
-import Testimonials from "../components/sections/Testimonials.astro";
-import MainLayout from "../layouts/MainLayout.astro";
+import Cases from "@/components/sections/Cases.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Process from "@/components/sections/Process.astro";
+import Services from "@/components/sections/Services.astro";
+import Sponsors from "@/components/sections/Sponsors.astro";
+import Team from "@/components/sections/Team.astro";
+import Testimonials from "@/components/sections/Testimonials.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
 ---
 
 <MainLayout
@@ -17,11 +15,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 >
   <Hero />
   <Sponsors />
+  <Sponsors isReversed />
   <Services />
-  <Proposal />
   <Cases />
   <Process />
+  <!--  <Proposal /> 
+ 
+  <Process />-->
   <Team />
   <Testimonials />
-  <Contact />
+  <!-- <Contact /> -->
 </MainLayout>

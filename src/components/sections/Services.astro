@@ -3,72 +3,61 @@ import SectionTitle from "../ui/SectionTitle.astro";
 import ServiceCard from "../ui/ServiceCard.astro";
 import Section from "./Section.astro";
 
+import e1 from "../../assets/elements/element1.png";
+import p1 from "../../assets/paintings/paint3.jpg";
+import p2 from "../../assets/paintings/paint6.jpg";
+import p3 from "../../assets/paintings/paint8.jpg";
 import c1 from "../../assets/pics/card-pic1.png";
 import c2 from "../../assets/pics/card-pic2.png";
 import c3 from "../../assets/pics/card-pic3.png";
-import c4 from "../../assets/pics/card-pic4.png";
-import c5 from "../../assets/pics/card-pic5.png";
-import c6 from "../../assets/pics/card-pic6.png";
 
 const cards = [
   {
     index: 1,
-    titleTop: "Search Engine",
-    titleBottom: "Optimization",
+    titleTop: "Comité d'entreprise",
+    titleBottom: "",
     img: c1,
     alt: "SEO",
     link: "https://google.com",
+    painting: p1,
+    text: "Offrez à vos collaborateurs une expérience unique : des performances théâtralisées interactives, conçues sur-mesure pour renforcer la cohésion et enrichir la culture générale de vos équipes. Avec des thèmes adaptés à votre entreprise, chaque prestation devient un moment captivant d’échange, de créativité et d’inspiration. Gaëtan Bros, c’est l’alliance de l’art et du collectif pour créer des souvenirs durables et renforcer le lien entre vos collaborateurs.",
+    element: e1,
   },
   {
     index: 2,
-    titleTop: "Pay-per-click",
-    titleBottom: "advertising",
+    titleTop: "Directeur des ressources humaines",
+    titleBottom: "",
     img: c2,
     alt: "SEO",
     link: "https://google.com",
+    painting: p2,
+    text: "Et si l’art devenait un levier stratégique pour engager vos collaborateurs ? Avec des performances théâtralisées interactives, sur des thèmes artistiques adaptés à vos équipes, nous créons des expériences uniques pour stimuler la réflexion, la créativité et l’esprit collectif. Chaque prestation est conçue pour répondre à vos enjeux RH : renforcer la cohésion, développer la culture générale et favoriser des échanges enrichissants. Gaëtan Bros, c’est l’art au service de vos talents et de leur engagement.",
+    element: e1,
   },
   {
     index: 3,
-    titleTop: "Social Media",
-    titleBottom: "Marketing",
+    titleTop: "Manager",
+    titleBottom: "",
     img: c3,
     alt: "SEO",
     link: "https://google.com",
-  },
-  {
-    index: 1,
-    titleTop: "Email",
-    titleBottom: "Marketing",
-    img: c4,
-    alt: "SEO",
-    link: "https://google.com",
-  },
-  {
-    index: 2,
-    titleTop: "Content",
-    titleBottom: "Creation",
-    img: c5,
-    alt: "SEO",
-    link: "https://google.com",
-  },
-  {
-    index: 3,
-    titleTop: "Analytics and",
-    titleBottom: "Tracking",
-    img: c6,
-    alt: "SEO",
-    link: "https://google.com",
+    painting: p3,
+    text: "Et si l’art devenait un outil pour révéler votre plein potentiel en tant que leader ? Avec un accompagnement unique, nous utilisons des thématiques artistiques pour explorer vos forces, vos défis et développer des compétences essentielles comme la communication, la créativité et la gestion des équipes. À travers des échanges personnalisés et des approches théâtrales immersives, nous vous aidons à mieux vous connaître, à inspirer vos collaborateurs et à renforcer votre impact en tant que manager. Gaëtan Bros, c’est un coaching innovant qui allie réflexion personnelle et inspiration artistique.",
+    element: e1,
   },
 ];
 
 const description =
-  "At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include";
+  "Imaginez une activité qui allie culture, créativité et cohésion d’équipe. Chez Gaëtan Bros, nous proposons une expérience unique où l’art devient un outil puissant pour fédérer vos collaborateurs.";
 ---
 
 <Section id="services">
-  <div class="mt-[140px] mb-5">
-    <SectionTitle sectionTitle="Services" description={description} />
-    <div class="grid lg:grid-cols-2 lg:grid-rows-3 gap-10">
+  <div class="mt-[60px]">
+    <SectionTitle
+      sectionTitle="Séances personnalisées"
+      description={description}
+    />
+    <div class="grid lg:grid-cols-3 lg:grid-rows-1 gap-3 mt-[60px]">
       {
         cards.map((card) => (
           <ServiceCard
@@ -78,6 +67,9 @@ const description =
             img={card.img}
             alt={card.alt}
             link={card.link}
+            painting={card.painting}
+            text={card.text}
+            element={card.element}
           />
         ))
       }

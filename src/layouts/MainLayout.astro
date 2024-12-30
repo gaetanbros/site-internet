@@ -1,8 +1,8 @@
 ---
-import Footer from "../components/ui/Footer.astro";
 import Navbar from "../components/ui/Navbar.astro";
-import MainHead from "./MainHead.astro";
 import "../styles/global.css";
+import "../styles/gradients.css";
+import MainHead from "./MainHead.astro";
 
 const { ...props } = Astro.props;
 ---
@@ -24,11 +24,11 @@ const { ...props } = Astro.props;
     }
   </style>
   <script src="../utils/lenis"></script>
-  <body class="bg-white font-grotesk">
+  <body class="bg-transparent font-bricolage">
     <main>
       <Navbar />
       <slot />
-      <Footer />
+      <!-- <Footer /> -->
     </main>
   </body>
 </html>

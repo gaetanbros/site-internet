@@ -1,17 +1,105 @@
 ---
-import Accordion from "../ui/Accordion.astro";
 import SectionTitle from "../ui/SectionTitle.astro";
 import Section from "./Section.astro";
 
-const description = "Step-by-Step Guide to Achieving Your Business Goals";
+const description =
+  "Nous vous présentons notre mode opératoire en 4 étapes simples : de l'identification de la cible à la présentation théâtrale.";
+const steps = [
+  {
+    title: "Identification de la cible",
+    description:
+      "Nous commençons par déterminer précisément le public concerné : quel service, quelle équipe, ou quel groupe sera au centre de la performance ? Cette première étape permet de cadrer efficacement l’intervention et de comprendre les enjeux spécifiques à ce public.",
+    circleColor: "grad-right-top",
+  },
+  {
+    title: "Identification du besoin",
+    description:
+      "Une fois la cible définie, nous identifions les problématiques à adresser : cohésion, motivation, communication, etc. Cette phase est cruciale pour adapter la performance aux défis réels que rencontrent vos collaborateurs.",
+    circleColor: "grad-left-top",
+  },
+
+  {
+    title: "Sélection d'un thème",
+    description:
+      "Nous sélectionnons ensuite un thème parmi une liste variée (ex : art contemporain, théâtre, patrimoine culturel, etc.), en veillant à ce qu’il résonne avec les besoins identifiés. Ce choix détermine la tonalité artistique de la prestation et garantit une expérience immersive pertinente.",
+    circleColor: "grad-left-bottom",
+  },
+  {
+    title: "Planification des séances",
+    description:
+      "Enfin, nous fixons les dates, la durée et le format de(s) séance(s). Selon vos contraintes et vos objectifs, nous définissons ensemble le rythme et l’ampleur de l’intervention, pour optimiser l’impact et l’engagement de vos équipes.",
+    circleColor: "grad-right-bottom",
+  },
+];
 ---
 
+<script>
+  var displaySteps = () => {
+    // Get all the steps
+    const steps = document.querySelectorAll(".step");
+    const stepsAnim = document.querySelectorAll(".step-anim");
+    const lines = document.querySelectorAll(".line");
+
+    // Calculate the viewport height
+    const viewportHeight = window.innerHeight;
+
+    steps.forEach((step, index) => {
+      const stepPosition = step.getBoundingClientRect().top;
+
+      // If the step is within the viewport, make it visible and draw the line
+      if (stepPosition < viewportHeight * 0.8) {
+        // You can adjust the trigger point
+        step.classList.add("step-visible");
+        stepsAnim[index].classList.add("animate-fadein");
+        if (index >= 0) {
+          lines[index].classList.add("line-visible");
+          lines[index].classList.add("animate-grow");
+        }
+      } else {
+        // If the step is not within the viewport, hide it
+        step.classList.remove("step-visible");
+        stepsAnim[index].classList.remove("animate-fadein");
+
+        if (index >= 0) {
+          lines[index].classList.remove("line-visible");
+          lines[index].classList.remove("animate-grow");
+        }
+      }
+    });
+  };
+  displaySteps();
+  window.addEventListener("scroll", displaySteps);
+</script>
 <Section id="process">
-  <div class="mt-[140px]">
+  <div class="mt-[60px] w-full text-center">
     <SectionTitle
-      sectionTitle="Our Working Process"
+      sectionTitle="Notre mode opératoire"
       description={description}
     />
-    <Accordion />
+    <div class="relative flex flex-col w-full items-center mt-[60px] mb-10">
+      <div class="flex flex-col w-2/3">
+        {
+          steps.map((step, index) => (
+            <div class="animate-fadein step-anim">
+              <div
+                class={`step  flex flex-col items-center ${
+                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                } justify-between w-full rounded-full  `}
+                key={index}
+                id={"step" + index}
+              >
+                <div
+                  class={`p-4 animate-glow text-center content-center min-w-[16rem] min-h-[16rem] w-[16rem] h-[16rem] rounded-full ${step.circleColor}`}
+                >
+                  <h3 class="text-3xl font-bold mb-2 ">{step.title}</h3>
+                </div>{" "}
+                <p class="text-md text-left px-5 ">{step.description}</p>
+                <div class="line  delay-1000 " id={`"line-" + ${index}`} />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
   </div>
 </Section>

@@ -3,6 +3,38 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    background-image: linear-gradient(
+      to bottom,
+      #d5c9f6,
+      #f5cce9,
+      #ffd5db,
+      #ffe1d7,
+      #ffefdd,
+      #fff5e3,
+      #fefae9,
+      #fffff0,
+      #fffff0,
+      #fffff0,
+      #fffff0,
+      #fffff0
+    );
+    /*     background-image: linear-gradient(
+      to bottom,
+      #d16ba5,
+      #e88499,
+      #f2a298,
+      #f4c0a5,
+      #f5ddc0,
+      #f7e9cf,
+      #faf4df,
+      #fffff0,
+      #fffff0,
+      #fffff0,
+      #fffff0,
+      #fffff0
+    ); */
+  }
   @font-face {
     font-family: "Grotesk";
     src: url("/fonts/grotesk/SpaceGrotesk-Regular.woff"), format("woff");
@@ -19,6 +51,21 @@
     font-display: swap;
   }
 
+  @font-face {
+    font-family: "Bricolage";
+    src: url("/fonts/bricolage/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf"),
+      format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @property --border-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: "<angle>";
+  }
+
   .font-outline {
     -webkit-text-stroke: 2.5px black;
     background-color: transparent;
@@ -29,11 +76,11 @@
   }
 
   :root {
-    --green: #b9ff66;
+    --green: #dda0dd;
     --black: rgb(0, 0, 0);
     --dark: #191a23;
     --gray: #f3f3f3;
-    --white: #ffffff;
+    --white: #fffff0;
   }
 
   /* @layer base {
@@ -162,4 +209,23 @@
   margin: 20px 0;
   font-size: 1.4rem;
   font-weight: bold;
+}
+
+.step {
+  visibility: hidden;
+}
+.step-visible {
+  visibility: visible;
+}
+.line {
+  width: 2px;
+  height: 50px; /* Adjust for the space between steps */
+  background-color: #000;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.line-visible {
+  opacity: 1;
 }
