@@ -52,12 +52,14 @@ const description =
 ---
 
 <Section id="services">
-  <div class="mt-[60px]">
+  <div class="mt-[80px]">
     <SectionTitle
       sectionTitle="Séances personnalisées"
       description={description}
     />
-    <div class="grid lg:grid-cols-3 lg:grid-rows-1 gap-3 mt-[60px]">
+    <div
+      class="grid lg:grid-cols-3 lg:grid-rows-1 gap-3 mt-[60px] section-hidden"
+    >
       {
         cards.map((card) => (
           <ServiceCard

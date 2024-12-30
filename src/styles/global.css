@@ -229,3 +229,10 @@
 .line-visible {
   opacity: 1;
 }
+
+.section-hidden {
+  opacity: 0;
+}
+.secton-visible {
+  opacity: 1;
+}

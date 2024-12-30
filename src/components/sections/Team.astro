@@ -22,41 +22,43 @@ const team = [
 ];
 ---
 
-<Section id="home">
-  <SectionTitle sectionTitle="Équipe" description={description} />
+<Section id="team">
+  <div class="mt-[80px]">
+    <SectionTitle sectionTitle="Équipe" description={description} />
 
-  <div
-    class="mt-[60px] relative flex flex-col-reverse items-center md:flex-row"
-    id="hero"
-  >
-    <div class="row items-center pb-10 md:w-8/12 md:pb-30 md:pt-10">
-      <div class="text-left space-y-3">
-        <h1
-          class="text-2xl font-medium leading-none md:text-4xl text-center md:text-left"
-        >
-          Rencontrez Gaëtan Bros, Fondateur et CEO
-        </h1>
-        <p
-          class="mt-6 mb-8 text-md font-normal leading-7 sm:mb-12 text-center md:text-left md:pr-12"
-        >
-          Gaëtan est convaincu que l’art est bien plus qu’un simple
-          divertissement : c’est un levier puissant pour transformer nos modes
-          de travail et renforcer la cohésion des équipes. <br />Avec un
-          parcours mêlant performance artistique et conseil en entreprise, il a
-          développé une approche unique qui allie créativité, interactivité et
-          impact durable. Son ambition ? Aider les entreprises et leurs
-          collaborateurs à se reconnecter à leur potentiel créatif, à partager
-          de nouveaux savoirs et à vivre une expérience collective inédite. <br
-          />
-          Pionnier dans l’univers du coaching culturel et artistique, Gaëtan s’engage
-          à accompagner chaque client avec empathie et expertise. Son but est simple
-          : faire de chaque intervention une rencontre marquante entre l’art et le
-          monde du travail, pour inspirer, fédérer et innover.
-        </p>
+    <div
+      class="relative flex flex-col-reverse items-center md:flex-row section-hidden"
+      id="hero"
+    >
+      <div class="row items-center pb-10 md:w-8/12 md:pb-30 md:pt-10">
+        <div class="text-left space-y-3">
+          <h1
+            class="text-2xl font-medium leading-none md:text-4xl text-center md:text-left"
+          >
+            Rencontrez Gaëtan Bros, Fondateur et CEO
+          </h1>
+          <p
+            class="mt-6 mb-8 text-md font-normal leading-7 sm:mb-12 text-center md:text-left md:pr-12"
+          >
+            Gaëtan est convaincu que l’art est bien plus qu’un simple
+            divertissement : c’est un levier puissant pour transformer nos modes
+            de travail et renforcer la cohésion des équipes. <br />Avec un
+            parcours mêlant performance artistique et conseil en entreprise, il
+            a développé une approche unique qui allie créativité, interactivité
+            et impact durable. Son ambition ? Aider les entreprises et leurs
+            collaborateurs à se reconnecter à leur potentiel créatif, à partager
+            de nouveaux savoirs et à vivre une expérience collective inédite. <br
+            />
+            Pionnier dans l’univers du coaching culturel et artistique, Gaëtan s’engage
+            à accompagner chaque client avec empathie et expertise. Son but est simple
+            : faire de chaque intervention une rencontre marquante entre l’art et
+            le monde du travail, pour inspirer, fédérer et innover.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="flex items-center pb-10 md:w-4/12 md:pb-30 md:pt-10 max-w-sm">
-      <Image src={HeroIlust} alt="Hero Ilustration" loading="eager" />
+      <div class="flex items-center pb-10 md:w-4/12 md:pb-30 md:pt-10 max-w-sm">
+        <Image src={HeroIlust} alt="Hero Ilustration" loading="eager" />
+      </div>
     </div>
   </div>
 </Section>

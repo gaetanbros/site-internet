@@ -36,7 +36,7 @@ import SectionTitle from "../ui/SectionTitle.astro";
 ---
 
 <Section id="cases">
-  <div class="mt-[60px]">
+  <div class="mt-[80px]">
     <SectionTitle
       sectionTitle="Les thèmes à succès"
       description="Nos thèmes les plus populaires"
@@ -45,7 +45,7 @@ import SectionTitle from "../ui/SectionTitle.astro";
       {
         successStories.map((story, index) => (
           <div
-            class={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} items-center mb-8 justify-between`}
+            class={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} items-center mb-8 justify-between section-hidden`}
             key={index}
           >
             <div class="">
