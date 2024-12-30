@@ -12,6 +12,7 @@ export default {
     },
     extend: {
       animation: {
+        "spin-slow": "spin 5s linear infinite",
         "infinite-scroll": "infinite-scroll 25s linear infinite",
         "reverse-infinite-scroll":
           "reverse-infinite-scroll 25s linear infinite",

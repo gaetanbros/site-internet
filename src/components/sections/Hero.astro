@@ -1,11 +1,20 @@
 ---
+/* import { Image } from "astro:assets";
+import StarShape2 from "../../assets/shapes/StarShape2.svg";
+import StarShape from "../../assets/shapes/StarShape3.svg"; */
 import Section from "./Section.astro";
 ---
 
 <Section id="home">
   <div class="relative flex flex-col-reverse items-center" id="hero">
     <div class="row items-center pb-10 md:pb-30 md:pt-10">
-      <div class="space-y-3 text-center">
+      <div class="relative space-y-3 text-center">
+        <!--  <div class="absolute animate-spin-slow z-[-1]">
+          <Image src={StarShape} alt="Star Shape" loading="eager" />
+        </div>
+        <div class="absolute animate-spin-slow z-[-1] right-0">
+          <Image src={StarShape2} alt="Star Shape" loading="eager" />
+        </div> -->
         <h1 class="text-6xl font-medium leading-none md:text-6 xl text-center">
           Et si l’art devenait la clé de la cohésion et de l’engagement de vos
           équipes ?
