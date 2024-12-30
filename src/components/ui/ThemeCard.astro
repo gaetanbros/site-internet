@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Card from "../ui/Card.astro";
+
+const { theme } = Astro.props;
+
+interface Props {
+  article: CollectionEntry<"blog">;
+}
+---
+
+<Card isUnderline={true}>
+  <article class="p-6 relative">
+    <div class="flex justify-between items-center mb-5 text-gray-500">
+      <h2
+        class="bg-green text-black text-xl font-medium inline-flex items-center px-2.5 py-0.5 rounded"
+      >
+        {theme.data.title}
+      </h2>
+    </div>
+
+    <p
+      class="px-2.5 mb-5 font-light text-sm text-gray-500 w-4/5"
+      style="white-space:pre-line"
+    >
+      {theme.data.summary}
+    </p>
+    <div class="absolute bottom-3 right-3 flex items-center">
+      <img
+        class="w-24 h-auto"
+        src={"/themes/" + theme.data.authImage + ".png"}
+        alt={theme.data.author + " cover"}
+      />
+    </div>
+  </article>
+</Card>

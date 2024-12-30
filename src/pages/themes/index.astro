@@ -1,13 +1,13 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
-import ArticleCard from "../../components/ui/ArticleCard.astro";
 import SearchForm from "../../components/ui/SearchForm.astro";
+import ThemeCard from "../../components/ui/ThemeCard.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 
 const currentPage: number | null = +Astro.url.searchParams.get("page")! || 1;
 
-const allBlogArticles: CollectionEntry<"blog">[] = await getCollection("blog");
+const allThemes: CollectionEntry<"blog">[] = await getCollection("blog");
 ---
 
 <MainLayout title="Gaëtan Bros | Thèmes">
@@ -33,7 +33,7 @@ const allBlogArticles: CollectionEntry<"blog">[] = await getCollection("blog");
       <SearchForm />
       <br />
       <div class="grid gap-8 lg:grid-cols-2">
-        {allBlogArticles.map((article) => <ArticleCard article={article} />)}
+        {allThemes.map((theme) => <ThemeCard theme={theme} />)}
       </div>
     </div>
   </main>

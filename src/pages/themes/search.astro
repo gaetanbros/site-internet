@@ -1,25 +1,25 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
-import ArticleCard from "../../components/ui/ArticleCard.astro";
 import SearchForm from "../../components/ui/SearchForm.astro";
+import ThemeCard from "../../components/ui/ThemeCard.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 
 const query: string | null = Astro.url.searchParams.get("query");
 
-const allBlogArticles: CollectionEntry<"blog">[] = await getCollection("blog");
+const allThemes: CollectionEntry<"blog">[] = await getCollection("blog");
 
-// Filter articles based on query
-const searchResults = allBlogArticles.filter((article) => {
-  const titleMatch: boolean = article.data.title
+// Filter themes based on query
+const searchResults = allThemes.filter((theme) => {
+  const titleMatch: boolean = theme.data.title
     .toLowerCase()
     .includes(query!.toLowerCase());
 
-  const slugMatch: boolean = article.data.summary
+  const summaryMatch: boolean = theme.data.summary
     .toLowerCase()
     .includes(query!.toLowerCase());
 
-  return titleMatch || slugMatch;
+  return titleMatch || summaryMatch;
 });
 ---
 
@@ -29,7 +29,7 @@ const searchResults = allBlogArticles.filter((article) => {
       class="bg-transparent py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6"
     >
       <a
-        href="/articles"
+        href="/themes"
         class="inline-flex items-center font-medium text-black hover:text-green my-4"
       >
         <svg
@@ -55,7 +55,7 @@ const searchResults = allBlogArticles.filter((article) => {
       <br />
       <h2 class="text-2xl pb-3 mt-6">Results For <strong>{query}</strong></h2>
       <div class="grid gap-8 lg:grid-cols-2">
-        {searchResults.map((article) => <ArticleCard article={article} />)}
+        {searchResults.map((theme) => <ThemeCard theme={theme} />)}
       </div>
     </div>
   </main>

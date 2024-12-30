@@ -8,17 +8,7 @@ import Card from "./Card.astro";
 3. Black card with gray title and gray on black icon
 */
 
-const {
-  index,
-  titleTop,
-  titleBottom,
-  img,
-  alt,
-  link,
-  painting,
-  text,
-  element,
-} = Astro.props;
+const { titleTop, painting, text } = Astro.props;
 ---
 
 <Card isUnderline={true}>
@@ -34,7 +24,7 @@ const {
       class="text-white absolute h-1/2 z-10 bg-transparent top-1/2 p-2 bg-opacity-50 backdrop-blur-[10px]"
     >
       <span class=`w-[fit-content] text-3xl`>{titleTop}</span>
-      <p class="text-sm text-base">{text}</p>
+      <p class="text-sm">{text}</p>
     </div>
   </div>
 </Card>
