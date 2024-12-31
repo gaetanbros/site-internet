@@ -1,5 +1,5 @@
 ---
-const { sectionTitle, description } = Astro.props;
+const { sectionTitle, description, link } = Astro.props;
 ---
 
 <div class="section-hidden">
@@ -8,7 +8,13 @@ const { sectionTitle, description } = Astro.props;
       {sectionTitle}
     </h1>
     <p class="w-auto sm:w-[680px]">
-      {description}
+      {
+        (!link && description) || (
+          <a href={link} class="text-dark">
+            {description}
+          </a>
+        )
+      }
     </p>
   </div>
   <div class="flex flex-col gap-3 sm:flex-col">

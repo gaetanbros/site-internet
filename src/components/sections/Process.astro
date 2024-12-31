@@ -1,7 +1,8 @@
 ---
 import SectionTitle from "../ui/SectionTitle.astro";
 import Section from "./Section.astro";
-
+import StarShape4 from "../../assets/shapes/StarShape5.svg";
+import { Image } from "astro:assets";
 const description =
   "Nous vous présentons notre mode opératoire en 4 étapes simples : de l'identification de la cible à la présentation théâtrale.";
 const steps = [
@@ -10,12 +11,14 @@ const steps = [
     description:
       "Nous commençons par déterminer précisément le public concerné : quel service, quelle équipe, ou quel groupe sera au centre de la performance ? Cette première étape permet de cadrer efficacement l’intervention et de comprendre les enjeux spécifiques à ce public.",
     circleColor: "grad-right-top",
+    shape: StarShape4,
   },
   {
     title: "Identification du besoin",
     description:
       "Une fois la cible définie, nous identifions les problématiques à adresser : cohésion, motivation, communication, etc. Cette phase est cruciale pour adapter la performance aux défis réels que rencontrent vos collaborateurs.",
     circleColor: "grad-left-top",
+    shape: StarShape4,
   },
 
   {
@@ -23,12 +26,14 @@ const steps = [
     description:
       "Nous sélectionnons ensuite un thème parmi une liste variée (ex : art contemporain, théâtre, patrimoine culturel, etc.), en veillant à ce qu’il résonne avec les besoins identifiés. Ce choix détermine la tonalité artistique de la prestation et garantit une expérience immersive pertinente.",
     circleColor: "grad-left-bottom",
+    shape: StarShape4,
   },
   {
     title: "Planification des séances",
     description:
       "Enfin, nous fixons les dates, la durée et le format de(s) séance(s). Selon vos contraintes et vos objectifs, nous définissons ensemble le rythme et l’ampleur de l’intervention, pour optimiser l’impact et l’engagement de vos équipes.",
     circleColor: "grad-right-bottom",
+    shape: StarShape4,
   },
 ];
 ---
@@ -90,19 +95,33 @@ const steps = [
                 id={"step" + index}
               >
                 <div
+                  class={`text-center content-center min-w-[10rem] min-h-[10rem] w-[10rem] h-[10rem] lg:min-w-[16rem] lg:min-h-[16rem] lg:w-[16rem] lg:h-[16rem] `}
+                >
+                  <div class="relative content-center text-center   h-full w-full">
+                    <div>
+                      <Image
+                        src={step.shape}
+                        alt="Star Shape"
+                        class="absolute h-full w-full top-0 z-[-2] animate-spin-very-slow"
+                      />
+                    </div>
+                    <div class="text-center w-full ">
+                      <h3 class="w-2/3 left-[16%] lg:w-1/2 relative text-center lg:left-1/4 text-md lg:text-2xl font-bold mb-2 z-0">
+                        {step.title}
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                {/*   <div
                   class={`p-4 animate-glow text-center content-center min-w-[10rem] min-h-[10rem] w-[10rem] h-[10rem] lg:min-w-[16rem] lg:min-h-[16rem] lg:w-[16rem] lg:h-[16rem] rounded-full ${step.circleColor}`}
                 >
                   <h3 class="text-xl lg:text-3xl font-bold mb-2 ">
                     {step.title}
                   </h3>
-                </div>{" "}
+                </div>{" "} */}
                 <p class="text-md text-left px-5 pt-5 lg:pt-0">
                   {step.description}
                 </p>
-                <div
-                  class="line hidden lg:block delay-1000 "
-                  id={`"line-" + ${index}`}
-                />
               </div>
             </div>
           ))
