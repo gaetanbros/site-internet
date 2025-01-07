@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    background: purple;
+    background: white;
   }
   @font-face {
     font-family: "Grotesk";
@@ -67,7 +67,7 @@
   }
 
   :root {
-    --green: #dda0dd;
+    --green: #554183;
     --black: rgb(0, 0, 0);
     --dark: #191a23;
     --gray: #f3f3f3;

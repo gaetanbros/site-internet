@@ -3,7 +3,12 @@ import tailwindcssMotion from "tailwindcss-motion";
 
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-  safelist: ["animate-grow"],
+  safelist: [
+    "animate-grow",
+    "border-black",
+    "border-gray-200",
+    "text-slate-400",
+  ],
   theme: {
     screens: {
       sm: "640px",

@@ -9,7 +9,7 @@
     "action": "Moments captivants de partage et de créativité",
     "link": "L’art comme levier pour créer des souvenirs durables et fédérer les équipes",
     "bgClass": "bg-white",
-    "tickColor": "#52427f"
+    "tickColor": "#000"
   },
   {
     "title": "Direction des resources humaines",
@@ -31,6 +31,6 @@
     "update": "Échanges personnalisés et approches immersives",
     "action": "Un coaching innovant alliant réflexion personnelle et inspiration artistique",
     "bgClass": "bg-white",
-    "tickColor": "#52427f"
+    "tickColor": "#000"
   }
 ]
