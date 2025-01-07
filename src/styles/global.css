@@ -176,7 +176,7 @@
 
 /* custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
 }
 
 ::-webkit-scrollbar-track {
@@ -184,7 +184,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: var(--purple);
 }
 
 ::-webkit-scrollbar-thumb:hover {
