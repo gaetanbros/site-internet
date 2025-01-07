@@ -3,7 +3,6 @@ import Cases from "@/components/sections/Cases.astro";
 import Hero from "@/components/sections/Hero.astro";
 import Process from "@/components/sections/Process.astro";
 import Services from "@/components/sections/Services.astro";
-import Sponsors from "@/components/sections/Sponsors.astro";
 import Paintings from "@/components/sections/Paintings.astro";
 import Team from "@/components/sections/Team.astro";
 import Testimonials from "@/components/sections/Testimonials.astro";
@@ -36,8 +35,12 @@ import MainLayout from "@/layouts/MainLayout.astro";
 </script>
 <MainLayout title="Artésémys" description="">
   <Hero />
-  <Sponsors />
   <Paintings />
+  <div
+    class="h-full w-full fixed"
+    style="background-image: url('/projet-gb/landscape.jpg')"
+  >
+  </div>
   <!--   <Sponsors isReversed />
  -->
   <Services />

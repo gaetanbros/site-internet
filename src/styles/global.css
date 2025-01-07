@@ -4,36 +4,7 @@
 
 @layer base {
   body {
-    background-image: linear-gradient(
-      to bottom,
-      #d5c9f6,
-      #f5cce9,
-      #ffd5db,
-      #ffe1d7,
-      #ffefdd,
-      #fff5e3,
-      #fefae9,
-      #fffff0,
-      #fffff0,
-      #fffff0,
-      #fffff0,
-      #fffff0
-    );
-    /*     background-image: linear-gradient(
-      to bottom,
-      #d16ba5,
-      #e88499,
-      #f2a298,
-      #f4c0a5,
-      #f5ddc0,
-      #f7e9cf,
-      #faf4df,
-      #fffff0,
-      #fffff0,
-      #fffff0,
-      #fffff0,
-      #fffff0
-    ); */
+    background-image: white;
   }
   @font-face {
     font-family: "Grotesk";
@@ -57,7 +28,25 @@
     font-family: "Bricolage";
     src: url("/projet-gb/fonts/bricolage/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf"),
       format("truetype");
-    font-weight: normal;
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Bricolage";
+    src: url("/projet-gb/fonts/bricolage/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf"),
+      format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Bricolage";
+    src: url("/projet-gb/fonts/bricolage/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf"),
+      format("truetype");
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
   }
@@ -82,7 +71,8 @@
     --black: rgb(0, 0, 0);
     --dark: #191a23;
     --gray: #f3f3f3;
-    --white: #fffff0;
+    --white: #fff;
+    --purple: #554183;
   }
 
   /* @layer base {

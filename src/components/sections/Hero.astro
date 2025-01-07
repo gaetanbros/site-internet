@@ -2,12 +2,13 @@
 /* import { Image } from "astro:assets";
 import StarShape2 from "../../assets/shapes/StarShape2.svg";
 import StarShape from "../../assets/shapes/StarShape3.svg"; */
+import Sponsors from "@/components/sections/Sponsors.astro";
 import Section from "./Section.astro";
 ---
 
 <Section id="home">
   <div class="relative flex flex-col-reverse items-center" id="hero">
-    <div class="row items-center pb-10 md:pb-30 md:pt-10 text-center w-5/6">
+    <div class="row items-center md:pb-30 md:pt-10 text-center w-5/6">
       <div class="relative space-y-3">
         <!--  <div class="absolute animate-spin-slow z-[-1]">
           <Image src={StarShape} alt="Star Shape" loading="eager" />
@@ -31,7 +32,7 @@ import Section from "./Section.astro";
           transformation.
         </p> -->
         <h6
-          class="text-3xl lg:pt-10 lg:text-xl font-medium leading-none md:text-4xl text-center"
+          class="text-3xl lg:pt-10 lg:text-xl font-light leading-none md:text-4xl text-center"
         >
           Revéillez le potentiel de vos équipes grâce à l'art. Nous transformons
           vos équipes à travers des créations artistiques uniques et
@@ -41,6 +42,7 @@ import Section from "./Section.astro";
       </div>
     </div>
   </div>
+  <Sponsors />
 </Section>
 
 <!-- <Section id="home">

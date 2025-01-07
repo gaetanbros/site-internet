@@ -16,7 +16,7 @@ export default {
       animation: {
         "spin-slow": "spin 5s linear infinite",
         "spin-very-slow": "spin 30s linear infinite",
-        "infinite-scroll": "infinite-scroll 25s linear infinite",
+        "infinite-scroll": "infinite-scroll 30s linear infinite",
         "reverse-infinite-scroll":
           "reverse-infinite-scroll 25s linear infinite",
         fadein: "fadein 1s ease forwards",

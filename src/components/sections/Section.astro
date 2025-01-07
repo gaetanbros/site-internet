@@ -1,8 +1,9 @@
 ---
-const { id } = Astro.props;
+const { id, rounded } = Astro.props;
+const sectionClass = `px-5 flex justify-center overflow-hidden lg:block bg-white ${rounded ? "rounded-3xl" : ""}`;
 ---
 
-<section id={id} class="px-5 flex justify-center overflow-hidden lg:block">
+<section id={id} class={sectionClass}>
   <div class="w-full max-w-[1280px] mx-auto">
     <slot />
   </div>
