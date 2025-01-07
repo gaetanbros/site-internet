@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import portrait1 from "../../assets/paintings/portraits/portrait1.jpg";
+import portrait2 from "../../assets/paintings/portraits/portrait2.jpg";
+import portrait3 from "../../assets/paintings/portraits/portrait3.jpg";
+import portrait6 from "../../assets/paintings/portraits/portrait6.jpg";
+import portrait8 from "../../assets/paintings/portraits/portrait8.jpg";
+
+const paintings = [
+  { index: 0, src: portrait1, alt: "portrait1", top: "50px" },
+  { index: 1, src: portrait2, alt: "portrait2", top: "0px" },
+  { index: 2, src: portrait3, alt: "portrait3", top: "-25px" },
+  { index: 3, src: portrait6, alt: "portrait4", top: "0px" },
+  { index: 4, src: portrait8, alt: "portrait5", top: "50px" },
+];
+const { isReversed, filteredPaitings } = Astro.props;
+
+const displayedPaintings =
+  (filteredPaitings &&
+    paintings.filter((painting) =>
+      filteredPaitings.includes(painting.index)
+    )) ||
+  paintings;
+
+const animate = "flex items-center justify-center md:justify-start  ";
+---
+
+<div class="overflow-hidden">
+  <div class="py-5 w-full inline-flex flex-nowrap overflow-hidden">
+    <ul class={animate}>
+      {
+        paintings.slice(0, 5).map((painting, index) => {
+          return (
+            <li
+              class="motion-scale-y-loop-105 motion-scale-x-loop-105 motion-duration-2000 !m-0 w-[300px] h-4/5 overflow-hidden rounded-t-full relative shadow-xl  "
+              style={{
+                rotate: `${(index - 2) * 5}deg`,
+                left: `${(index - 2) * 25}px`,
+                top: painting.top,
+              }}
+            >
+              <Image
+                src={painting.src}
+                class="  transition duration-200  object-scale-down shadow-xl  "
+                alt={painting.alt}
+                loading="lazy"
+              />
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</div>

@@ -7,7 +7,9 @@
     "support": "Renforcement de la cohésion et de la culture générale",
     "update": "Thèmes adaptés à l’identité de l’entreprise",
     "action": "Moments captivants de partage et de créativité",
-    "link": "L’art comme levier pour créer des souvenirs durables et fédérer les équipes"
+    "link": "L’art comme levier pour créer des souvenirs durables et fédérer les équipes",
+    "bgClass": "bg-white",
+    "tickColor": "#52427f"
   },
   {
     "title": "Direction des resources humaines",
@@ -16,7 +18,9 @@
     "devCount": "Des performances immersives et adaptées aux besoins de vos équipes",
     "support": "Un levier stratégique pour stimuler l’engagement et la créativité",
     "update": "Un focus RH pour renforcer la cohésion et développer la culture générale",
-    "action": "L’art au service de vos talents et de leur engagement"
+    "action": "L’art au service de vos talents et de leur engagement",
+    "bgClass": "bg-green",
+    "tickColor": "#fffff0"
   },
   {
     "title": "Managers",
@@ -25,6 +29,8 @@
     "devCount": "Thématiques artistiques pour explorer forces et défis",
     "support": "Développement de compétences en communication, créativité et gestion d’équipe",
     "update": "Échanges personnalisés et approches immersives",
-    "action": "Un coaching innovant alliant réflexion personnelle et inspiration artistique"
+    "action": "Un coaching innovant alliant réflexion personnelle et inspiration artistique",
+    "bgClass": "bg-white",
+    "tickColor": "#52427f"
   }
 ]

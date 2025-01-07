@@ -55,40 +55,45 @@ const animate = isReversed
 ---
 
 <Section id="sponsors">
-  <div
-    class="py-5 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
-  >
-    <ul class={animate}>
-      {
-        sponsors.map((sponsor) => {
-          return (
-            <li class="p-4  transition duration-200 hover:grayscale-0 ">
-              <Image
-                src={sponsor.logo}
-                class="h-12 w-auto mx-auto max-w-8 min-w-40"
-                alt={sponsor.alt}
-                loading="lazy"
-              />
-            </li>
-          );
-        })
-      }
-    </ul>
-    <ul class={animate} aria-hidden="true">
-      {
-        sponsors.map((sponsor) => {
-          return (
-            <li class="p-4  transition duration-200 hover:grayscale-0">
-              <Image
-                src={sponsor.logo}
-                class="h-12 w-auto mx-auto max-w-8 min-w-40"
-                alt={sponsor.alt}
-                loading="lazy"
-              />
-            </li>
-          );
-        })
-      }
-    </ul>
+  <div class="grid grid-cols-6 gap-4 items-center">
+    <div class="col-span-1"><span>Ils nous ont fait confiance</span></div>
+    <div class="col-span-5">
+      <div
+        class="py-5 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
+      >
+        <ul class={animate}>
+          {
+            sponsors.map((sponsor) => {
+              return (
+                <li class="p-4  transition duration-200 hover:grayscale-0 ">
+                  <Image
+                    src={sponsor.logo}
+                    class="h-12 w-auto mx-auto max-w-8 min-w-40"
+                    alt={sponsor.alt}
+                    loading="lazy"
+                  />
+                </li>
+              );
+            })
+          }
+        </ul>
+        <ul class={animate} aria-hidden="true">
+          {
+            sponsors.map((sponsor) => {
+              return (
+                <li class="p-4  transition duration-200 hover:grayscale-0">
+                  <Image
+                    src={sponsor.logo}
+                    class="h-12 w-auto mx-auto max-w-8 min-w-40"
+                    alt={sponsor.alt}
+                    loading="lazy"
+                  />
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+    </div>
   </div>
 </Section>
