@@ -1,0 +1,14 @@
+---
+const landscapes = [
+  "/projet-gb/landscapes/landscape1.jpg",
+  "/projet-gb/landscapes/landscape2.jpg",
+  "/projet-gb/landscapes/landscape3.jpg",
+];
+const { landscape } = Astro.props;
+---
+
+<div
+  class="h-80 bg-center bg-cover bg-no-repeat bg-body-img bg-fixed flex items-center justify-center w-full"
+  style={`background-image: url('${landscapes[landscape]}')`}
+>
+</div>
