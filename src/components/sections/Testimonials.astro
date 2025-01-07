@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import Section from "./Section.astro";
 //increment the logo import to 6
+import clients from "../../assets/clients.jpeg";
 import companyLogo1 from "../../assets/company/company-logo1.svg";
 import companyLogo3 from "../../assets/company/company-logo11.svg";
 import companyLogo5 from "../../assets/company/company-logo12.svg";
@@ -69,7 +70,7 @@ const testimonials = [
       description="Découvrez ce que nos clients satisfaits disent de nous : lisez nos témoignages pour en savoir plus sur nos services"
     /> -->
     <div
-      class="min-w-screen min-h-screen bg-gray-50 flex items-center justify-center"
+      class="min-w-screen min-h-screen bg-gray-50 flex flex-col items-center justify-center content-center"
     >
       <div class="w-full bg-white px-5 text-gray-800">
         <div class="w-full max-w-6xl mx-auto">
@@ -90,7 +91,15 @@ const testimonials = [
               ></span>
             </div>
           </div>
-          <div class="-mx-3 md:flex items-start section-hidden">
+          <div class="w-3/4 h-50 pb-10 flex-col items-center mx-auto">
+            <Image src={clients} alt="" class="shadow-xl" />
+          </div>
+          <div
+            class="-mx-3
+              md:flex
+              items-start
+              section-hidden"
+          >
             {
               Array.from(
                 Array(testimonials.length / 2).keys(),
