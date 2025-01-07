@@ -31,14 +31,14 @@ export function Slider() {
   return (
     <div className="flex flex-row justify-between rounded-[45px] py-10 bg-white">
       <div className="w-1/2 pr-10 relative">
-        <div class="bg-green w-full h-full absolute z-[-1]" />
+        <div className="bg-green w-full h-full absolute z-[-1]" />
         {successStories.map((story, index) => (
           <div
             key={index + "tes"}
             className={`mb-4 border-b pb-1 ${activeIndex === index ? "border-black" : "border-gray"}`}
           >
             <h1
-              className={`uppercase cursor-pointer pb-2 font-light text-xl md:text-2xl ${activeIndex === index ? "text-black" : "text-slate-400"}`}
+              className={`uppercase font-bold cursor-pointer pb-2  text-xl md:text-2xl ${activeIndex === index ? "text-black" : "text-slate-400"}`}
               onClick={() => setActiveIndex(index)}
             >
               {story.title}
