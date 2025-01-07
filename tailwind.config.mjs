@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import tailwindcssIntersect from "tailwindcss-intersect";
 import tailwindcssMotion from "tailwindcss-motion";
 
 export default {
@@ -25,6 +26,7 @@ export default {
         "reverse-infinite-scroll":
           "reverse-infinite-scroll 25s linear infinite",
         fadein: "fadein 1s ease forwards",
+        fadeout: "fadeout 1s ease forwards",
         glow: "glow 1.5s linear infinite alternate",
         grow: "grow 1.5s linear forwards",
       },
@@ -58,6 +60,14 @@ export default {
             opacity: "1",
           },
         },
+        fadeout: {
+          from: {
+            opacity: "1",
+          },
+          to: {
+            opacity: "0",
+          },
+        },
       },
       fontFamily: {
         grotesk: ["Grotesk", "sans-serif"],
@@ -77,5 +87,5 @@ export default {
       },
     },
   },
-  plugins: [tailwindcssMotion],
+  plugins: [tailwindcssMotion, tailwindcssIntersect],
 };

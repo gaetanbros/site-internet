@@ -7,11 +7,36 @@ import portrait6 from "../../assets/paintings/portraits/portrait6.jpg";
 import portrait8 from "../../assets/paintings/portraits/portrait8.jpg";
 
 const paintings = [
-  { index: 0, src: portrait1, alt: "portrait1", top: "30px" },
-  { index: 1, src: portrait2, alt: "portrait2", top: "0px" },
-  { index: 2, src: portrait3, alt: "portrait3", top: "-25px" },
-  { index: 3, src: portrait6, alt: "portrait4", top: "0px" },
-  { index: 4, src: portrait8, alt: "portrait5", top: "30px" },
+  {
+    index: 0,
+    src: portrait1,
+    alt: "portrait1",
+    transform: "rotate3d(0, 1, 0, 25deg)",
+  },
+  {
+    index: 1,
+    src: portrait2,
+    alt: "portrait2",
+    transform: "rotate3d(0, 1, 0, 0deg)",
+  },
+  {
+    index: 2,
+    src: portrait3,
+    alt: "portrait3",
+    transform: "rotate3d(0, 0, 0, 0deg)",
+  },
+  {
+    index: 3,
+    src: portrait6,
+    alt: "portrait4",
+    transform: "rotate3d(0, 1, 0, 0deg)",
+  },
+  {
+    index: 4,
+    src: portrait8,
+    alt: "portrait5",
+    transform: "rotate3d(0, 1, 0, -25deg)",
+  },
 ];
 const { isReversed, filteredPaitings } = Astro.props;
 
@@ -25,18 +50,19 @@ const displayedPaintings =
 const animate = "flex items-center justify-center md:justify-start  ";
 ---
 
-<div id="paitings" class="overflow-hidden z-10 bg-white h-[22rem]">
+<div class="overflow-hidden z-10 bg-white h-[40rem]">
   <div class="py-5 w-full inline-flex flex-nowrap overflow-hidden">
-    <ul class={animate}>
+    <ul class={animate} style={{ perspective: "1000px" }}>
       {
         paintings.slice(0, 5).map((painting, index) => {
           return (
             <li
-              class=" motion-delay-200 motion-scale-y-loop-105 motion-scale-x-loop-105 motion-duration-2000 !m-0 w-[300px] h-4/5 overflow-hidden rounded-t-full relative shadow-xl  "
+              class=" !m-0 w-[300px] h-4/5 overflow-hidden rounded-2xl relative shadow-xl  "
               style={{
-                rotate: `${(index - 2) * 4}deg`,
-                left: `${(index - 2) * 25}px`,
-                top: painting.top,
+                //rotate: `${(index - 2) * 4}deg`,
+                //top: painting.top,
+                scale: 1 + (index === 0 || index === 4 ? 0.02 : 0),
+                transform: painting.transform,
               }}
             >
               <Image
