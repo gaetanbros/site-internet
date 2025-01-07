@@ -68,6 +68,7 @@ export default {
         dark: "var(--dark)",
         gray: "var(--gray)",
         white: "var(--white)",
+        purple: "var(--purple)",
       },
     },
   },
