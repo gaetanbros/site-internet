@@ -1,4 +1,5 @@
 ---
+import SectionMotion from "@/components/ui/SectionMotion.astro";
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import SearchForm from "../../components/ui/SearchForm.astro";
@@ -10,9 +11,15 @@ const allThemes: CollectionEntry<"blog">[] = await getCollection("blog");
 
 <MainLayout title="Artésémys | Thèmes">
   <main class="">
-    <div class="mt-[80px] px-4 mx-auto max-w-screen-xl lg:px-3">
-      <div class="text-center max-w-xl mx-auto">
-        <h1 class="text-6xl md:text-7xl font-bold mb-5 text-gray-600">
+    <div
+      class="relative mt-[100px] lg:mt-[120px] px-4 mx-auto max-w-screen-xl lg:px-3"
+    >
+      <div
+        class="text-center max-w-xl mx-auto intersect-once intersect:motion-delay-200 intersect:motion-preset-slide-right intersect:motion-duration-2000"
+      >
+        <h1
+          class="text-4xl lg:text-6xl md:text-7xl font-bold mb-5 text-gray-600"
+        >
           Nos thèmes
         </h1>
         <p class="font-light sm:text-xl">
@@ -27,9 +34,11 @@ const allThemes: CollectionEntry<"blog">[] = await getCollection("blog");
           <span class="inline-block w-1 h-1 rounded-full bg-green ml-1"></span>
         </div>
       </div>
-      <br />
-      <SearchForm />
-      <br />
+      <SectionMotion>
+        <br />
+        <SearchForm />
+        <br />
+      </SectionMotion>
       <div class="grid gap-8 lg:grid-cols-2">
         {allThemes.map((theme) => <ThemeCard theme={theme} />)}
       </div>
