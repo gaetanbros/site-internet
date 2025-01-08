@@ -33,6 +33,7 @@ const successStories = [
 ];
 
 import { Slider } from "../react/Slider";
+import SectionMotion from "../ui/SectionMotion.astro";
 import SectionTitle from "../ui/SectionTitle.astro";
 ---
 
@@ -47,7 +48,6 @@ import SectionTitle from "../ui/SectionTitle.astro";
       description="Nos thèmes les plus populaires. Vous pouvez retrouver la liste complète de nos thèmes en cliquant sur cette description ou sur l'onglet Thèmes depuis la barre de navigation."
       link="/projet-gb/themes"
     />
-
-    <Slider client:load />
+    <SectionMotion> <Slider client:load /></SectionMotion>
   </div>
 </Section>

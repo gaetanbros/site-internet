@@ -1,7 +1,6 @@
 ---
 /* import { Image } from "astro:assets";
-import StarShape2 from "../../assets/shapes/StarShape2.svg";
-import StarShape from "../../assets/shapes/StarShape3.svg"; */
+import StarShape2 from "../../assets/shapes/StarShape2.svg";*/
 import Sponsors from "@/components/sections/Sponsors.astro";
 import Section from "./Section.astro";
 ---
@@ -10,74 +9,24 @@ import Section from "./Section.astro";
   <div class="relative flex flex-col-reverse items-center" id="hero">
     <div class="row items-center md:pb-30 md:pt-10 text-center w-5/6">
       <div class="relative space-y-3">
-        <!--  <div class="absolute animate-spin-slow z-[-1]">
-          <Image src={StarShape} alt="Star Shape" loading="eager" />
-        </div>
-        <div class="absolute animate-spin-slow z-[-1] right-0">
-          <Image src={StarShape2} alt="Star Shape" loading="eager" />
-        </div> -->
-        <h1 class="text-5xl lg:text-5xl font-medium leading-none text-center">
+        <h1
+          class="text-5xl lg:text-5xl font-medium leading-none text-center motion-preset-slide-right motion-duration-2000"
+        >
           Et si l’art devenait la clé de la cohésion et de l’engagement de vos
           équipes ?
         </h1>
 
-        <!--   <p
-          class="text-md lg:pt-16 mb-8 lg:text-lg font-normal leading-7 sm:mb-12 text-center md:pr-12"
-        >
-          Nous transformons vos équipes à travers des créations artistiques
-          uniques et personnalisées. Ensemble, nous identifions leurs
-          spécificités, sélectionnons un thème en résonance avec leur univers,
-          puis donnons vie à une performance théâtralisée sur-mesure. Plus qu'un
-          simple spectacle, c'est un moment de réflexion, de partage et de
-          transformation.
-        </p> -->
         <h6
-          class="text-3xl lg:pt-10 lg:text-xl font-light leading-none md:text-4xl text-center"
+          class="text-3xl lg:pt-10 lg:text-xl font-light leading-none md:text-4xl text-center motion-opacity-in-0 motion-preset-slide-left motion-duration-2000"
         >
           Revéillez le potentiel de vos équipes grâce à l'art. Nous transformons
           vos équipes à travers des créations artistiques uniques et
-          personnalisées. Plus qu'un simple spectacle, c'est un moment de
+          personnalisées.Plus qu'un simple spectacle, c'est un moment de
           réflexion, de partage et de transformation.
         </h6>
       </div>
+      <!--  -->
     </div>
   </div>
   <Sponsors />
 </Section>
-
-<!-- <Section id="home">
-  <div
-    class="relative flex flex-col-reverse items-center md:flex-row"
-    id="hero"
-  >
-    <div class="row items-center pb-10 md:w-7/12 md:pb-30 md:pt-10">
-      <div class="text-left space-y-3">
-        <h1
-          class="text-2xl font-medium leading-none md:text-4xl text-center md:text-left"
-        >
-          Et si l’art devenait la clé de la cohésion <br />et de l’engagement de
-          vos équipes ?
-        </h1>
-        <p
-          class="mt-6 mb-8 text-lg font-normal leading-7 sm:mb-12 text-center md:text-left md:pr-12"
-        >
-          Chez <strong>Artésémys</strong>, nous transformons vos équipes grâce
-          à des expériences artistiques immersives et interactives.<br /> Ensemble,
-          nous identifions leurs spécificités, sélectionnons un thème en résonance
-          avec leur univers, puis donnons vie à une performance théâtralisée sur-mesure.<br
-          />
-          Plus qu’un simple spectacle, c’est un moment de réflexion, de partage et
-          de transformation.
-        </p>
-        <h6
-          class="text-xl font-medium leading-none md:text-xl text-center md:text-left"
-        >
-          Avec Artésémys, le musée vient à vous.
-        </h6>
-      </div>
-    </div>
-    <div class="flex items-center pb-10 md:w-5/12 md:pb-30 md:pt-10">
-      <Image src={HeroIlust} alt="Hero Ilustration" loading="eager" />
-    </div>
-  </div>
-</Section> -->

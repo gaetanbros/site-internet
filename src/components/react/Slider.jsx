@@ -54,16 +54,6 @@ export function Slider() {
             >
               <p className="text-md pb-2 text-slate-700">{story.summary}</p>
             </motion.div>
-
-            {/*  */}
-
-            {/*  <div class="absolute z-[-1] bottom-0 animate-spin-slow">
-                <Image
-                  src={story.shape}
-                  alt="Star Shape"
-                  class="max-w-[10rem] w-[10rem] lg:max-w-[15rem] lg:w-[15rem]"
-                />
-              </div> */}
           </div>
         ))}
       </div>

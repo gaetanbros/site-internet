@@ -1,6 +1,7 @@
 ---
 import Card from "../../components/ui/Card.astro";
 import priceData from "../../data/priceDats.json";
+import SectionMotion from "../ui/SectionMotion.astro";
 import SectionTitle from "../ui/SectionTitle.astro";
 import Section from "./Section.astro";
 
@@ -36,21 +37,8 @@ const description =
       sectionTitle="Séances personnalisées"
       description={description}
     />
-<!--     <div
-      class="grid lg:grid-cols-3 lg:grid-rows-1 gap-3 mt-[60px] section-hidden"
-    >
-      {
-        cards.map((card) => (
-          <ServiceCard
-            titleTop={card.titleTop}
-            painting={card.painting}
-            text={card.text}
-          />
-        ))
-      }
-    </div> -->
-      <div     class="lg:pb-5 grid lg:grid-cols-3 lg:grid-rows-1 gap-4 mt-[60px] section-hidden">
-                <!-- Pricing Card -->
+    <SectionMotion>
+  <div class="lg:pb-5 grid lg:grid-cols-3 lg:grid-rows-1 gap-4 mt-[60px]  ">
                 {
                 priceData.map((item) => (
                 <Card isUnderline={true}>
@@ -91,5 +79,8 @@ const description =
                 )) 
                 }
             </div>
+
+    </SectionMotion>
+    
   </div>
 </Section>

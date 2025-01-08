@@ -1,39 +1,15 @@
 ---
 import Cases from "@/components/sections/Cases.astro";
 import Hero from "@/components/sections/Hero.astro";
+import Paintings from "@/components/sections/Paintings.astro";
+import Parallax from "@/components/sections/Parallax.astro";
 import Process from "@/components/sections/Process.astro";
 import Services from "@/components/sections/Services.astro";
-import Paintings from "@/components/sections/Paintings.astro";
 import Team from "@/components/sections/Team.astro";
 import Testimonials from "@/components/sections/Testimonials.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
-import Parallax from "@/components/sections/Parallax.astro";
 ---
 
-<script>
-  var displaySteps = (isFirst: boolean) => {
-    // Get all the steps
-    const sections = document.querySelectorAll(".section-hidden");
-
-    // Calculate the viewport height
-    const viewportHeight = window.innerHeight;
-
-    sections.forEach((section) => {
-      const stepPosition = section.getBoundingClientRect().top;
-
-      // If the step is within the viewport, make it visible and draw the line
-      if (stepPosition < viewportHeight * 0.8) {
-        // You can adjust the trigger point
-        if (!isFirst) {
-          section.classList.add("animate-fadein");
-        }
-        section.classList.add("section-visible");
-      }
-    });
-  };
-  displaySteps(true);
-  window.addEventListener("scroll", displaySteps.bind(null, false));
-</script>
 <MainLayout title="Artésémys" description="">
   <Hero />
   <Paintings />

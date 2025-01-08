@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import portrait1 from "../../assets/paintings/portraits/portrait1.jpg";
 import portrait2 from "../../assets/paintings/portraits/portrait2.jpg";
 import portrait3 from "../../assets/paintings/portraits/portrait3.jpg";
@@ -26,24 +25,25 @@ const animate = "flex items-center justify-center md:justify-start  ";
 ---
 
 <div id="paitings" class="overflow-hidden z-10 bg-white h-[22rem]">
-  <div class="py-5 w-full inline-flex flex-nowrap overflow-hidden">
+  <div
+    class="py-5 w-full inline-flex flex-nowrap overflow-hidden motion-opacity-in-0 motion-translate-y-in-100 motion-duration-2000 motion-delay-250"
+  >
     <ul class={animate}>
       {
         paintings.slice(0, 5).map((painting, index) => {
           return (
             <li
-              class=" motion-delay-200 motion-scale-y-loop-105 motion-scale-x-loop-105 motion-duration-2000 !m-0 w-[300px] h-4/5 overflow-hidden rounded-t-full relative shadow-xl  "
+              class=" !m-0 w-[300px] h-4/5 overflow-hidden rounded-t-full relative shadow-xl  "
               style={{
                 rotate: `${(index - 2) * 4}deg`,
                 left: `${(index - 2) * 25}px`,
                 top: painting.top,
               }}
             >
-              <Image
-                src={painting.src}
-                class="  transition duration-200  object-scale-down shadow-xl  "
+              <img
+                src={painting.src.src}
+                class="object-scale-down shadow-xl  "
                 alt={painting.alt}
-                loading="lazy"
               />
             </li>
           );

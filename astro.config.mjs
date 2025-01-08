@@ -9,5 +9,4 @@ export default defineConfig({
   site: "https://alessandroma.github.io",
   integrations: [tailwind(), react()],
   base: "/projet-gb",
-  prefetch: true,
 });

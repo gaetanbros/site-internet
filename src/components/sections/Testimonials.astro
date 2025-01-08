@@ -74,7 +74,7 @@ const testimonials = [
     >
       <div class="w-full bg-white px-5 text-gray-800">
         <div class="w-full max-w-6xl mx-auto">
-          <div class="text-center max-w-xl mx-auto section-hidden">
+          <div class="text-center max-w-xl mx-auto">
             <h1 class="text-4xl lg:text-6xl font-bold text-gray-600 mb-5">
               Ce que nos clients <br />disent de nous.
             </h1>
@@ -94,12 +94,9 @@ const testimonials = [
           <div class="w-3/4 h-50 pb-10 flex-col items-center mx-auto">
             <Image src={clients} alt="" class="shadow-xl" />
           </div>
-          <div
-            class="-mx-3
+          <div class="-mx-3
               md:flex
-              items-start
-              section-hidden"
-          >
+              items-start">
             {
               Array.from(
                 Array(testimonials.length / 2).keys(),

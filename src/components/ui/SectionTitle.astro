@@ -2,8 +2,10 @@
 const { sectionTitle, description, link } = Astro.props;
 ---
 
-<div class="section-hidden">
-  <div class="flex flex-col text-center lg:text-left gap-3 sm:flex-col">
+<div class="">
+  <div
+    class="flex flex-col text-center lg:text-left gap-3 sm:flex-col intersect-once intersect:motion-delay-200 intersect:motion-preset-slide-right intersect:motion-duration-2000"
+  >
     <h1 class="text-4xl lg:text-6xl font-bold text-gray-600">
       {sectionTitle}
     </h1>
