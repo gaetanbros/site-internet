@@ -1,0 +1,31 @@
+.bg-img::before {
+  position: fixed;
+  content: " ";
+  display: block;
+  width: 100vw;
+  height: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-position: top;
+  background-size: cover;
+  z-index: -10;
+}
+.bg-img1::before {
+  background-image: url("/projet-gb/landscapes/landscape1.jpg");
+}
+.bg-img2:before {
+  background-image: url("/projet-gb/landscapes/landscape2.jpg");
+}
+
+.bg-img3::before {
+  background-image: url("/projet-gb/landscapes/landscape3.jpg");
+}
+
+.bg-img4::before {
+  background-image: url("/projet-gb/landscapes/landscape2.jpg");
+}
+.bg-img5:before {
+  background-image: url("/projet-gb/landscapes/landscape1.jpg");
+}

@@ -1,36 +1,5 @@
 ---
-import e1 from "../../assets/elements/element1.png";
-import e2 from "../../assets/elements/element2.png";
-import e3 from "../../assets/elements/element3.png";
-/* import landscape from "../../assets/paintings/landscapes/landscape1.jpg";
- */ import StarShape from "../../assets/shapes/StarShape.svg";
-import StarShape2 from "../../assets/shapes/StarShape2.svg";
-import StarShape3 from "../../assets/shapes/StarShape3.svg";
 import Section from "./Section.astro";
-
-const successStories = [
-  {
-    title: "Veermer, la lumière du silence",
-    summary:
-      "Pourquoi une simple femme affublée d'une perle ou une laitière peuvent-elles nous émouvoir si fortement trois siècles après leur réalisation ? Comment un tel génie a-t-il pu être oublié pendant près de deux siècles ? Parcourez l’âge d’or hollandais, et découvrez les secrets d’un Vermeer dans l’intimité de ses peintures, qui n’ont pas fini de nous émerveiller.",
-    image: e3,
-    shape: StarShape,
-  },
-  {
-    title: "Les mystérieuses citées d’or : Les trésors du Pérou",
-    summary:
-      "Immenses glyphes dont les figures ne sont visibles que du ciel, divinités étranges et colorés sur des pots de terres, cités désertes, tombes comblent d’or, tous ces vestiges sont autant de signes de la grandeur des civilisations Péruviennes. Venez décrypter ces indices magnifiques et mystérieux, plongez dans la création des ancêtres des Incas.",
-    image: e2,
-    shape: StarShape2,
-  },
-  {
-    title: "Eros et Psyché : la plus belle des histoires d’amour",
-    summary:
-      "Eros, enfant d’Aphrodite, embrase le cœur de ceux qu’il touche avec ses flèches. Les mythes grecs en font parfois un dieu fondamental de la création, et d’autres fois l’initiateur du désordre passionnel. Ce démon ambigu du désir n’eut qu’un amour et pas des moindres puisque c’est avec Psyché, la plus belle des humaines, dont le nom signifie en grec l’âme.",
-    image: e1,
-    shape: StarShape3,
-  },
-];
 
 import { Slider } from "../react/Slider";
 import SectionMotion from "../ui/SectionMotion.astro";
@@ -41,7 +10,7 @@ import SectionTitle from "../ui/SectionTitle.astro";
   <Image src={landscape} alt="landscape" class="w-full h-full object-cover" />
 </div>
  -->
-<Section id="cases">
+<Section id="cases" withMin>
   <div class="mt-[80px] mb-[50px] bg-white">
     <SectionTitle
       sectionTitle="Les thèmes à succès"

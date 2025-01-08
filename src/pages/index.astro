@@ -10,23 +10,85 @@ import Testimonials from "@/components/sections/Testimonials.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 ---
 
+<script>
+  var landscapes = [
+    { section: "home", pos: 1 },
+    { section: "services", pos: 2 },
+    { section: "cases", pos: 3 },
+    { section: "process", pos: 4 },
+    { section: "team", pos: 5 },
+    { section: "testimonials", pos: 5 },
+  ];
+  var previousPos = 0;
+
+  var displayActive = () => {
+    // Get all the steps
+    const sections = document.querySelectorAll("section");
+    const viewportHeight = window.outerHeight;
+    var lastVisibleSection = null;
+
+    for (let i = 0; i < sections.length; i++) {
+      const section = sections[i];
+      const sectionPosition = section.getBoundingClientRect().bottom;
+
+      if (sectionPosition <= viewportHeight * 1) {
+        lastVisibleSection = section;
+      }
+    }
+    const lastVisibleSectionId = lastVisibleSection?.id;
+    const lastVisibleSectionPos =
+      landscapes.find((l) => l.section === lastVisibleSectionId)?.pos || 0;
+
+    if (lastVisibleSection) {
+      const px1 = document.getElementById(`px${lastVisibleSectionPos}`);
+      px1.classList.remove("hidden");
+    }
+    if (previousPos && previousPos !== lastVisibleSectionPos) {
+      const px1 = document.getElementById(`px${previousPos}`);
+      px1.classList.add("hidden");
+    }
+
+    previousPos = lastVisibleSectionPos;
+
+    /*   const lastVisibleSection = Array.from(sections).find(
+      (section) => section.getBoundingClientRect().bottom > viewportHeight
+    );
+    // Calculate the viewport height
+
+    const lastSectionId = lastVisibleSection?.id;
+    const landscape =
+      landscapes.find((l) => l.section === lastSectionId)?.landscape ||
+      "bg-img1";
+    const image = document.querySelector("#bg-img");
+    console.info(landscape, lastSectionId);
+    if (previous) {
+      image.classList.remove(previous);
+    }
+    image.classList.add(landscape);
+
+    previous = landscape; */
+  };
+  displayActive();
+  window.addEventListener("scroll", displayActive);
+</script>
+
 <MainLayout title="Artésémys" description="">
   <Hero />
   <Paintings />
   <div class="lg:pt-[80px] bg-white"></div>
-  <Parallax landscape={0} />
+  <Parallax landscape={1} />
 
   <Services />
-  <Parallax landscape={1} />
-
-  <Cases />
   <Parallax landscape={2} />
 
+  <Cases />
+  <Parallax landscape={3} />
+
   <Process />
-  <Parallax landscape={1} />
+  <Parallax landscape={4} />
 
   <Team />
-  <Parallax landscape={0} />
+  <Parallax landscape={5} />
 
   <Testimonials />
 </MainLayout>

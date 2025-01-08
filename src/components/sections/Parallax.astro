@@ -1,14 +1,47 @@
 ---
-const landscapes = [
-  "/projet-gb/landscapes/landscape1.jpg",
-  "/projet-gb/landscapes/landscape2.jpg",
-  "/projet-gb/landscapes/landscape3.jpg",
-];
 const { landscape } = Astro.props;
 ---
 
-<div
-  class="h-[15rem] lg:h-[25rem] bg-top bg-cover bg-no-repeat bg-body-img bg-fixed flex items-center justify-center w-full"
-  style={`background-image: url('${landscapes[landscape]}')`}
->
+<!-- <script>
+  var previous = null;
+  var landscapes = [
+    { section: "home", landscape: "bg-img1" },
+    { section: "services", landscape: "bg-img2" },
+    { section: "cases", landscape: "bg-img3" },
+    { section: "process", landscape: "bg-img2" },
+    { section: "team", landscape: "bg-img" },
+    { section: "testimonials", landscape: "bg-img1" },
+  ];
+  var displayActive = () => {
+    // Get all the steps
+    const sections = document.querySelectorAll("section");
+    const viewportHeight = window.innerHeight;
+
+    const lastVisibleSection = Array.from(sections).find(
+      (section) => section.getBoundingClientRect().bottom > viewportHeight
+    );
+    // Calculate the viewport height
+
+    const lastSectionId = lastVisibleSection?.id;
+    const landscape =
+      landscapes.find((l) => l.section === lastSectionId)?.landscape ||
+      "bg-img1";
+    const image = document.querySelector("#bg-img");
+    console.info(landscape, lastSectionId);
+    if (previous) {
+      image.classList.remove(previous);
+    }
+    image.classList.add(landscape);
+
+    previous = landscape;
+  };
+  displayActive();
+  window.addEventListener("scroll", displayActive);
+</script> -->
+<div class={` h-[15rem] lg:h-[25rem]`}>
+  <div
+    id={`px${landscape}`}
+    class={`parallax hidden bg-img bg-img${landscape} `}
+  >
+  </div>
 </div>

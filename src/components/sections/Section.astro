@@ -1,6 +1,6 @@
 ---
-const { id, rounded } = Astro.props;
-const sectionClass = `px-5 flex justify-center overflow-hidden lg:block bg-white ${rounded ? "rounded-3xl" : ""}`;
+const { id, rounded, withMin } = Astro.props;
+const sectionClass = `px-5 flex justify-center overflow-hidden lg:block bg-white ${withMin ? "min-h-[100vh]" : ""} ${rounded ? "rounded-3xl" : ""}`;
 ---
 
 <section id={id} class={sectionClass}>
