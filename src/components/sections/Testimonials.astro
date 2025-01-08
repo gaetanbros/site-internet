@@ -9,6 +9,7 @@ import companyLogo5 from "../../assets/company/company-logo12.svg";
 import companyLogo2 from "../../assets/company/company-logo2.svg";
 import companyLogo4 from "../../assets/company/company-logo4.svg";
 import companyLogo6 from "../../assets/company/company-logo6.svg";
+import SectionMotion from "../ui/SectionMotion.astro";
 
 const testimonials = [
   {
@@ -74,7 +75,9 @@ const testimonials = [
     >
       <div class="w-full bg-white px-5 text-gray-800">
         <div class="w-full max-w-6xl mx-auto">
-          <div class="text-center max-w-xl mx-auto">
+          <div
+            class="text-center max-w-xl mx-auto intersect-once intersect:motion-delay-200 intersect:motion-preset-slide-right intersect:motion-duration-2000"
+          >
             <h1 class="text-4xl lg:text-6xl font-bold text-gray-600 mb-5">
               Ce que nos clients <br />disent de nous.
             </h1>
@@ -91,49 +94,51 @@ const testimonials = [
               ></span>
             </div>
           </div>
-          <div class="w-3/4 h-50 pb-10 flex-col items-center mx-auto">
-            <Image src={clients} alt="" class="shadow-xl" />
-          </div>
-          <div class="-mx-3
+          <SectionMotion>
+            <div class="w-3/4 h-50 pb-10 flex-col items-center mx-auto">
+              <Image src={clients} alt="" class="shadow-xl" />
+            </div>
+            <div class="-mx-3
               md:flex
               items-start">
-            {
-              Array.from(
-                Array(testimonials.length / 2).keys(),
-                (_, i) => i * 2
-              ).map((i) => (
-                <div class="px-3 md:w-1/3">
-                  {Array.from([i, i + 1]).map((j) => (
-                    <div class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-                      <div class="relative w-full flex mb-4 items-center">
-                        <Image src={testimonials[j].logo} alt="" />
+              {
+                Array.from(
+                  Array(testimonials.length / 2).keys(),
+                  (_, i) => i * 2
+                ).map((i) => (
+                  <div class="px-3 md:w-1/3">
+                    {Array.from([i, i + 1]).map((j) => (
+                      <div class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                        <div class="relative w-full flex mb-4 items-center">
+                          <Image src={testimonials[j].logo} alt="" />
+                        </div>
+                        <div class="w-full">
+                          <p class="text-sm leading-tight">
+                            <span class="text-lg leading-none italic font-bold text-gray-400 mr-1">
+                              "
+                            </span>
+                            {testimonials[j].description}
+                            <span class="text-lg leading-none italic font-bold text-gray-400 ml-1">
+                              "
+                            </span>
+                          </p>
+                        </div>{" "}
+                        <div class="flex-grow p-3 text-end">
+                          <h6 class="text-dark">{testimonials[j].employee}</h6>{" "}
+                          <h6 class="font-bold text-sm text-gray-600">
+                            {testimonials[j].position}
+                          </h6>
+                          <h6 class="font-extrabold">
+                            {testimonials[j].company}
+                          </h6>
+                        </div>
                       </div>
-                      <div class="w-full">
-                        <p class="text-sm leading-tight">
-                          <span class="text-lg leading-none italic font-bold text-gray-400 mr-1">
-                            "
-                          </span>
-                          {testimonials[j].description}
-                          <span class="text-lg leading-none italic font-bold text-gray-400 ml-1">
-                            "
-                          </span>
-                        </p>
-                      </div>{" "}
-                      <div class="flex-grow p-3 text-end">
-                        <h6 class="text-dark">{testimonials[j].employee}</h6>{" "}
-                        <h6 class="font-bold text-sm text-gray-600">
-                          {testimonials[j].position}
-                        </h6>
-                        <h6 class="font-extrabold">
-                          {testimonials[j].company}
-                        </h6>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ))
-            }
-          </div>
+                    ))}
+                  </div>
+                ))
+              }
+            </div>
+          </SectionMotion>
         </div>
       </div>
     </div>
