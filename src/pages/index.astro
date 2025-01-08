@@ -31,7 +31,7 @@ import MainLayout from "@/layouts/MainLayout.astro";
       const section = sections[i];
       const sectionPosition = section.getBoundingClientRect().bottom;
 
-      if (sectionPosition <= viewportHeight * 1) {
+      if (sectionPosition <= viewportHeight) {
         lastVisibleSection = section;
       }
     }
