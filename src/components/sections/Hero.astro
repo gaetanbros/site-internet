@@ -2,22 +2,25 @@
 /* import { Image } from "astro:assets";
 import StarShape2 from "../../assets/shapes/StarShape2.svg";*/
 import Sponsors from "@/components/sections/Sponsors.astro";
+import MobilePaintings from "./MobilePaintings.astro";
 import Section from "./Section.astro";
 ---
 
 <Section id="home">
+  <MobilePaintings />
+
   <div class="relative flex flex-col-reverse items-center" id="hero">
-    <div class="row items-center md:pb-30 md:pt-10 text-center w-5/6">
+    <div class="row items-center md:pb-30 md:pt-10 text-center w-full lg:w-5/6">
       <div class="relative space-y-3">
         <h1
-          class="text-5xl lg:text-5xl font-medium leading-none text-center motion-preset-slide-right motion-duration-2000"
+          class="font-bold text-2xl pt-10 lg:pt-0 lg:text-5xl lg:font-medium leading-none text-center motion-preset-slide-right motion-duration-2000"
         >
           Et si l’art devenait la clé de la cohésion et de l’engagement de vos
           équipes ?
         </h1>
 
         <h6
-          class="text-3xl lg:pt-10 lg:text-xl font-light leading-none md:text-4xl text-center motion-opacity-in-0 motion-preset-slide-left motion-duration-2000"
+          class="text-sm lg:pt-10 lg:text-xl font-light leading-none md:text-4xl text-center motion-opacity-in-0 motion-preset-slide-left motion-duration-2000"
         >
           Revéillez le potentiel de vos équipes grâce à l'art. Nous transformons
           vos équipes à travers des créations artistiques uniques et
