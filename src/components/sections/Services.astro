@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import assemblee from "../../assets/business/assemblee.jpeg";
 import Card from "../../components/ui/Card.astro";
 import priceData from "../../data/priceDats.json";
 import SectionMotion from "../ui/SectionMotion.astro";
@@ -37,8 +39,10 @@ const description =
       sectionTitle="Séances personnalisées"
       description={description}
     />
-    <SectionMotion>
-  <div class="lg:pb-5 grid lg:grid-cols-3 lg:grid-rows-1 gap-4 mt-[60px]  ">
+    <SectionMotion>  <div class="lg:w-3/4 h-50 pb-4 flex-col items-center mx-auto pt-4 lg:pt-0 lg:my-[60px]">
+             <Image src={assemblee} alt={''} class="shadow-xl"/>
+            </div>
+  <div class="lg:pb-5 grid lg:grid-cols-3 lg:grid-rows-1 gap-4   ">
                 {
                 priceData.map((item) => (
                 <Card isUnderline={true}>
@@ -79,7 +83,7 @@ const description =
                 )) 
                 }
             </div>
-
+          
     </SectionMotion>
     
   </div>
