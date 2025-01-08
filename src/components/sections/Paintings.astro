@@ -12,14 +12,6 @@ const paintings = [
   { index: 3, src: portrait6, alt: "portrait4", top: "0px" },
   { index: 4, src: portrait8, alt: "portrait5", top: "30px" },
 ];
-const { isReversed, filteredPaitings } = Astro.props;
-
-const displayedPaintings =
-  (filteredPaitings &&
-    paintings.filter((painting) =>
-      filteredPaitings.includes(painting.index)
-    )) ||
-  paintings;
 
 const animate = "flex items-center justify-center md:justify-start  ";
 ---

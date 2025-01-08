@@ -41,11 +41,11 @@ import MainLayout from "@/layouts/MainLayout.astro";
 
     if (lastVisibleSection) {
       const px1 = document.getElementById(`px${lastVisibleSectionPos}`);
-      px1.classList.remove("hidden");
+      px1?.classList.remove("hidden");
     }
     if (previousPos && previousPos !== lastVisibleSectionPos) {
       const px1 = document.getElementById(`px${previousPos}`);
-      px1.classList.add("hidden");
+      px1?.classList.add("hidden");
     }
 
     previousPos = lastVisibleSectionPos;
