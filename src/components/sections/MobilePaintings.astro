@@ -46,7 +46,7 @@ const imgClass = "h-[8rem]  w-[6rem] shadow-xl rounded-lg";
 ---
 
 <div
-  class="lg:hidden items-center intersect-once intersect:motion-delay-200 intersect:motion-preset-slide-right intersect:motion-duration-2000"
+  class="lg:hidden items-center intersect-once intersect:motion-delay-500 intersect:motion-preset-slide-right intersect:motion-duration-2000"
 >
   <div class="">
     <div class="pt-5 w-full inline-flex flex-nowrap overflow-hidden">
@@ -59,7 +59,7 @@ const imgClass = "h-[8rem]  w-[6rem] shadow-xl rounded-lg";
                   src={sponsor.src}
                   class={imgClass}
                   alt={sponsor.alt}
-                  loading="lazy"
+                  loading="eager"
                 />
               </li>
             );
@@ -75,7 +75,7 @@ const imgClass = "h-[8rem]  w-[6rem] shadow-xl rounded-lg";
                   src={sponsor.src}
                   class={imgClass}
                   alt={sponsor.alt}
-                  loading="lazy"
+                  loading="eager"
                 />
               </li>
             );

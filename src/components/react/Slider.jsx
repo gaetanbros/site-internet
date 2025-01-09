@@ -45,7 +45,7 @@ export function Slider() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="flex flex-col lg:flex-row justify-between rounded-[45px] lg:py-10 bg-white">
+    <div className="flex flex-col lg:flex-row justify-between rounded-[45px] lg:py-10 bg-purple text-white">
       <div className="lg:hidden flex flex-row  justify-center items-center rounded-[45px] ">
         <Image activeIndex={activeIndex} />
       </div>
@@ -53,10 +53,10 @@ export function Slider() {
         {successStories.map((story, index) => (
           <div
             key={index + "tes"}
-            className={`mb-4 border-b pb-1 ${activeIndex === index ? "border-black" : "border-gray"}`}
+            className={`mb-4 border-b pb-1 ${activeIndex === index ? "border-white" : "border-zinc-500"}`}
           >
             <h1
-              className={`uppercase font-bold cursor-pointer pb-2  text-xl md:text-2xl ${activeIndex === index ? "text-black" : "text-slate-400"}`}
+              className={`uppercase font-bold cursor-pointer pb-2  text-xl md:text-2xl ${activeIndex === index ? "text-white" : "text-zinc-500"}`}
               onClick={() => setActiveIndex(index)}
             >
               {story.title}
@@ -70,12 +70,12 @@ export function Slider() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="overflow-hidden"
             >
-              <p className="text-md pb-2 text-slate-700">{story.summary}</p>
+              <p className="text-md pb-2 text-white">{story.summary}</p>
             </motion.div>
           </div>
         ))}
       </div>
-      <div className="hidden flex-row lg:flex-col lg:w-1/2 lg:flex justify-center items-center bg-purple  shadow-2xl rounded-l-[45px]">
+      <div className="hidden flex-row lg:flex-col lg:w-1/2 lg:flex justify-center items-center bg-white  shadow-2xl rounded-l-[45px]">
         <Image activeIndex={activeIndex} />
       </div>
     </div>

@@ -1,10 +1,14 @@
 ---
-const { id, rounded, withMin } = Astro.props;
-const sectionClass = `px-5 flex justify-center overflow-hidden lg:block bg-white ${withMin ? "min-h-[100vh]" : ""} ${rounded ? "rounded-3xl" : ""}`;
+const { id, rounded, withMin, noMaxWidth, bgColor } = Astro.props;
+const sectionClass = `${noMaxWidth ? "" : "px-5"} 
+                      flex justify-center overflow-hidden lg:block 
+                      ${bgColor ? bgColor : "bg-white"} 
+                      ${withMin ? "min-h-[100vh]" : ""} 
+                      ${rounded ? "rounded-3xl" : ""}`;
 ---
 
 <section id={id} class={sectionClass}>
-  <div class="w-full max-w-[1280px] mx-auto">
+  <div class={`w-full ${noMaxWidth ? "" : "max-w-[1280px]"} mx-auto`}>
     <slot />
   </div>
 </section>

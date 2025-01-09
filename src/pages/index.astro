@@ -50,24 +50,6 @@ import MainLayout from "@/layouts/MainLayout.astro";
     }
 
     previousPos = lastVisibleSectionPos;
-
-    /*   const lastVisibleSection = Array.from(sections).find(
-      (section) => section.getBoundingClientRect().bottom > viewportHeight
-    );
-    // Calculate the viewport height
-
-    const lastSectionId = lastVisibleSection?.id;
-    const landscape =
-      landscapes.find((l) => l.section === lastSectionId)?.landscape ||
-      "bg-img1";
-    const image = document.querySelector("#bg-img");
-    console.info(landscape, lastSectionId);
-    if (previous) {
-      image.classList.remove(previous);
-    }
-    image.classList.add(landscape);
-
-    previous = landscape; */
   };
   displayActive();
   window.addEventListener("scroll", displayActive);
@@ -76,7 +58,7 @@ import MainLayout from "@/layouts/MainLayout.astro";
 <MainLayout title="Artésémys" description="">
   <Hero />
   <Paintings />
-  <div class="lg:pt-[80px] bg-white"></div>
+  <div class="pt-[2rem] lg:hidden bg-white"></div>
   <Parallax landscape={1} />
 
   <Services />
