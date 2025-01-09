@@ -42,10 +42,11 @@ const description =
     <SectionMotion>  <div class="lg:w-3/4 h-50 pb-4 flex-col items-center mx-auto pt-4 lg:pt-0 lg:my-[60px]">
              <Image src={assemblee} alt={''} class="shadow-xl"/>
             </div>
-  <div class="lg:pb-5 grid lg:grid-cols-3 lg:grid-rows-1 gap-4   ">
+  <div class="overflow-x-scroll lg:overflow-x-hidden flex pb-4 lg:grid lg:grid-cols-3 lg:grid-rows-1 gap-4 p-0 lg:p-10 ">
                 {
                 priceData.map((item) => (
-                <Card isUnderline={true}>
+                  <div class="w-[90%]  lg:w-auto flex-shrink-0 space-x-8 lg:space-x-0 ">
+   <Card isUnderline={true}>
                 <div class={`flex flex-col p-6 mx-auto max-w-lg text-center h-full ${item.bgClass}`} style={{color: item.tickColor}}>
                     <h3 class="mb-4 text-xl lg:text-2xl font-semibold">{item.title}</h3>
                     <p class="text-sm font-light text-gray-500 sm:text-md pb-5">{item.description}</p>
@@ -80,6 +81,8 @@ const description =
                     </ul>
                 </div>
                 </Card>
+                  </div>
+             
                 )) 
                 }
             </div>

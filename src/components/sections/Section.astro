@@ -4,7 +4,9 @@ const sectionClass = `${noMaxWidth ? "" : "px-5"}
                       flex justify-center overflow-hidden lg:block 
                       ${bgColor ? bgColor : "bg-white"} 
                       ${withMin ? "min-h-[100vh]" : ""} 
-                      ${rounded ? "rounded-3xl" : ""}`;
+                      ${rounded ? "rounded-3xl" : ""}
+                      shadow-section
+                      `;
 ---
 
 <section id={id} class={sectionClass}>

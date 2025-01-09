@@ -14,6 +14,9 @@ export default {
       "2xl": "1536px",
     },
     extend: {
+      boxShadow: {
+        section: "5px 5px 41px 5px #2e2c2c",
+      },
       animation: {
         "infinite-scroll": "infinite-scroll 30s linear infinite",
         "reverse-infinite-scroll":
