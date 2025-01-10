@@ -4,9 +4,9 @@ const base = "/projet-gb/";
 const menuitems = [
   { id: "home", href: "", label: "À propos" },
   { id: "services", href: "#services", label: "Services" },
-  { id: "cases", href: "#cases", label: "Succès" },
-  { id: "process", href: "#process", label: "Mode opératoire" },
-  { id: "team", href: "#team", label: "Équipe" },
+  // { id: "cases", href: "#cases", label: "Succès" },
+  // { id: "process", href: "#process", label: "Mode opératoire" },
+  // { id: "team", href: "#team", label: "Équipe" },
   { id: "testimonials", href: "#testimonials", label: "Témoignages" },
   { id: "themes", href: "themes", label: "Thèmes" },
 ];
@@ -49,23 +49,18 @@ const menuitems = [
   displayActive();
   window.addEventListener("scroll", displayActive);
 </script> -->
-<div class="mt-20">
+<div class="">
   <nav
-    class="w-full top-0 left-0 z-50 fixed bg-white backdrop-blur-[40px] text-xl"
+    class="motion-preset-slide-down motion-duration-[2000ms] shadow-section w-full top-0 left-0 z-50 absolute bg-white px-10"
   >
-    <StickyHeader
-      class="flex flex-col lg:flex-row justify-between items-center my-1 px-6 md:px-32"
-      activeClass="py-2 bg-white/80 border-gray-200 backdrop-blur-lg"
-      defaultClass="py-5 border-transparent"
-      scrollY={50}
-    >
+    <header class="flex flex-col lg:flex-row justify-between items-center p-4">
       <Astronav>
         <div class="flex w-full lg:w-auto items-center justify-between">
           <a
             href={base}
             class="flex items-center lg:space-x-3 rtl:space-x-reverse"
           >
-            <img src="/projet-gb/logo_artesemys.png" class="h-12" alt="Logo" />
+            <img src="/projet-gb/logo_artesemys.png" class="h-9" alt="Logo" />
           </a>
           <div class="block lg:hidden">
             <div id="menu-icon" class="w-8 h-8 text-black cursor-pointer">
@@ -104,11 +99,11 @@ const menuitems = [
         </div>
 
         <nav
-          class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0 lg:bg-purple text-white h-[40px] items-center rounded-l-full rounded-r-full bg-opacity-50 backdrop-blur-[40px]"
+          class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0 text-dark h-[30px] items-center rounded-l-full rounded-r-full bg-opacity-50 backdrop-blur-[40px]"
           id="menu-items"
         >
           <ul
-            class="bg-purple font-medium flex flex-col p-4 lg:p-0 mt-4 border rounded-xl lg:flex-row lg:px-1 lg:mt-0 lg:border-0"
+            class="font-medium flex flex-col p-4 lg:p-0 mt-4 border rounded-xl lg:flex-row lg:px-1 lg:mt-0 lg:border-0"
           >
             {
               menuitems.map((item) => (
@@ -120,7 +115,7 @@ const menuitems = [
                   <li class="px-3 ">
                     <a
                       href={base + item.href}
-                      class=" text-base mobile-nav-link block py-2 px-3  rounded lg:bg-transparent lg:p-0 "
+                      class="font-light text-xs uppercase mobile-nav-link block py-2 px-3  rounded lg:bg-transparent lg:p-0 "
                       data-close-menu="true"
                     >
                       {item.label}
@@ -156,7 +151,7 @@ const menuitems = [
           </a>
         </div>
       </div> -->
-    </StickyHeader>
+    </header>
   </nav>
 </div>
 

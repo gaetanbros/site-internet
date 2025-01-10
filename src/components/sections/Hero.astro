@@ -1,33 +1,66 @@
 ---
 /* import { Image } from "astro:assets";
 import StarShape2 from "../../assets/shapes/StarShape2.svg";*/
-import Sponsors from "@/components/sections/Sponsors.astro";
-import MobilePaintings from "./MobilePaintings.astro";
-import Section from "./Section.astro";
+const sectionClass = ` top-0
+                      flex justify-center overflow-hidden lg:block 
+                      min-h-screen
+                      shadow-section
+                      
+                      `;
 ---
 
-<Section id="home">
-  <div class="relative flex flex-col-reverse items-center" id="hero">
-    <div class="row items-center md:pb-30 md:pt-10 text-center w-full lg:w-5/6">
-      <div class="relative space-y-3">
-        <h1
-          class="font-bold text-2xl pt-10 lg:pt-0 lg:text-5xl lg:font-medium leading-none text-center motion-preset-slide-right motion-duration-2000"
-        >
-          Et si l’art devenait la clé de la cohésion et de l’engagement de vos
-          équipes ?
-        </h1>
-        <MobilePaintings />
+<script>
+  $(document).ready(function () {
+    var screenHeight = $(window).height();
+    $(window).on("scroll", function () {
+      //.05 is a multiplier for the font size
+      //14 is the default font size
+      $("#mainText").css(
+        "font-size",
+        Math.min(160 + $(this).scrollTop() * (1 + 0.01), 1000)
+      );
+      // I need to hide the section if we scroll past the height of the screen
+      if ($(this).scrollTop() > screenHeight) {
+        $("#homeContainer").css("display", "none");
+      } else {
+        $("#homeContainer").css("display", "flex");
+      }
+    });
+  });
+</script>
+<section id="home2" class={sectionClass}>
+  <!-- style="background-image: url('/projet-gb/landscapes/landscape1.jpg');" -->
 
-        <h6
-          class="min-h-32 text-sm pb-5 lg:pb-0 pt-6 lg:pt-10 lg:text-xl font-light leading-none md:text-4xl text-center motion-opacity-in-0 motion-preset-slide-left motion-duration-2000"
-        >
-          Chez Artesemys, nous fusionnons l'art et la culture pour inspirer les
-          équipes et améliorer la collaboration. <br /> Découvrez comment nos conférences
-          uniques peuvent élever la dynamique de votre environnement de travail.
-        </h6>
-      </div>
-      <!--  -->
+  <div
+    class={` w-full fixed min-h-[100vh] flex justify-center items-center`}
+    id="homeContainer"
+  >
+    <video autoplay loop muted id="myVideo">
+      <source src="video/anim.mp4" type="video/mp4" />
+    </video>
+    <div
+      class="absolute flex flex-col items-center h-full justify-center w-1/2"
+    >
+      <h6
+        id="mainText"
+        0
+        class="uppercase text-[10rem] font-bold text-white motion-preset-fade-lg motion-duration-[5000ms]"
+        style={{ "text-shadow": "0 0 2px #000" }}
+      >
+        <!--  style={{
+          background: "url('/public/video/anim_2k.gif')",
+          "background-size": "cover",
+          "-webkit-background-clip": "text",
+          "-webkit-text-fill-color": "transparent",
+        }} -->
+        Artésémys
+      </h6>
+      <h6
+        class="text-[3rem] font-bold text-white text-center motion-preset-fade-lg motion-duration-[5000ms]"
+        style={{ "text-shadow": "0 0 2px #000" }}
+      >
+        Transformez votre équipe avec du coaching culturel
+      </h6>
     </div>
   </div>
-  <Sponsors />
-</Section>
+</section>

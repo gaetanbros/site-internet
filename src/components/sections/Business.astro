@@ -1,0 +1,96 @@
+---
+/* import { Image } from "astro:assets";
+import StarShape2 from "../../assets/shapes/StarShape2.svg";*/
+import { Image } from "astro:assets";
+import assemblee from "../../assets/business/assemblee.jpeg";
+import portraitVeermer from "../../assets/paintings/portraits/portrait2.jpg";
+import portraitJoconde from "../../assets/paintings/portraits/portrait8.jpg";
+import RightArrow from "../../assets/shapes/RightArrow.svg";
+import Section from "./Section.astro";
+---
+
+<Section id="home">
+  <div
+    class="pt-[4rem] relative grid grid-flow-col grid-rows-4 justify-end bg-white gap-4 max-h-screen px-10"
+  >
+    <div class="row-span-4 p-4 grid">
+      <div class="items-left text-left w-full flex flex-col justify-between">
+        <div class="relative space-y-3">
+          <div class="flex flex-row align-top">
+            <h1
+              class="w-3/4 font-bold text-3xl pt-10 lg:pt-0 lg:text-5xl lg:font-medium leading-none text-left motion-preset-slide-right motion-duration-2000"
+            >
+              L’art, clé de la cohésion et de l’engagement des équipes.
+            </h1>
+            <div
+              class="w-1/2 max-h-[2rem] rounded-full relative top-10 scale-110"
+            >
+              <Image
+                src={portraitJoconde}
+                alt={""}
+                class="animate-blink2 shadow-2xl"
+                style={{
+                  "clip-path": "ellipse(36% 6% at 50% 22%)",
+                  transform: "translate(-1rem, -4rem)",
+                }}
+              />
+            </div>
+          </div>
+
+          <div class="w-1/2 max-h-[2rem] rounded-full relative top-10">
+            <Image
+              src={portraitVeermer}
+              alt={""}
+              class="animate-blink shadow-2xl"
+              style={{
+                "clip-path": "ellipse(36% 6% at 50% 40%)",
+                transform: "translate(-3rem, -8rem)",
+              }}
+            />
+          </div>
+        </div>
+        <div class="pt-44 text-lg font-light">
+          <button
+            class="bg-purple hover:bg-white hover:text-dark hover:border-purple hover:border text-white font-bold py-6 px-14 rounded-full"
+          >
+            Nos services
+          </button>
+          <button
+            class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+          >
+            <span>Contactez-nous</span>
+            <Image src={RightArrow} alt={""} class="w-6 h-6 ml-2" />
+          </button>
+        </div>
+        <p class="text-sm text-light w-3/4 bottom-0 pb-10 text-slate-400">
+          Transformez vos équipes grâce à nos conférences théâtralisées. <br />A
+          travers différents thèmes nous saurons répondre à vos problématique et
+          offrir un moment de cohésion à vous équipes
+        </p>
+      </div>
+    </div>
+
+    <div class="col-span-2">
+      <div class="row-span-2 pt-4">
+        <Image
+          src={assemblee}
+          alt={""}
+          class="shadow-2xl rounded-2xl h-auto w-[35rem]"
+        />
+      </div>
+      <div class="row-span-2 col-span-2 pt-8">
+        <div
+          class="shadow-2xl bg-purple text-white rounded-2xl w-[35rem] min-h-[12rem] h-full p-4 text-xl font-light"
+        >
+          <h1 class="font-bold text-2xl pb-12">Nos conférences</h1>
+          <span class="font-light">
+            Chez Artesemys, nous fusionnons l'art et la culture pour inspirer
+            les équipes et améliorer la collaboration. <br /> Découvrez comment nos
+            conférences uniques peuvent élever la dynamique de votre environnement
+            de travail.</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</Section>

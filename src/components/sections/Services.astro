@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import assemblee from "../../assets/business/assemblee.jpeg";
 import Card from "../../components/ui/Card.astro";
 import priceData from "../../data/priceDats.json";
 import SectionMotion from "../ui/SectionMotion.astro";
@@ -33,16 +31,14 @@ const description =
   "Imaginez une activité qui allie culture, créativité et cohésion d’équipe. Chez Artésémys, nous proposons une expérience unique où l’art devient un outil puissant pour fédérer vos collaborateurs.";
 ---
 
-<Section id="services" withMin>
-  <div class="mt-[80px] mb-[60px]">
+<Section id="services" >
+  <div class="pt-[4rem] bg-white p-4 ">
     <SectionTitle
       sectionTitle="Séances personnalisées"
       description={description}
     />
-    <SectionMotion>  <div class="lg:w-3/4 h-50 pb-4 flex-col items-center mx-auto pt-4 lg:pt-0 lg:my-[60px]">
-             <Image src={assemblee} alt={''} class="shadow-xl"/>
-            </div>
-  <div class="overflow-x-scroll lg:overflow-x-hidden flex pb-4 lg:grid lg:grid-cols-3 lg:grid-rows-1 gap-4 p-0 lg:p-10 ">
+    <SectionMotion>  
+  <div class="bg-white overflow-x-scroll lg:overflow-x-hidden flex pb-4 lg:grid lg:grid-cols-3 lg:grid-rows-1 gap-4 p-0 lg:p-10 ">
                 {
                 priceData.map((item) => (
                   <div class="w-[90%]  lg:w-auto flex-shrink-0 space-x-8 lg:space-x-0 ">
