@@ -1,14 +1,92 @@
 ---
-/* import { Image } from "astro:assets";
-import StarShape2 from "../../assets/shapes/StarShape2.svg";*/
-const sectionClass = ` top-0
-                      flex justify-center overflow-hidden lg:block 
-                      min-h-screen
-                      
-                      `;
+import { Image } from "astro:assets";
+import portrait1 from "../../assets/paintings/portraits/portrait1.jpg";
+import portrait10 from "../../assets/paintings/portraits/portrait10.jpg";
+import portrait11 from "../../assets/paintings/portraits/portrait11.jpg";
+import portrait13 from "../../assets/paintings/portraits/portrait13.jpg";
+import portrait14 from "../../assets/paintings/portraits/portrait14.jpg";
+import portrait15 from "../../assets/paintings/portraits/portrait15.jpg";
+import portrait16 from "../../assets/paintings/portraits/portrait16.jpg";
+import portrait17 from "../../assets/paintings/portraits/portrait17.jpg";
+import portrait18 from "../../assets/paintings/portraits/portrait18.jpg";
+import portrait2 from "../../assets/paintings/portraits/portrait2.jpg";
+import portrait3 from "../../assets/paintings/portraits/portrait3.jpg";
+import portrait4 from "../../assets/paintings/portraits/portrait4.jpg";
+import portrait5 from "../../assets/paintings/portraits/portrait5.jpg";
+import portrait6 from "../../assets/paintings/portraits/portrait6.jpg";
+import portrait8 from "../../assets/paintings/portraits/portrait8.jpg";
+import portrait9 from "../../assets/paintings/portraits/portrait9.jpg";
+const paintings = [
+  {
+    src: portrait1,
+    alt: "portrait1",
+  },
+  {
+    src: portrait2,
+    alt: "portrait2",
+  },
+  {
+    src: portrait3,
+    alt: "portrait3",
+  },
+  {
+    src: portrait6,
+    alt: "portrait4",
+  },
+  {
+    src: portrait8,
+    alt: "portrait5",
+  },
+  {
+    src: portrait4,
+    alt: "portrait6",
+  },
+  {
+    src: portrait5,
+    alt: "portrait8",
+  },
+  {
+    src: portrait9,
+    alt: "portrait9",
+  },
+  {
+    src: portrait10,
+    alt: "portrait10",
+  },
+  {
+    src: portrait11,
+    alt: "portrait11",
+  },
+
+  {
+    src: portrait13,
+    alt: "portrait13",
+  },
+  {
+    src: portrait14,
+    alt: "portrait14",
+  },
+  {
+    src: portrait15,
+    alt: "portrait15",
+  },
+  {
+    src: portrait16,
+    alt: "portrait16",
+  },
+  {
+    src: portrait17,
+    alt: "portrait17",
+  },
+  {
+    src: portrait18,
+    alt: "portrait18",
+  },
+];
+const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
 ---
 
-<script>
+<!-- <script>
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   $(document).ready(function () {
@@ -31,39 +109,71 @@ const sectionClass = ` top-0
       }
     });
   });
-</script>
-<section id="home2" class={sectionClass}>
-  <!-- style="background-image: url('/projet-gb/landscapes/landscape1.jpg');" -->
-
+</script> -->
+<section id="home2" class="min-h-screen w-full bg-purple overflow-hidden">
   <div
-    class={`z-[-1] w-full fixed min-h-[40rem] lg:min-h-[100vh] flex justify-center items-center `}
+    class="fixed inset-0 flex items-center justify-center"
     id="homeContainer"
   >
-    <video class="block" autoplay loop muted playsinline id="myVideo">
-      <source src="/public/video/anim.mp4" type="video/mp4" />
-      <source src="/public/video/anim.webm" type="video/webm" />
-    </video>
     <div
-      class="backdrop-contrast-75 backdrop-hue-rotate-[45deg] absolute flex flex-col items-center h-full justify-center w-full"
+      class="z-[-1] grid grid-cols-6 gap-12 bg-purple
+      [mask-image:linear-gradient(to_top,_transparent_0%,rgba(85,65,131,1.0)_128px,rgba(85,65,131,0.5)_0%)]"
     >
-      <h6
-        id="mainText"
-        class="font-allenoire text-[1rem] lg:text-[10rem] font-light text-white motion-preset-fade-lg motion-duration-[2000ms]"
-      >
-        <!--  style={{
+      {
+        Array.from({ length: 6 }).map((_, i) => (
+          <div class={"relative overflow-hidden"}>
+            <div
+              class={i % 2 === 0 ? "animate-scroll-up" : "animate-scroll-down"}
+            >
+              {/* Duplicated content for seamless scrolling */}
+
+              {shuffle(paintings).map((_, k) => (
+                <div class=" my-12  bg-dark min-h-[16rem] min-w-[14rem] max-h-[16rem] max-w-[14rem]">
+                  <Image
+                    src={_.src}
+                    alt={_.alt}
+                    class="min-h-[16rem] min-w-[14rem] max-h-[16rem] max-w-[14rem]  object-fit"
+                  />
+                </div>
+              ))}
+            </div>
+            <div
+              aria-hidden="true"
+              class={i % 2 === 0 ? "animate-scroll-up" : "animate-scroll-down"}
+            >
+              {/* Duplicated content for seamless scrolling */}
+
+              {shuffle(paintings).map((_, k) => (
+                <div class=" my-12  bg-dark min-h-[16rem] min-w-[14rem] max-h-[16rem] max-w-[14rem]">
+                  <Image
+                    src={_.src}
+                    alt={_.alt}
+                    class="min-h-[16rem] min-w-[14rem] max-h-[16rem] max-w-[14rem]  object-fit"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="absolute flex flex-col items-center h-full justify-center w-full">
+    <h6
+      id="mainText"
+      class="font-allenoire text-[1rem] lg:text-[10rem] font-light text-white"
+    >
+      <!--  style={{
           background: "url('/public/video/anim_2k.gif')",
           "background-size": "cover",
           "-webkit-background-clip": "text",
           "-webkit-text-fill-color": "transparent",
         }} -->
-        Artésémys
-      </h6>
-      <h6
-        class="font-allenoire lg:text-[3rem] text-white text-center motion-preset-fade-lg motion-duration-[2000ms]"
-      >
-        Transformez votre équipe avec du coaching culturel
-      </h6>
-    </div>
+      Artésémys
+    </h6>
+    <h6 class="font-allenoire lg:text-[3rem] text-white text-center">
+      Transformez votre équipe avec du coaching culturel
+    </h6>
   </div>
 </section>
 

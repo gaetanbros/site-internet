@@ -1,5 +1,5 @@
 ---
-import Navbar from "../components/ui/Navbar.astro";
+import Navbar from "@/components/ui/Navbar.astro";
 import "../styles/global.css";
 import "../styles/gradients.css";
 import "../styles/parallax.css";
@@ -29,12 +29,12 @@ const { ...props } = Astro.props;
   <body class="font-bricolage overflow-x-hidden">
     <main>
       <div
-        class="z-8 absolute top-0 right-[50%] w-[50%] h-full bg-white transform translate-x-0 origin-right animate-reveal-center-left"
+        class="z-[11] absolute top-0 right-[50%] w-[50%] h-full bg-white transform translate-x-0 origin-right animate-reveal-center-left"
       >
       </div>
 
       <div
-        class="z-8 absolute top-0 left-[50%] w-[50%] h-full bg-white transform translate-x-0 origin-left animate-reveal-center-right"
+        class="z-[11] absolute top-0 left-[50%] w-[50%] h-full bg-white transform translate-x-0 origin-left animate-reveal-center-right"
       >
       </div>
       <Navbar />

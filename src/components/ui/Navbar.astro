@@ -50,16 +50,19 @@ const menuitems = [
   window.addEventListener("scroll", displayActive);
 </script> -->
 <div class="">
-  <nav class="w-full top-0 left-0 z-9 absolute bg-white px-10">
+  <nav
+    class="z-10 w-full justify-center top-0 left-0 absolute bg-white bg-opacity-95 px-10 shadow-section"
+  >
     <header class="flex flex-col lg:flex-row justify-between items-center p-4">
       <Astronav>
         <div class="flex w-full lg:w-auto items-center justify-between">
           <a
             href={base}
-            class="flex items-center lg:space-x-3 rtl:space-x-reverse"
+            class="flex items-center justify-center h-12 w-[11rem] rounded-full bg-white bg-opacity-50"
           >
             <img src="/projet-gb/logo_artesemys.png" class="h-9" alt="Logo" />
           </a>
+
           <div class="block lg:hidden">
             <div id="menu-icon" class="w-8 h-8 text-black cursor-pointer">
               <!-- Open (hamburger) icon -->
@@ -97,7 +100,7 @@ const menuitems = [
         </div>
 
         <nav
-          class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0 text-dark h-[30px] items-center rounded-l-full rounded-r-full bg-opacity-50 backdrop-blur-[40px]"
+          class="z-10 hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0 text-dark h-[30px] items-center rounded-l-full rounded-r-full bg-white bg-opacity-50 backdrop-blur-[40px]"
           id="menu-items"
         >
           <ul
@@ -108,12 +111,12 @@ const menuitems = [
                 <div class="relative">
                   <div
                     id={item.id + "-active"}
-                    class="bg-white h-[24px] w-full rounded-2xl absolute z-0 top-0 hidden"
+                    class="bg-white h-[24px] w-full rounded-2xl absolute z-10 top-0 hidden"
                   />
                   <li class="px-3 ">
                     <a
                       href={base + item.href}
-                      class="font-light text-xs uppercase mobile-nav-link block py-2 px-3  rounded lg:bg-transparent lg:p-0 "
+                      class="font-light text-sm uppercase mobile-nav-link block py-2 px-3  rounded lg:bg-transparent lg:p-0 "
                       data-close-menu="true"
                     >
                       {item.label}

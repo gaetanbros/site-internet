@@ -4,6 +4,7 @@ import priceData from "../../data/priceDats.json";
 import SectionMotion from "../ui/SectionMotion.astro";
 import SectionTitle from "../ui/SectionTitle.astro";
 import Section from "./Section.astro";
+import Sponsors from "./Sponsors.astro";
 
 /* import p1 from "../../assets/paintings/paint3.jpg";
 import p2 from "../../assets/paintings/paint6.jpg";
@@ -32,8 +33,9 @@ const description =
 ---
 
 <Section id="services" >
-  <div class="pt-[4rem] bg-white p-4 ">
-    <SectionTitle
+  <div
+    class="pt-[4rem] relative  justify-end bg-white gap-4  px-10"
+  >    <SectionTitle
       sectionTitle="Séances personnalisées"
       description={description}
     />
@@ -82,8 +84,9 @@ const description =
                 )) 
                 }
             </div>
-          
+          <Sponsors />
     </SectionMotion>
-    
-  </div>
+
+  </div>      
+
 </Section>

@@ -76,12 +76,12 @@
   }
 
   :root {
-    --green: #000;
+    --green: #554183;
     --black: rgb(0, 0, 0);
     --dark: #191a23;
     --gray: #f3f3f3;
     --white: #fff;
-    --purple: #000;
+    --purple: #554183;
   }
 
   /* @layer base {

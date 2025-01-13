@@ -65,21 +65,23 @@ const testimonials = [
 ---
 
 <Section id="testimonials" withMin>
-  <div class="mt-[80px] mb-[60px]">
+  <div
+    class="pt-[4rem] relative grid grid-flow-col grid-rows-1 justify-center bg-white min-h-screen gap-4 px-10"
+  >
     <!--  <SectionTitle
       sectionTitle="Témoignages"
       description="Découvrez ce que nos clients satisfaits disent de nous : lisez nos témoignages pour en savoir plus sur nos services"
     /> -->
     <div
-      class="min-w-screen min-h-screen bg-gray-50 flex flex-col items-center justify-center content-center"
+      class="min-w-screen min-h-screen bg-gray-50 flex flex-col items-center justify-center content-center mb-20"
     >
       <div class="w-full bg-white px-5 text-gray-800">
         <div class="w-full max-w-6xl mx-auto">
           <div
-            class="text-center max-w-xl mx-auto intersect-once intersect:motion-delay-200 intersect:motion-preset-slide-right intersect:motion-duration-2000"
+            class="text-center mx-auto intersect-once intersect:motion-delay-200 intersect:motion-preset-slide-right intersect:motion-duration-2000"
           >
             <h1 class="text-4xl lg:text-6xl font-bold text-gray-600 mb-5">
-              Ce que nos clients <br />disent de nous.
+              Ce que nos clients disent de nous.
             </h1>
 
             <div class="text-center mb-10">
@@ -101,17 +103,11 @@ const testimonials = [
             <div class="flex overflow-x-scroll space-x-8">
               {
                 testimonials.map((testimonial) => (
-                  <div class="flex-shrink-0 w-3/4 lg:w-1/2 rounded-lg bg-white  lg:p-5 text-gray-800 font-light mb-6">
+                  <div class="shadow-sm flex-shrink-0 w-3/4 lg:w-1/2 rounded-lg bg-white  lg:p-5 text-gray-800 font-light mb-6">
                     <div class="flex items-center mb-4">
-                      {Array.from({ length: 5 }).map((_, index) => (
-                        <svg
-                          class="w-4 h-4 fill-current text-yellow-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M10 15l-5.878 3.09 1.122-6.545L.488 7.91l6.564-.955L10 1l2.948 5.955 6.564.955-4.756 4.635 1.122 6.545z" />
-                        </svg>
-                      ))}
+                      <div class="relative w-1/3 flex  items-center">
+                        <Image src={testimonial.logo} alt="" />
+                      </div>
                     </div>
                     <div class="w-full">
                       <p class="leading-tight">
@@ -120,16 +116,12 @@ const testimonials = [
                         </span>
                       </p>
                     </div>{" "}
-                    <div class="flex flex-row pt-1">
-                      <div class="flex-grow lg:p-3 text-start w-2/3 text-xs lg:text-sm">
+                    <div class="flex flex-row pt-1 justify-end w-full">
+                      <div class=" lg:p-3 text-start w-1/2 text-xs lg:text-sm">
                         <h6 class="text-dark ">{testimonial.employee}</h6>{" "}
                         <h6 class="font-bold  text-gray-600">
                           {testimonial.position}, {testimonial.company}
                         </h6>
-                      </div>
-                      <div class="border-l-2 border-gray-200 h-auto mx-4" />
-                      <div class="relative w-1/3 flex  items-center">
-                        <Image src={testimonial.logo} alt="" />
                       </div>
                     </div>
                   </div>

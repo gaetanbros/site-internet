@@ -22,9 +22,21 @@ import Section from "./Section.astro";
             >
               L’art, clé de la cohésion et de l’engagement des équipes.
             </h1>
-            <div
-              class="w-1/2 max-h-[2rem] rounded-full relative top-10 scale-150"
-            >
+          </div>
+
+          <div class="inline-flex">
+            <div class="w-1/2 max-h-[2rem] rounded-full relative top-10">
+              <Image
+                src={portraitVeermer}
+                alt={""}
+                class="animate-blink shadow-2xl"
+                style={{
+                  "clip-path": "ellipse(36% 6% at 50% 40%)",
+                  transform: "translate(-3rem, -8rem)",
+                }}
+              />
+            </div>
+            <div class="w-1/2 max-h-[2rem] rounded-full relative top-10">
               <Image
                 src={portraitJoconde}
                 alt={""}
@@ -35,18 +47,6 @@ import Section from "./Section.astro";
                 }}
               />
             </div>
-          </div>
-
-          <div class="w-1/2 max-h-[2rem] rounded-full relative top-10">
-            <Image
-              src={portraitVeermer}
-              alt={""}
-              class="animate-blink shadow-2xl"
-              style={{
-                "clip-path": "ellipse(36% 6% at 50% 40%)",
-                transform: "translate(-3rem, -8rem)",
-              }}
-            />
           </div>
         </div>
         <div class="pt-44 text-lg font-light">

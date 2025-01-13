@@ -48,21 +48,19 @@ const sponsors = [
 const { isReversed } = Astro.props;
 
 const animate = isReversed
-  ? "flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-reverse-infinite-scroll"
+  ? "animate-reverse-infinite-scroll"
   : "flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll";
 ---
 
-<div
-  class="p-4 bg-white grid grid-cols-6 gap-4 items-center motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-md motion-delay-200"
->
-  <div class="col-span-2 lg:col-span-1">
-    <p class="text-xs leading-3 lg:leading-none lg:text-sm font-light">
+<div class="p-4 bg-white grid grid-cols-6 gap-4 items-center h-[10rem]">
+  <div class="col-span-2 lg:col-span-1 bg-white">
+    <p class="text-xs leading-3 lg:leading-none lg:text-sm font-light bg-white">
       Nos partenaires qui nous ont fait confiance
     </p>
   </div>
-  <div class="col-span-4 lg:col-span-5">
+  <div class="col-span-4 lg:col-span-5 bg-white">
     <div
-      class="py-5 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
+      class="bg-white py-5 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
     >
       <ul class={animate}>
         {

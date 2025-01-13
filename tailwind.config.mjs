@@ -4,7 +4,13 @@ import tailwindcssMotion from "tailwindcss-motion";
 
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-  safelist: ["border-black", "border-gray-200", "text-slate-400"],
+  safelist: [
+    "border-black",
+    "border-gray-200",
+    "text-slate-400",
+    "animate-scroll-down",
+    "animate-scroll-up",
+  ],
   theme: {
     screens: {
       sm: "640px",
@@ -26,6 +32,8 @@ export default {
         "infinite-scroll": "infinite-scroll 40s linear infinite",
         "reverse-infinite-scroll":
           "reverse-infinite-scroll 25s linear infinite",
+        "scroll-up": "scroll 40s linear infinite",
+        "scroll-down": "reverseScroll 40s linear infinite",
       },
       keyframes: {
         blink: {
@@ -57,6 +65,14 @@ export default {
         "reverse-infinite-scroll": {
           from: { transform: "translateX(-100%)" },
           to: { transform: "translateX(0)" },
+        },
+        scroll: {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(-50%)" },
+        },
+        reverseScroll: {
+          from: { transform: "translateY(-50%)" },
+          to: { transform: "translateY(0)" },
         },
         "reveal-center-outward": {
           "0%": {

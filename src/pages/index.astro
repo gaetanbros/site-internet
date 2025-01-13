@@ -60,10 +60,10 @@ import MainLayout from "@/layouts/MainLayout.astro";
     previousPos = lastVisibleSectionPos;
   };
 
-  displayActive();
+  //displayActive();
 
   //document.addEventListener("DOMContentLoaded", snapHome);
-  window.addEventListener("scroll", displayActive);
+  // window.addEventListener("scroll", displayActive);
 </script>
 
 <MainLayout title="Artésémys" description="">
@@ -74,15 +74,14 @@ import MainLayout from "@/layouts/MainLayout.astro";
   <Parallax landscape={1} />
 
   <Services />
-  <Sponsors />
 
   <Parallax landscape={2} />
 
   <Cases />
   <Parallax landscape={3} />
 
-  <Process />
-  <Parallax landscape={4} />
+  <!-- <Process />
+  <Parallax landscape={4} /> -->
 
   <Team />
   <Parallax landscape={5} />
