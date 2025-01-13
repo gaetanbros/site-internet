@@ -41,7 +41,7 @@ const description =
   <div class="bg-white overflow-x-scroll lg:overflow-x-hidden flex pb-4 lg:grid lg:grid-cols-3 lg:grid-rows-1 gap-4 p-0 lg:p-10 ">
                 {
                 priceData.map((item) => (
-                  <div class="w-[90%]  lg:w-auto flex-shrink-0 space-x-8 lg:space-x-0 ">
+                  <div class="relative w-[90%]  lg:w-auto flex-shrink-0 space-x-8 lg:space-x-0 " style={{bottom: `${item.bottom}px`}}>
    <Card isUnderline={true}>
                 <div class={`flex flex-col p-6 mx-auto max-w-lg text-center h-full ${item.bgClass}`} style={{color: item.tickColor}}>
                     <h3 class="mb-4 text-xl lg:text-2xl font-semibold">{item.title}</h3>

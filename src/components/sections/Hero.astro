@@ -4,12 +4,13 @@ import StarShape2 from "../../assets/shapes/StarShape2.svg";*/
 const sectionClass = ` top-0
                       flex justify-center overflow-hidden lg:block 
                       min-h-screen
-                      shadow-section
                       
                       `;
 ---
 
 <script>
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
   $(document).ready(function () {
     var screenHeight = $(window).height();
     $(window).on("scroll", function () {
@@ -17,7 +18,10 @@ const sectionClass = ` top-0
       //14 is the default font size
       $("#mainText").css(
         "font-size",
-        Math.min(160 + $(this).scrollTop() * (1 + 0.01), 1000)
+        Math.min(
+          (isMobile && 16) || 160 + $(this).scrollTop() * (1 + 0.0001),
+          1000
+        )
       );
       // I need to hide the section if we scroll past the height of the screen
       if ($(this).scrollTop() > screenHeight) {
@@ -32,20 +36,19 @@ const sectionClass = ` top-0
   <!-- style="background-image: url('/projet-gb/landscapes/landscape1.jpg');" -->
 
   <div
-    class={` w-full fixed min-h-[100vh] flex justify-center items-center`}
+    class={`z-[-1] w-full fixed min-h-[40rem] lg:min-h-[100vh] flex justify-center items-center `}
     id="homeContainer"
   >
-    <video autoplay loop muted id="myVideo">
-      <source src="video/anim.mp4" type="video/mp4" />
+    <video class="block" autoplay loop muted playsinline id="myVideo">
+      <source src="/public/video/anim.mp4" type="video/mp4" />
+      <source src="/public/video/anim.webm" type="video/webm" />
     </video>
     <div
-      class="absolute flex flex-col items-center h-full justify-center w-1/2"
+      class="backdrop-contrast-75 backdrop-hue-rotate-[45deg] absolute flex flex-col items-center h-full justify-center w-full"
     >
       <h6
         id="mainText"
-        0
-        class="uppercase text-[10rem] font-bold text-white motion-preset-fade-lg motion-duration-[5000ms]"
-        style={{ "text-shadow": "0 0 2px #000" }}
+        class="font-allenoire text-[1rem] lg:text-[10rem] font-light text-white motion-preset-fade-lg motion-duration-[2000ms]"
       >
         <!--  style={{
           background: "url('/public/video/anim_2k.gif')",
@@ -56,11 +59,72 @@ const sectionClass = ` top-0
         Artésémys
       </h6>
       <h6
-        class="text-[3rem] font-bold text-white text-center motion-preset-fade-lg motion-duration-[5000ms]"
-        style={{ "text-shadow": "0 0 2px #000" }}
+        class="font-allenoire lg:text-[3rem] text-white text-center motion-preset-fade-lg motion-duration-[2000ms]"
       >
         Transformez votre équipe avec du coaching culturel
       </h6>
     </div>
   </div>
 </section>
+
+<!-- BG REVEAL -->
+<!-- <html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+      }
+
+      .container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .reveal {
+        position: absolute;
+        width: 0;
+        height: 100vh;
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        animation: revealBackground 2s ease-in-out forwards;
+      }
+
+      @keyframes revealBackground {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+
+      .content {
+        position: relative;
+        color: white;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 2em;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="reveal"></div>
+      <div class="content">
+        <h1>Background Reveal</h1>
+        <p>Click refresh to see the animation again</p>
+      </div>
+    </div>
+  </body>
+</html>
+ -->

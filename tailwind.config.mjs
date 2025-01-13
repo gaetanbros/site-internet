@@ -15,12 +15,15 @@ export default {
     },
     extend: {
       boxShadow: {
-        section: "5px 5px 41px 5px #2e2c2c",
+        section: "5px 5px 41px 5px #000",
       },
       animation: {
+        "reveal-center-left": "reveal-center-outward 2s ease-out forwards",
+        "reveal-center-right":
+          "reveal-center-outward-right 2s ease-out forwards",
         blink: "blink 4s  cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite",
         blink2: "blink2 4s  cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite",
-        "infinite-scroll": "infinite-scroll 30s linear infinite",
+        "infinite-scroll": "infinite-scroll 40s linear infinite",
         "reverse-infinite-scroll":
           "reverse-infinite-scroll 25s linear infinite",
       },
@@ -55,10 +58,27 @@ export default {
           from: { transform: "translateX(-100%)" },
           to: { transform: "translateX(0)" },
         },
+        "reveal-center-outward": {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(-100%)",
+          },
+        },
+        "reveal-center-outward-right": {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(100%)",
+          },
+        },
       },
       fontFamily: {
         grotesk: ["Grotesk", "sans-serif"],
         bricolage: ["Bricolage", "sans-serif"],
+        allenoire: ["Allenoire", "serif"],
       },
       fontWeight: {
         regular: 400,

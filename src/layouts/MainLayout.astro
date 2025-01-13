@@ -26,8 +26,17 @@ const { ...props } = Astro.props;
     }
   </style>
   <script src="../utils/lenis"></script>
-  <body class="font-bricolage">
+  <body class="font-bricolage overflow-x-hidden">
     <main>
+      <div
+        class="z-8 absolute top-0 right-[50%] w-[50%] h-full bg-white transform translate-x-0 origin-right animate-reveal-center-left"
+      >
+      </div>
+
+      <div
+        class="z-8 absolute top-0 left-[50%] w-[50%] h-full bg-white transform translate-x-0 origin-left animate-reveal-center-right"
+      >
+      </div>
       <Navbar />
       <slot />
       <!-- <Footer /> -->
