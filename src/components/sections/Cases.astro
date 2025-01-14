@@ -1,9 +1,12 @@
 ---
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import Section from "./Section.astro";
 
-import { Slider } from "../react/Slider";
+import { Slider } from "../react/Slider2";
 import SectionMotion from "../ui/SectionMotion.astro";
 import SectionTitle from "../ui/SectionTitle.astro";
+const allThemes: CollectionEntry<"blog">[] = await getCollection("blog");
 ---
 
 <!-- <div class="bg-purple w-full h-full absolute z-[-1]">
@@ -11,17 +14,13 @@ import SectionTitle from "../ui/SectionTitle.astro";
 </div>
  -->
 <Section id="cases" withMin noMaxWidth bgColor="bg-purple">
-  <div
-    class="pt-[4rem] relative grid grid-flow-col grid-rows-4 justify-end bg-purple gap-4 max-h-screen px-10"
-  >
-    <div class="mt-[80px] mb-[50px] px-5">
-      <SectionTitle
-        sectionTitle="Les thèmes à succès"
-        description="Nos thèmes les plus populaires. Vous pouvez retrouver la liste complète de nos thèmes en cliquant sur cette description ou sur l'onglet Thèmes depuis la barre de navigation."
-        link="/projet-gb/themes"
-        textColor="text-white"
-      />
-      <SectionMotion> <Slider client:load /></SectionMotion>
-    </div>
+  <div class="pt-[4rem] relative justify-end bg-purple gap-4 px-10">
+    <SectionTitle
+      sectionTitle="Les thèmes à succès"
+      description="Nos thèmes les plus populaires. Vous pouvez retrouver la liste complète de nos thèmes en cliquant sur cette description ou sur l'onglet Thèmes depuis la barre de navigation."
+      link="/projet-gb/themes"
+      textColor="text-white"
+    />
+    <SectionMotion> <Slider themes={allThemes} client:load /></SectionMotion>
   </div>
 </Section>

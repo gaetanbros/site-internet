@@ -82,6 +82,8 @@
     --gray: #f3f3f3;
     --white: #fff;
     --purple: #554183;
+    --purple-light: #8971b8;
+    --purple-flash: hsl(281.853, 100%, 68%);
   }
 
   /* @layer base {

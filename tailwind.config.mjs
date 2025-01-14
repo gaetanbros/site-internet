@@ -107,6 +107,8 @@ export default {
         gray: "var(--gray)",
         white: "var(--white)",
         purple: "var(--purple)",
+        "purple-flash": "var(--purple-flash)",
+        "purple-light": "var(--purple-light)",
       },
     },
   },
