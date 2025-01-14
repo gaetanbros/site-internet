@@ -49,13 +49,13 @@ export default {
         },
         blink2: {
           "0%": {
-            "clip-path": "ellipse(36% 6% at 50% 22%)",
+            "clip-path": "ellipse(37% 5% at 50% 22%)",
           },
           "12%": {
-            "clip-path": "ellipse(36% 0% at 50% 22%)",
+            "clip-path": "ellipse(37% 0% at 50% 22%)",
           },
           "14%, 100%": {
-            "clip-path": "ellipse(36% 6% at 50% 22%)",
+            "clip-path": "ellipse(37% 5% at 50% 22%)",
           },
         },
         "infinite-scroll": {
