@@ -13,7 +13,7 @@ const textCs = textColor || "text-dark";
     </h1>
     <p class="w-auto">
       {
-        (!link && description) || (
+        (!link && <span class={textCs}>{description}</span>) || (
           <a href={link} class={textCs}>
             {description}
           </a>

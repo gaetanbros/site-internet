@@ -10,6 +10,8 @@ export default {
     "text-slate-400",
     "animate-scroll-down",
     "animate-scroll-up",
+    "bottom-[-10px]",
+    "bottom-[10px]",
   ],
   theme: {
     screens: {

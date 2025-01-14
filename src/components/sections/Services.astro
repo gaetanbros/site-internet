@@ -34,18 +34,18 @@ const description =
 
 <Section id="services" >
   <div
-    class="pt-[4rem] relative  justify-end bg-white gap-4  px-10"
+    class="pt-[4rem] relative  justify-end bg-white gap-4  px-1 lg:px-10"
   >    <SectionTitle
       sectionTitle="Séances personnalisées"
       description={description}
     />
     <SectionMotion>  
-  <div class="bg-white overflow-x-scroll lg:overflow-x-hidden flex pb-4 lg:grid lg:grid-cols-3 lg:grid-rows-1 gap-4 p-0 lg:p-10 ">
+  <div class="bg-white overflow-x-scroll lg:overflow-x-hidden flex pb-4 lg:grid lg:grid-cols-3 lg:grid-rows-1 gap-4 p-0 pt-4 lg:p-10 ">
                 {
                 priceData.map((item) => (
-                  <div class="relative w-[90%]  lg:w-auto flex-shrink-0 space-x-8 lg:space-x-0 " style={{bottom: `${item.bottom}px`}}>
+                  <div class={`relative w-[90%]  lg:w-auto flex-shrink-0 space-x-8 lg:space-x-0 lg:bottom-[${item.bottom}px]`} >
    <Card isUnderline={true}>
-                <div class={`flex flex-col p-6 mx-auto max-w-lg text-center h-full ${item.bgClass}`} style={{color: item.tickColor}}>
+                <div class={`flex flex-col p-6 mx-auto  text-center h-full ${item.bgClass}`} style={{color: item.tickColor}}>
                     <h3 class="mb-4 text-xl lg:text-2xl font-semibold">{item.title}</h3>
                     <p class="text-sm font-light text-gray-500 sm:text-md pb-5">{item.description}</p>
                  

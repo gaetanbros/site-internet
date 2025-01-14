@@ -5,40 +5,54 @@ import SectionMotion from "../ui/SectionMotion.astro";
 import SectionTitle from "../ui/SectionTitle.astro";
 import Section from "./Section.astro";
 
-const description =
-  "Rencontrez notre équipe qui vous accompagnera dans la transformation de vos équipes.";
+const description = "";
 ---
 
 <Section id="team" withMin>
-  <div class="pt-[4rem] relative justify-end bg-white gap-4 max-h-screen px-10">
-    <SectionTitle sectionTitle="Équipe" description={description} />
+  <div
+    class="pt-[4rem] relative justify-end bg-white gap-4 lg:max-h-screen px-2 lg:px-10"
+  >
+    <SectionTitle sectionTitle="Qui suis-je ?" description={description} />
     <SectionMotion>
       <div
         class="mt-8 lg:mt-0 lg:pt-0 relative flex flex-col-reverse items-center md:flex-row"
       >
         <div class="row items-center pb-10 md:w-7/12 md:pb-30">
-          <div class="text-left space-y-3">
-            <h1
-              class="text-2xl font-medium leading-none md:text-4xl text-center md:text-left"
-            >
-              Rencontrez Gaëtan, Fondateur et CEO
-            </h1>
+          <div class="text-left space-y-3 md:pr-12">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <h1
+                class="text-2xl font-medium leading-none md:text-4xl text-center md:text-left"
+              >
+                Gaëtan Bros
+              </h1><img
+                src={"/projet-gb/logo_artesemys.png"}
+                alt="Hero Ilustration"
+                loading="lazy"
+                class="pb-5 h-20"
+              />
+            </div>
+
             <p
-              class="mt-6 mb-8 lg:text-md font-light sm:mb-12 text-center lg:text-left md:pr-12"
+              class="mt-6 mb-8 lg:text-md font-light sm:mb-12 text-center lg:text-left"
             >
-              Gaëtan est convaincu que l’art est bien plus qu’un simple
-              divertissement : c’est un levier puissant pour transformer nos
-              modes de travail et renforcer la cohésion des équipes. <br />Avec
-              un parcours mêlant performance artistique et conseil en
-              entreprise, il a développé une approche unique qui allie
-              créativité, interactivité et impact durable. Son ambition ? Aider
-              les entreprises et leurs collaborateurs à se reconnecter à leur
-              potentiel créatif, à partager de nouveaux savoirs et à vivre une
-              expérience collective inédite. <br />
-              Pionnier dans l’univers du coaching culturel et artistique, Gaëtan
-              s’engage à accompagner chaque client avec empathie et expertise. Son
-              but est simple : faire de chaque intervention une rencontre marquante
-              entre l’art et le monde du travail, pour inspirer, fédérer et innover.
+              Je suis <strong>convaincu</strong> que l’art est bien plus qu’un simple
+              divertissement : c’est un <strong>levier puissant</strong> pour transformer
+              nos modes de travail et <strong
+                >renforcer la cohésion des équipes</strong
+              >. Avec un parcours mêlant performance artistique et conseil en
+              entreprise, j’ai développé une approche unique qui allie
+              <strong>créativité, interactivité et impact durable</strong>.
+              <br />Mon ambition ? Aider les entreprises et leurs collaborateurs
+              à se <strong
+                >reconnecter à leur potentiel créatif, à partager de nouveaux
+                savoirs et à vivre une expérience collective inédite</strong
+              >. <br />Pionnier dans l’univers du coaching culturel et
+              artistique, je m’engage à accompagner chaque client avec empathie
+              et expertise. Mon but est simple : faire de chaque intervention
+              <strong
+                >une rencontre marquante entre l’art et le monde du travail,
+                pour inspirer, fédérer et innover</strong
+              >.
             </p>
           </div>
         </div>

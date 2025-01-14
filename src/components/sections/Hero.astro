@@ -84,6 +84,9 @@ const paintings = [
   },
 ];
 const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
+const sizeClass =
+  "lg:min-h-[16rem] lg:min-w-[14rem] lg:max-h-[16rem] lg:max-w-[14rem]  object-fit";
+const imgContainerClass = `my-12  bg-dark ${sizeClass}`;
 ---
 
 <!-- <script>
@@ -120,7 +123,7 @@ const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
     }}
   >
     <div
-      class="z-[-1] grid grid-cols-6 gap-12 bg-purple
+      class="z-[-1] grid grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-12 bg-purple
       [mask-image:linear-gradient(to_top,_transparent_0%,rgba(85,65,131,1.0)_128px,rgba(85,65,131,0.5)_0%)]"
     >
       {
@@ -132,12 +135,8 @@ const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
               {/* Duplicated content for seamless scrolling */}
 
               {shuffle(paintings).map((_, k) => (
-                <div class=" my-12  bg-dark min-h-[16rem] min-w-[14rem] max-h-[16rem] max-w-[14rem]">
-                  <Image
-                    src={_.src}
-                    alt={_.alt}
-                    class="min-h-[16rem] min-w-[14rem] max-h-[16rem] max-w-[14rem]  object-fit"
-                  />
+                <div class={imgContainerClass}>
+                  <Image src={_.src} alt={_.alt} class={sizeClass} />
                 </div>
               ))}
             </div>
@@ -148,12 +147,8 @@ const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
               {/* Duplicated content for seamless scrolling */}
 
               {shuffle(paintings).map((_, k) => (
-                <div class=" my-12  bg-dark min-h-[16rem] min-w-[14rem] max-h-[16rem] max-w-[14rem]">
-                  <Image
-                    src={_.src}
-                    alt={_.alt}
-                    class="min-h-[16rem] min-w-[14rem] max-h-[16rem] max-w-[14rem]  object-fit"
-                  />
+                <div class={imgContainerClass}>
+                  <Image src={_.src} alt={_.alt} class={sizeClass} />
                 </div>
               ))}
             </div>
@@ -165,7 +160,7 @@ const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
   <div class="absolute flex flex-col items-center h-full justify-center w-full">
     <h6
       id="mainText"
-      class="font-allenoire text-[1rem] lg:text-[10rem] font-light text-white"
+      class="font-allenoire text-[3rem] lg:text-[10rem] font-light text-white"
     >
       <!--  style={{
           background: "url('/public/video/anim_2k.gif')",
@@ -175,8 +170,10 @@ const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
         }} -->
       Artésémys
     </h6>
-    <h6 class="font-allenoire lg:text-[3rem] text-white text-center">
-      Transformez votre équipe avec du coaching culturel
+    <h6
+      class="font-allenoire text-[1rem] lg:text-[3rem] text-white text-center"
+    >
+      <strong>Transformez</strong> votre équipe avec du coaching culturel
     </h6>
   </div>
 </section>

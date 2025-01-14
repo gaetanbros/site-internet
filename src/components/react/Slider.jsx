@@ -1,82 +1,90 @@
-import e2 from "../../assets/elements/element2.png";
-import e3 from "../../assets/elements/element3.png";
-import e1 from "/src/assets/elements/element1.png";
+import classNames from "classnames";
+import { useEffect, useRef, useState } from "react";
+
 /* import landscape from "../../assets/paintings/landscapes/landscape1.jpg";
  */
-import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
-const successStories = [
-  {
-    title: "Veermer, la lumière du silence",
-    summary:
-      "Pourquoi une simple femme affublée d'une perle ou une laitière peuvent-elles nous émouvoir si fortement trois siècles après leur réalisation ? Comment un tel génie a-t-il pu être oublié pendant près de deux siècles ? Parcourez l’âge d’or hollandais, et découvrez les secrets d’un Vermeer dans l’intimité de ses peintures, qui n’ont pas fini de nous émerveiller.",
-    image: e3,
-  },
-  {
-    title: "Les mystérieuses citées d’or : Les trésors du Pérou",
-    summary:
-      "Immenses glyphes dont les figures ne sont visibles que du ciel, divinités étranges et colorés sur des pots de terres, cités désertes, tombes comblent d’or, tous ces vestiges sont autant de signes de la grandeur des civilisations Péruviennes. Venez décrypter ces indices magnifiques et mystérieux, plongez dans la création des ancêtres des Incas.",
-    image: e2,
-  },
-  {
-    title: "Eros et Psyché : la plus belle des histoires d’amour",
-    summary:
-      "Eros, enfant d’Aphrodite, embrase le cœur de ceux qu’il touche avec ses flèches. Les mythes grecs en font parfois un dieu fondamental de la création, et d’autres fois l’initiateur du désordre passionnel. Ce démon ambigu du désir n’eut qu’un amour et pas des moindres puisque c’est avec Psyché, la plus belle des humaines, dont le nom signifie en grec l’âme.",
-    image: e1,
-  },
-];
-const Image = ({ activeIndex }) => (
-  <AnimatePresence mode="wait">
-    <motion.div
-      key={activeIndex}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-    >
-      <img
-        src={successStories[activeIndex]?.image.src}
-        alt="Star Shape"
-        className="motion-scale-y-loop-105 motion-scale-x-loop-105 motion-duration-2000 max-w-[10rem] w-[10rem] lg:max-w-[20rem] lg:w-[20rem]"
-      />
-    </motion.div>
-  </AnimatePresence>
-);
-export function Slider() {
-  const [activeIndex, setActiveIndex] = useState(0);
+
+export function Slider({ themes }) {
+  //get only the first 5 themes
+
+  const [activeItem, setActiveItem] = useState(5);
+  const wrapperRef = useRef(null);
+  const timeoutRef = useRef(null);
+
+  useEffect(() => {
+    if (!wrapperRef.current) return;
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    wrapperRef.current.style.setProperty(
+      "--transition",
+      "600ms cubic-bezier(0.22, 0.61, 0.36, 1)"
+    );
+
+    timeoutRef.current = setTimeout(() => {
+      wrapperRef.current?.style.removeProperty("--transition");
+    }, 900);
+
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [activeItem]);
 
   return (
-    <div className="flex flex-col lg:flex-row justify-between rounded-[45px] lg:py-10 bg-purple text-white">
-      <div className="lg:hidden flex flex-row  justify-center items-center rounded-[45px] ">
-        <Image activeIndex={activeIndex} />
-      </div>
-      <div className="pt-4 lg:pt-0 flex-row lg:flex-col lg:w-1/2 lg:pr-10 relative">
-        {successStories.map((story, index) => (
-          <div
-            key={index + "tes"}
-            className={`mb-4 border-b pb-1 ${activeIndex === index ? "border-white" : "border-zinc-500"}`}
-          >
-            <h1
-              className={`uppercase font-bold cursor-pointer pb-2  text-xl md:text-2xl ${activeIndex === index ? "text-white" : "text-zinc-500"}`}
-              onClick={() => setActiveIndex(index)}
+    <div className="flex h-full w-full items-center justify-center pb-20">
+      <div className="w-screen max-w-[100%] overflow-scroll   p-5 rounded-xl">
+        <ul
+          ref={wrapperRef}
+          className="group flex  gap-3 h-[22rem] md:h-[640px] flex-row md:gap-[1.5%] "
+        >
+          {themes.map((theme, index) => (
+            <li
+              onClick={() => setActiveItem(index)}
+              aria-current={activeItem === index}
+              className={classNames(
+                "relative cursor-pointer w-[35%] md:w-[8%]  [&[aria-current='true']]:w-[100%] [&[aria-current='true']]:max-w-[1280px]",
+                "[transition:width_var(--transition,200ms_ease-in)]",
+                "before-block before:absolute before:bottom-0 before:left-[-10px] before:right-[-10px] before:top-0 before:hidden before:bg-white",
+                " md:hover:w-[15%]"
+              )}
+              key={theme.data.title}
             >
-              {story.title}
-            </h1>
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{
-                opacity: activeIndex === index ? 1 : 0,
-                height: activeIndex === index ? "auto" : 0,
-              }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="overflow-hidden"
-            >
-              <p className="text-md pb-2 text-white">{story.summary}</p>
-            </motion.div>
-          </div>
-        ))}
-      </div>
-      <div className="hidden flex-row lg:flex-col lg:w-1/2 lg:flex justify-center items-center bg-white  shadow-2xl rounded-l-[45px]">
-        <Image activeIndex={activeIndex} />
+              <div className="relative h-full w-full overflow-hidden rounded-2xl bg-[#c9c6c7]">
+                <img
+                  className="  max-w-none object-scale-down lg:object-cover h-[22rem]  md:h-[640px] w-auto"
+                  src={"/projet-gb/themes-full/" + theme.data.authImage}
+                  alt={theme.data.title}
+                />
+                <div
+                  className={classNames(
+                    "inset-0 opacity-25 duration-300 before:absolute lg:before:bottom-0 lg:before:left-[-546px] lg:before:right-0 lg:before:top-[-148px] before:z-10 before:bg-texture  lg:after:bottom-[28px] after:left-0 after:right-[-434px] after:top-0 after:z-10 after:bg-texture absolute transition-opacity",
+                    activeItem === index ? "opacity-25" : "opacity-0"
+                  )}
+                />
+                <div
+                  className={classNames(
+                    " bottom-8 w-full p-4 transition-[transform,opacity] absolute  bg-dark bg-opacity-50 backdrop-blur-xl",
+                    activeItem === index
+                      ? "opacity-100 motion-preset-fade-lg motion-duration-2000"
+                      : " opacity-0"
+                  )}
+                >
+                  <div className="p-1 lg:p-4">
+                    <p className="text-xs uppercase text-purple-flash md:text-lg">
+                      {theme.data.title}
+                    </p>
+                    <p className="text-xs font-bold md:text-sm text-white">
+                      {theme.data.summary}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
