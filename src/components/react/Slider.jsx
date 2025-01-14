@@ -35,16 +35,17 @@ export function Slider({ themes }) {
 
   return (
     <div className="flex h-full w-full items-center justify-center pb-20">
-      <div className="w-screen max-w-[100%] overflow-scroll   p-5 rounded-xl">
+      <div className="snap-mandatory snap-x w-screen max-w-[100%] overflow-scroll   p-5 rounded-xl">
         <ul
           ref={wrapperRef}
-          className="group flex  gap-3 h-[22rem] md:h-[640px] flex-row md:gap-[1.5%] "
+          className="relative group flex  gap-3 h-[22rem] md:h-[640px] flex-row md:gap-[1.5%] "
         >
           {themes.map((theme, index) => (
             <li
               onClick={() => setActiveItem(index)}
               aria-current={activeItem === index}
               className={classNames(
+                "snap-center",
                 "relative cursor-pointer w-[35%] md:w-[8%]  [&[aria-current='true']]:w-[100%] [&[aria-current='true']]:max-w-[1280px]",
                 "[transition:width_var(--transition,200ms_ease-in)]",
                 "before-block before:absolute before:bottom-0 before:left-[-10px] before:right-[-10px] before:top-0 before:hidden before:bg-white",
@@ -54,7 +55,8 @@ export function Slider({ themes }) {
             >
               <div className="relative h-full w-full overflow-hidden rounded-2xl bg-[#c9c6c7]">
                 <img
-                  className="  max-w-none object-scale-down lg:object-cover h-[22rem]  md:h-[640px] w-auto"
+                  aria-current={activeItem === index}
+                  className="max-w-none object-scale-down lg:object-cover h-[22rem]  md:h-[640px] w-auto"
                   src={"/projet-gb/themes-full/" + theme.data.authImage}
                   alt={theme.data.title}
                 />
@@ -66,7 +68,7 @@ export function Slider({ themes }) {
                 />
                 <div
                   className={classNames(
-                    " bottom-8 w-full p-4 transition-[transform,opacity] absolute  bg-dark bg-opacity-50 backdrop-blur-xl",
+                    "max-h-[10rem] bottom-8 w-full p-4 transition-[opacity] absolute  bg-dark bg-opacity-50 backdrop-blur-xl",
                     activeItem === index
                       ? "opacity-100 motion-preset-fade-lg motion-duration-2000"
                       : " opacity-0"
@@ -76,7 +78,7 @@ export function Slider({ themes }) {
                     <p className="text-xs uppercase text-purple-flash md:text-lg">
                       {theme.data.title}
                     </p>
-                    <p className="text-xs font-bold md:text-sm text-white">
+                    <p className="text-xs font-bold md:text-sm text-white ">
                       {theme.data.summary}
                     </p>
                   </div>

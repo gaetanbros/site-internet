@@ -136,7 +136,7 @@ const imgContainerClass = `my-12  bg-dark ${sizeClass}`;
 
               {shuffle(paintings).map((_, k) => (
                 <div class={imgContainerClass}>
-                  <Image src={_.src} alt={_.alt} class={sizeClass} />
+                  <Image src={_.src} alt={_.alt} class={sizeClass} priority />
                 </div>
               ))}
             </div>
@@ -148,7 +148,7 @@ const imgContainerClass = `my-12  bg-dark ${sizeClass}`;
 
               {shuffle(paintings).map((_, k) => (
                 <div class={imgContainerClass}>
-                  <Image src={_.src} alt={_.alt} class={sizeClass} />
+                  <Image src={_.src} alt={_.alt} class={sizeClass} priority />
                 </div>
               ))}
             </div>
