@@ -24,6 +24,7 @@ export default {
     extend: {
       boxShadow: {
         section: "5px 5px 41px 5px #000",
+        "section-small": "5px 5px 25px 1px #000",
       },
       animation: {
         "reveal-center-left": "reveal-center-outward 2s ease-out forwards",

@@ -2,9 +2,7 @@
 import { Image } from "astro:assets";
 import Facebook from "../../assets/facebook.svg";
 import Linkedin from "../../assets/linkedin.svg";
-import Logo from "../../assets/logo-alt.svg";
 import Twitter from "../../assets/twitter.svg";
-import ShortForm from "../ui/ShortForm.astro";
 
 const logos = [
   { name: "Facebook", src: Facebook, link: "https://facebook.com" },
@@ -15,16 +13,19 @@ const logos = [
 const links = [
   { name: "À propos", href: "" },
   { name: "Services", href: "#services" },
-  { name: "Use Cases", href: "#cases" },
-  { name: "Pricing", href: "#Testimonials" },
-  { name: "Blog", href: "#Home" },
+  { name: "Thèmes", href: "#cases" },
+  //{ name: "Pricing", href: "#Testimonials" },
+  //{ name: "Blog", href: "#Home" },
 ];
 ---
 
-<section class="sm:px-5">
-  <div class="w-full max-w-[1240px] mx-auto">
+<section class="px-5 bg-white relative">
+  <div class="w-full">
     <div
-      class="px-[15px] bg-dark text-gray py-[55px] lg:px-[60px] sm:rounded-t-[45px]"
+      class="px-[15px] text-dark py-[55px] lg:px-[60px] rounded-t-[45px]"
+      style={{
+        "background-color": "#fdf7ff",
+      }}
     >
       <div>
         <div
@@ -32,14 +33,19 @@ const links = [
         >
           <picture>
             <a href="#home">
-              <Image src={Logo} alt="Logo for Kreatif Brand" />
+              <img
+                src={"/projet-gb/logo_artesemys.png"}
+                alt="Hero Ilustration"
+                loading="lazy"
+                class="pb-5 h-20"
+              />
             </a>
           </picture>
-          <ul class="flex flex-col sm:flex-row gap-5">
+          <ul class="flex flex-row gap-5">
             {
               links.map((link) => {
                 return (
-                  <li class="text-center">
+                  <li class="text-center text-dark">
                     <a class="underline" href={link.href}>
                       {link.name}
                     </a>
@@ -65,51 +71,22 @@ const links = [
           </ul>
         </div>
 
-        <div class="flex flex-col lg:flex-row mt-[66px] mb-[51px]">
+        <div class="flex flex-col lg:flex-row mt-[1.75rem] lg:mt-[66px]">
           <div
             class="flex text-center lg:text-start flex-col w-full lg:w-[30%]"
           >
-            <h3 class="mb-5 text-center md:text-left text-2xl text-green">
-              Contact us
+            <h3 class="mb-5 text-center md:text-left text-2xl text-dark">
+              Nous contacter
             </h3>
-            <div class="flex flex-col justify-between gap-4">
-              <span> Email: examplemail.com </span>
-              <span> Phone: +123 456 789 </span>
+            <div class="flex flex-col justify-between">
+              <span> Email: artesemys@gmail.com </span>
+              <span> Phone: +33 6 00 00 00 00 </span>
               <span class="lg:w-3/4">
                 Address: 1234 Street Name, City Name, Country Name
               </span>
             </div>
           </div>
-          <div class="flex-grow my-10 lg:my-0 lg:ml-12">
-            <ShortForm />
-          </div>
         </div>
-      </div>
-
-      <div class="h-[1px] bg-gray mb-5"></div>
-      <div
-        class="flex flex-col lg:flex-row h-20 justify-center mt-4 text-center md:justify-between md:mt-0"
-      >
-        >&nbsp
-        <span>
-          Credits (
-          <a
-            href="https://www.olgaskuja.design/"
-            target="_blank"
-            class="underline">Olga</a
-          >,
-          <a
-            href="https://esteban-vasquez.netlify.app/"
-            target="_blank"
-            class="underline">Esteban</a
-          >)
-          <span> &</span>
-          <a
-            class="underline"
-            href="https://creativecommons.org/licenses/by/4.0/"
-            target="_blank">Licence</a
-          >
-        </span>
       </div>
     </div>
   </div>
