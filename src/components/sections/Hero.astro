@@ -159,10 +159,9 @@ const paintings = [
 ];
  */
 const shuffle = (arr: any[]) => [...arr].sort(() => Math.random() - 0.5);
-const sizeClass =
-  " rounded-full lg:min-h-[auto] lg:min-w-[14rem] lg:max-h-[auto] lg:max-w-[14rem]  ";
-const imgContainerClass = `my-12  bg-dark ${sizeClass} `;
-const imgClass = `  object-fit ${sizeClass} `;
+const sizeClass = " rounded-full lg:min-h-[auto]  lg:max-h-[auto]   ";
+const imgContainerClass = `my-12  bg-dark  ${sizeClass} `;
+const imgClass = `   min-w-full ${sizeClass} `;
 ---
 
 <script>
