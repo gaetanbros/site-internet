@@ -11,9 +11,9 @@ import Section from "./Section.astro";
 
 <Section id="home">
   <div
-    class="pt-[1rem] relative flex flex-col lg:grid lg:grid-flow-col lg:grid-rows-4 justify-end bg-white gap-4 lg:max-h-screen px-1 lg:px-10"
+    class="pt-[1rem] relative flex flex-col lg:grid lg:grid-flow-col lg:grid-col-2 lg:grid-rows-4 justify-end bg-white gap-4 lg:max-h-screen px-1 lg:px-10"
   >
-    <div class="flex flex-col p-4 lg:row-span-4 lg:grid">
+    <div class="flex flex-col p-4 lg:row-span-4 lg:col-span-1 lg:grid">
       <div
         class="items-left text-center lg:text-left w-full flex flex-col justify-between"
       >
@@ -52,7 +52,9 @@ import Section from "./Section.astro";
           </div>
         </div>
         <div class="pt-10 lg:pt-44 text-lg font-light text-center lg:text-left">
-          <p class="text-sm text-light lg:w-3/4 bottom-0 pb-10 text-slate-400">
+          <p
+            class="text-sm lg:text- text-bold lg:w-3/4 bottom-0 pb-10 text-slate-600"
+          >
             Transformez vos équipes grâce à nos conférences théâtralisées. <br
             />A travers différents thèmes nous saurons répondre à vos
             problématique et offrir un moment de cohésion à vous équipes
@@ -74,7 +76,7 @@ import Section from "./Section.astro";
       </div>
     </div>
 
-    <div class="flex flex-col lg:col-span-3 pb-8">
+    <div class="flex flex-col lg:col-span-1 pb-8">
       <div class="row-span-2 lg:pt-4">
         <Image
           src={assemblee}

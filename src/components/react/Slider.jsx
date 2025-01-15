@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 export function Slider({ themes }) {
   //get only the first 5 themes
 
-  const [activeItem, setActiveItem] = useState(5);
+  const [activeItem, setActiveItem] = useState(0);
   const wrapperRef = useRef(null);
   const timeoutRef = useRef(null);
 
@@ -56,9 +56,13 @@ export function Slider({ themes }) {
               <div className="relative h-full w-full overflow-hidden rounded-2xl bg-[#c9c6c7]">
                 <img
                   aria-current={activeItem === index}
-                  className="max-w-none object-scale-down lg:object-cover h-[22rem]  md:h-[640px] w-auto"
+                  style={{ transition: "transform 0.15s ease-in" }}
+                  className="translate-x-[-35%] [&[aria-current='true']]:translate-x-[0%] max-w-none object-scale-down lg:object-cover h-[22rem]  md:h-[640px] w-auto"
                   src={"/projet-gb/themes-full/" + theme.data.authImage}
                   alt={theme.data.title}
+                  loading="lazy"
+                  height="300px"
+                  width="300px"
                 />
                 <div
                   className={classNames(

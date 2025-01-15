@@ -16,6 +16,7 @@ import portrait5 from "../../assets/paintings/portraits/portrait5.jpg";
 import portrait6 from "../../assets/paintings/portraits/portrait6.jpg";
 import portrait8 from "../../assets/paintings/portraits/portrait8.jpg";
 import portrait9 from "../../assets/paintings/portraits/portrait9.jpg";
+
 const paintings = [
   {
     src: portrait1,
@@ -83,10 +84,85 @@ const paintings = [
     alt: "portrait18",
   },
 ];
+
+/**
+ * 
+ * @param arr 
+import artistsShit from "../../assets/themes-full/Artist's_Shit.webp";
+import bronzino from "../../assets/themes-full/Bronzino.jpg";
+import guggenheim from "../../assets/themes-full/Guggenheim.jpg";
+import klein from "../../assets/themes-full/Klein.webp";
+import rembrandt from "../../assets/themes-full/Rembrandt.jpg";
+import vermeer from "../../assets/themes-full/Vermeer.jpg";
+import abstractLandscape from "../../assets/themes-full/abstract_landscape.jpg";
+import bacchus from "../../assets/themes-full/bacchus.jpg";
+import botticelli from "../../assets/themes-full/botticelli.jpg";
+import cezanne from "../../assets/themes-full/cezanne.jpg";
+import creationAdam from "../../assets/themes-full/creation_adam.jpg";
+import creator from "../../assets/themes-full/creator.jpg";
+import cupid from "../../assets/themes-full/cupid.jpeg";
+import fragonard from "../../assets/themes-full/fragonard.jpg";
+import freud from "../../assets/themes-full/freud.jpg";
+import gauguin from "../../assets/themes-full/gauguin.jpg";
+import hammurabi from "../../assets/themes-full/hammurabi.jpg";
+import hand from "../../assets/themes-full/hand.png";
+import jacob from "../../assets/themes-full/jacob.jpg";
+import lascaux from "../../assets/themes-full/lascaux.jpg";
+import leJugementDernier from "../../assets/themes-full/le_jugement_dernier.jpeg";
+import medusa from "../../assets/themes-full/medusa.jpg";
+import mocheCulture from "../../assets/themes-full/moche_culture.jpg";
+import monaLisa from "../../assets/themes-full/mona_lisa.jpg";
+import monet from "../../assets/themes-full/monet.jpg";
+import pollock from "../../assets/themes-full/pollock.jpeg";
+import psyche from "../../assets/themes-full/psyche.jpeg";
+import rothko from "../../assets/themes-full/rothko.jpg";
+import ulysse from "../../assets/themes-full/ulysse.jpg";
+import urinoir from "../../assets/themes-full/urinoir.webp";
+import vanGogh from "../../assets/themes-full/van_gogh.jpg";
+import venusUrbin from "../../assets/themes-full/venus_urbin.webp";
+import warhol from "../../assets/themes-full/warhol.jpg";
+
+const paintings = [
+  { src: artistsShit, alt: "artistsShit" },
+  { src: bronzino, alt: "bronzino" },
+  { src: guggenheim, alt: "guggenheim" },
+  { src: klein, alt: "klein" },
+  { src: rembrandt, alt: "rembrandt" },
+  { src: vermeer, alt: "vermeer" },
+  { src: abstractLandscape, alt: "abstractLandscape" },
+  { src: bacchus, alt: "bacchus" },
+  { src: botticelli, alt: "botticelli" },
+  { src: cezanne, alt: "cezanne" },
+  { src: creationAdam, alt: "creationAdam" },
+  { src: creator, alt: "creator" },
+  { src: cupid, alt: "cupid" },
+  { src: fragonard, alt: "fragonard" },
+  { src: freud, alt: "freud" },
+  { src: gauguin, alt: "gauguin" },
+  { src: hammurabi, alt: "hammurabi" },
+  { src: hand, alt: "hand" },
+  { src: jacob, alt: "jacob" },
+  { src: lascaux, alt: "lascaux" },
+  { src: leJugementDernier, alt: "leJugementDernier" },
+  { src: medusa, alt: "medusa" },
+  { src: mocheCulture, alt: "mocheCulture" },
+  { src: monaLisa, alt: "monaLisa" },
+  { src: monet, alt: "monet" },
+  { src: pollock, alt: "pollock" },
+  { src: psyche, alt: "psyche" },
+  { src: rothko, alt: "rothko" },
+  { src: ulysse, alt: "ulysse" },
+  { src: urinoir, alt: "urinoir" },
+  { src: vanGogh, alt: "vanGogh" },
+  { src: venusUrbin, alt: "venusUrbin" },
+  { src: warhol, alt: "warhol" },
+];
+ */
 const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
 const sizeClass =
-  "rounded-full lg:min-h-[auto] lg:min-w-[14rem] lg:max-h-[auto] lg:max-w-[14rem]  object-fit";
-const imgContainerClass = `my-12  bg-dark ${sizeClass}`;
+  " rounded-full lg:min-h-[auto] lg:min-w-[14rem] lg:max-h-[auto] lg:max-w-[14rem]  ";
+const imgContainerClass = `my-12  bg-dark ${sizeClass} `;
+const imgClass = `  object-fit ${sizeClass} `;
 ---
 
 <!-- <script>
@@ -136,7 +212,15 @@ const imgContainerClass = `my-12  bg-dark ${sizeClass}`;
 
               {shuffle(paintings).map((_, k) => (
                 <div class={imgContainerClass}>
-                  <Image src={_.src} alt={_.alt} class={sizeClass} priority />
+                  <Image
+                    src={_.src}
+                    alt={_.alt}
+                    class={imgClass}
+                    priority
+                    loading="eager"
+                    width={400}
+                    height={400}
+                  />
                 </div>
               ))}
             </div>
@@ -148,7 +232,15 @@ const imgContainerClass = `my-12  bg-dark ${sizeClass}`;
 
               {shuffle(paintings).map((_, k) => (
                 <div class={imgContainerClass}>
-                  <Image src={_.src} alt={_.alt} class={sizeClass} priority />
+                  <Image
+                    src={_.src}
+                    alt={_.alt}
+                    class={imgClass}
+                    priority
+                    loading="eager"
+                    width={400}
+                    height={400}
+                  />
                 </div>
               ))}
             </div>
@@ -157,7 +249,9 @@ const imgContainerClass = `my-12  bg-dark ${sizeClass}`;
       }
     </div>
   </div>
-  <div class="absolute flex flex-col items-center h-full justify-center w-full">
+  <div
+    class="absolute flex flex-col items-center h-full justify-center w-full motion-preset-expand motion-preset-blur-down motion-duration-2000"
+  >
     <h6
       id="mainText"
       class="font-allenoire text-[3rem] lg:text-[10rem] font-light text-white"
@@ -173,7 +267,7 @@ const imgContainerClass = `my-12  bg-dark ${sizeClass}`;
     <h6
       class="font-allenoire text-[1rem] lg:text-[3rem] text-white text-center"
     >
-      <strong>Transformez</strong> votre équipe avec du coaching culturel
+      <strong>Transformez</strong> vos équipes avec du coaching culturel
     </h6>
   </div>
 </section>

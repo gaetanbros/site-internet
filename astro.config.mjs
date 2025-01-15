@@ -13,4 +13,15 @@ export default defineConfig({
     port: 4321,
     host: "192.168.1.15",
   },
+  image: {
+    service: {
+      entrypoint: "astro/assets/services/sharp",
+      config: {
+        limitInputPixels: false,
+      },
+    },
+    logLevel: "info",
+    cacheDir: "./.cache/image",
+    defaultFormat: "jpg",
+  },
 });
