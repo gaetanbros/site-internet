@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    background: white;
+    background: var(--purple);
   }
   @font-face {
     font-family: "Grotesk";

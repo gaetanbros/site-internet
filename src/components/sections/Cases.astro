@@ -13,8 +13,6 @@ const creator = allThemes.find((theme) => theme.id === "creator.md");
 const creatorIndex = allThemes.indexOf(creator);
 allThemes.splice(creatorIndex, 1);
 allThemes.splice(0, 0, creator);
-
-console.info(allThemes[0]);
 ---
 
 <!-- <div class="bg-purple w-full h-full absolute z-[-1]">
