@@ -36,7 +36,7 @@ const links = [
               <img
                 src={"/projet-gb/logo_artesemys.png"}
                 alt="Hero Ilustration"
-                loading="lazy"
+                loading="eager"
                 class="pb-5 h-20"
               />
             </a>
@@ -61,7 +61,11 @@ const links = [
                   <li>
                     <a href={logo.link} target="_blank">
                       <picture>
-                        <Image src={logo.src} alt={logo.name} />
+                        <Image
+                          src={logo.src}
+                          alt={logo.name}
+                          loading={"eager"}
+                        />
                       </picture>
                     </a>
                   </li>
