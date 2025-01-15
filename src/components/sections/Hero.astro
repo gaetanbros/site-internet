@@ -165,6 +165,27 @@ const imgContainerClass = `my-12  bg-dark ${sizeClass} `;
 const imgClass = `  object-fit ${sizeClass} `;
 ---
 
+<script>
+  $(document).ready(function () {
+    var screenWidth = $(window).width();
+    // Smallest size of columns is 14rem
+    var updateGap = () => {
+      const widthDiff = screenWidth - 1600;
+      console.info(screenWidth, widthDiff, Math.round(widthDiff / 100));
+      const gap = screenWidth / 6 / 16 - 9;
+      console.info(gap);
+      if (widthDiff >= 0) {
+        $("#background-grid").css("gap", `${gap}rem`);
+      }
+    };
+    $(window).on("resize", function () {
+      //.05 is a multiplier for the font size
+      //14 is the default font size
+      updateGap();
+    });
+    updateGap();
+  });
+</script>
 <section id="home2" class="min-h-screen w-full bg-purple overflow-hidden">
   <div
     class="fixed inset-0 flex items-center justify-center [mask-image:_linear-gradient(to_top,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)]"
@@ -175,7 +196,8 @@ const imgClass = `  object-fit ${sizeClass} `;
     }}
   >
     <div
-      class="z-[-1] grid grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-12 bg-purple
+      id="background-grid"
+      class="z-[-1] grid grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-12 2xl:gap-28 bg-purple
       [mask-image:linear-gradient(to_top,_transparent_0%,rgba(85,65,131,1.0)_128px,rgba(85,65,131,0.5)_0%)]"
     >
       {
@@ -230,7 +252,7 @@ const imgClass = `  object-fit ${sizeClass} `;
   >
     <h6
       id="mainText"
-      class="font-allenoire text-[3rem] lg:text-[10rem] font-light text-white"
+      class="font-allenoire text-[4rem] lg:text-[10rem] font-light text-white"
     >
       <!--  style={{
           background: "url('/public/video/anim_2k.gif')",
@@ -241,9 +263,9 @@ const imgClass = `  object-fit ${sizeClass} `;
       Artésémys
     </h6>
     <h6
-      class="font-allenoire text-[1rem] lg:text-[3rem] text-white text-center"
+      class="font-allenoire text-[1rem] lg:text-[3rem] text-white text-center w-3/4"
     >
-      <strong>Transformez</strong> vos équipes avec du coaching culturel
+      <strong>Stimuler la créativité</strong> de vos équipes avec du coaching culturel
     </h6>
   </div>
 </section>
