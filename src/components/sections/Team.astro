@@ -10,21 +10,21 @@ const description = "";
 
 <Section id="team" withMin>
   <div
-    class="pt-[2rem] lg:pt-[4rem] relative justify-end bg-white gap-4 lg:max-h-screen px-2 lg:px-10"
+    class="pt-[2rem] lg:pt-[4rem] relative justify-end bg-white gap-4 lg:max-h-screen lg:px-10"
   >
     <SectionTitle sectionTitle="Qui suis-je ?" description={description} />
     <SectionMotion>
       <div
-        class="mt-8 lg:mt-0 lg:pt-0 relative flex flex-col-reverse items-center md:flex-row"
+        class="mt-8 lg:mt-0 lg:pt-0 relative flex flex-col items-center md:flex-row"
       >
         <div
-          class="flex items-center pb-10 md:w-7/12 md:pb-30 md:pt-10 max-w-2xl"
+          class="flex items-center pb-10 md:w-7/12 md:pb-30 md:pt-10 lg:max-w-2xl"
         >
           <Image
             src={HeroIlust}
             alt="Hero Ilustration"
             loading="eager"
-            class="rounded-xl"
+            class="lg:rounded-xl"
           />
         </div>
         <div class="row items-center pb-10 md:w-5/12 md:pb-30">
@@ -43,7 +43,7 @@ const description = "";
             </div>
 
             <p
-              class="mt-6 mb-8 lg:text-md font-light sm:mb-12 text-center lg:text-left"
+              class="mt-6 mb-8 lg:text-md font-light sm:mb-12 text-center lg:text-left px-2 lg:px-0"
             >
               Je suis <strong class="font-bold">convaincu</strong> que l’art est
               bien plus qu’un simple divertissement : c’est un <strong

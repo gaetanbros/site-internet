@@ -9,6 +9,7 @@ import companyLogo5 from "../../assets/company/company-logo12.svg";
 import companyLogo2 from "../../assets/company/company-logo2.svg";
 import companyLogo4 from "../../assets/company/company-logo4.svg";
 import companyLogo6 from "../../assets/company/company-logo6.svg";
+import Quotes from "../../assets/shapes/Quotes.svg";
 import SectionMotion from "../ui/SectionMotion.astro";
 
 const testimonials = [
@@ -66,7 +67,7 @@ const testimonials = [
 
 <Section id="testimonials" withMin>
   <div
-    class="pt-[2rem] lg:pt-[4rem] relative grid grid-flow-col grid-rows-1 justify-center bg-white min-h-screen gap-4 px-10"
+    class="pt-[2rem] lg:pt-[4rem] relative grid grid-flow-col grid-rows-1 justify-center bg-white min-h-screen gap-4 lg:px-10"
   >
     <!--  <SectionTitle
       sectionTitle="Témoignages"
@@ -75,13 +76,13 @@ const testimonials = [
     <div
       class="min-w-screen min-h-screen bg-gray-50 flex flex-col items-center justify-center content-center mb-20"
     >
-      <div class="w-3/4 lg:w-full bg-white px-5 text-gray-800">
+      <div class="w-full bg-white px-5 text-gray-800">
         <div class="w-3/4 lg:w-full max-w-6xl mx-auto">
           <div
-            class="text-center mx-auto intersect-once intersect:motion-delay-200 intersect:motion-preset-slide-right intersect:motion-duration-2000"
+            class="text-center justify-center mx-auto intersect-once intersect:motion-delay-200 intersect:motion-preset-slide-right intersect:motion-duration-2000"
           >
             <h1 class="text-4xl lg:text-6xl font-bold text-gray-600 mb-5">
-              Ce que nos clients disent d'Artésémys.
+              Ce que nos clients <br class="lg:hidden" />disent d'Artésémys.
             </h1>
 
             <div class="text-center mb-10">
@@ -97,45 +98,50 @@ const testimonials = [
             </div>
           </div>
           <SectionMotion>
-            <div class="lg:w-3/4 h-50 pb-10 flex-col items-center mx-auto">
+            <div class="w-full h-50 pb-10 flex-col items-center mx-auto">
               <Image
                 src={clients}
                 alt=""
-                class="shadow-xl rounded-xl"
+                class="lg:shadow-xl lg:rounded-xl"
                 loading={"eager"}
               />
             </div>
-            <div class="flex overflow-x-scroll space-x-8">
-              {
-                testimonials.map((testimonial) => (
-                  <div class="shadow-sm flex-shrink-0 w-3/4 lg:w-1/2 rounded-lg bg-white  lg:p-5 text-gray-800 font-light mb-6">
-                    <div class="flex items-center mb-4">
-                      <div class="relative w-1/3 flex  items-center">
+            <div class="flex justify-center">
+              <div class="w-5/6 lg:w-full flex overflow-x-scroll flex-row">
+                {
+                  testimonials.map((testimonial) => (
+                    <div class=" flex-shrink-0 w-full lg:w-1/2 rounded-lg bg-white  lg:p-5 text-gray-800 font-light mb-6">
+                      <div class="flex items-center mb-4" />
+                      <div class="w-full flex flex-row items-center">
+                        <Image src={Quotes} alt="" class="size-6 lg:size-8" />
+                        <p class="x-auto text-xs lg:text-lg leading-none italic lg:font-bold text-gray-400 w-2/3 pl-3">
+                          {testimonial.description}
+                        </p>{" "}
                         <Image
-                          src={testimonial.logo}
+                          src={Quotes}
                           alt=""
-                          loading={"eager"}
+                          class="size-6 lg:size-8 scale-x-[-1]"
                         />
+                      </div>{" "}
+                      <div class="flex flex-row pt-1 justify-center w-full">
+                        <div class="relative w-1/3 flex  items-center">
+                          <Image
+                            src={testimonial.logo}
+                            alt=""
+                            loading={"eager"}
+                          />
+                        </div>
+                        <div class=" lg:p-3 text-start w-1/2 text-xs lg:text-sm">
+                          <h6 class="text-dark ">{testimonial.employee}</h6>{" "}
+                          <h6 class="font-bold  text-gray-600">
+                            {testimonial.position}, {testimonial.company}
+                          </h6>
+                        </div>
                       </div>
                     </div>
-                    <div class="w-full">
-                      <p class="leading-tight">
-                        <span class="text-xs lg:text-lg leading-none italic lg:font-bold text-gray-400 mx-1">
-                          " {testimonial.description} "
-                        </span>
-                      </p>
-                    </div>{" "}
-                    <div class="flex flex-row pt-1 justify-end w-full">
-                      <div class=" lg:p-3 text-start w-1/2 text-xs lg:text-sm">
-                        <h6 class="text-dark ">{testimonial.employee}</h6>{" "}
-                        <h6 class="font-bold  text-gray-600">
-                          {testimonial.position}, {testimonial.company}
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                ))
-              }
+                  ))
+                }
+              </div>
             </div>
           </SectionMotion>
         </div>
