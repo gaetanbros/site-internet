@@ -60,7 +60,7 @@ export function Slider({ themes }) {
                   className="translate-x-[-35%] [&[aria-current='true']]:translate-x-[0%] max-w-none object-scale-down lg:object-cover h-[22rem]  md:h-[640px] w-auto"
                   src={"/projet-gb/themes-full/" + theme.data.authImage}
                   alt={theme.data.title}
-                  loading="lazy"
+                  loading="eager"
                   height="300px"
                   width="300px"
                 />
