@@ -8,10 +8,10 @@ import Section from "./Section.astro";
 
 <Section id="home">
   <div
-    class="w-screen pt-[1rem] relative flex flex-col lg:grid lg:grid-flow-col lg:grid-col-4 lg:grid-rows-4 justify-end bg-white gap-4 lg:max-h-screen px-1 lg:px-5"
+    class="w-screen lg:pt-[1rem] relative flex flex-col lg:grid lg:grid-flow-col lg:grid-col-4 lg:grid-rows-4 justify-end bg-white gap-4 lg:max-h-screen px-0 lg:px-5"
   >
     <div
-      class="flex flex-col p-4 lg:row-span-4 lg:col-span-1 lg:grid pb-0 lg:pb-4"
+      class="flex flex-col lg:p-4 lg:row-span-4 lg:col-span-1 lg:grid pb-0 lg:pb-4"
     >
       <div
         class="items-left text-center lg:text-left w-full flex flex-col justify-between h-full"
@@ -19,14 +19,14 @@ import Section from "./Section.astro";
         <div class="relative space-y-3 py-4 lg:py-10">
           <div class="flex flex-row align-top">
             <h1
-              class="pl-4 w-full lg:w-full font-bold text-3xl pt-10 lg:pt-0 lg:text-5xl lg:font-medium leading-none motion-preset-slide-right motion-duration-2000"
+              class="pl-4 font-bold text-3xl pt-1 lg:pt-0 lg:text-5xl lg:font-medium leading-none motion-preset-slide-right motion-duration-2000"
             >
               L’art, clé de la cohésion et de l’engagement des équipes.
             </h1>
           </div>
         </div>
         <div
-          class="shadow-2xl bg-purple text-white rounded-xl lg:w-full lg:min-h-[12rem] p-4 text-xl font-light"
+          class="shadow-2xl bg-purple text-white lg:rounded-xl lg:w-full lg:min-h-[12rem] p-2 lg:p-4 text-xl font-light"
         >
           <h1 class="font-bold text-xl lg:text-2xl pb-3 lg:pb-6">
             Nos conférences
@@ -38,7 +38,9 @@ import Section from "./Section.astro";
             de travail.</span
           >
         </div>
-        <div class="pl-4 pt-10 text-lg font-light text-center lg:text-left">
+        <div
+          class="hidden lg:block pl-4 pt-10 text-lg font-light text-center lg:text-left"
+        >
           <button
             onclick="window.location.href='#services'"
             class="bg-purple hover:bg-white hover:text-dark hover:border-purple hover:border text-white font-bold py-6 px-14 rounded-full transition duration-500"
@@ -74,14 +76,44 @@ import Section from "./Section.astro";
         <Image
           src={assemblee}
           alt={""}
-          class="shadow-2xl rounded-xl lg:w-full lg:max-h-[90vh]"
+          class="shadow-2xl lg:rounded-xl lg:w-full lg:max-h-[90vh]"
         />
-        <p class="pt-4 text-xs lg:text-sm text-bold bottom-0 text-slate-600">
+        <p
+          class="px-1 lg:px-0 pt-4 text-xs lg:text-sm text-bold bottom-0 text-slate-600"
+        >
           Transformez vos équipes grâce à nos conférences théâtralisées. <br />A
           travers différents thèmes nous saurons répondre à vos problématique et
           offrir un moment de cohésion à vous équipes
         </p>
       </div>
+    </div>
+    <div class="lg:hidden pl-4 text-base font-light text-left inline-flex pb-4">
+      <button
+        onclick="window.location.href='#services'"
+        class="bg-purple text-white font-bold py-4 px-8 rounded-full"
+      >
+        Nos services
+      </button>
+      <button
+        onclick="window.location.href='#contact'"
+        class="bg-gray-300 text-gray-800 font-bold py-4 px-8 rounded-full inline-flex items-left"
+      >
+        <span>Contactez-nous</span>
+        <svg
+          class="w-6 h-6 ml-2 text-dark"
+          width="800px"
+          height="800px"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
+            fill="currentColor"
+            stroke="currentColor"></path>
+        </svg>
+      </button>
     </div>
   </div>
 </Section>

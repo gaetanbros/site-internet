@@ -22,10 +22,12 @@ if (creator) {
 </div>
  -->
 <Section id="cases" withMin bgColor="bg-purple">
-  <div class="pt-[4rem] relative justify-end bg-purple gap-4 lg:px-10">
+  <div
+    class="pt-[2rem] lg:pt-[4rem] relative justify-end bg-purple gap-4 lg:px-10"
+  >
     <SectionTitle
       sectionTitle="Les thèmes à succès"
-      description="Voici la liste des thèmes que nous proposons, venez les découvrir."
+      description="Voici la liste des thèmes que nous proposons, venez les découvrir. Faites-les défiler ou cliquer pour avoir plus de détails."
       textColor="text-white"
     />
     <SectionMotion> <Slider themes={allThemes} client:load /></SectionMotion>
