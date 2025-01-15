@@ -17,8 +17,18 @@ const description = "";
       <div
         class="mt-8 lg:mt-0 lg:pt-0 relative flex flex-col-reverse items-center md:flex-row"
       >
-        <div class="row items-center pb-10 md:w-7/12 md:pb-30">
-          <div class="text-left space-y-3 md:pr-12">
+        <div
+          class="flex items-center pb-10 md:w-7/12 md:pb-30 md:pt-10 max-w-2xl"
+        >
+          <Image
+            src={HeroIlust}
+            alt="Hero Ilustration"
+            loading="lazy"
+            class="rounded-xl"
+          />
+        </div>
+        <div class="row items-center pb-10 md:w-5/12 md:pb-30">
+          <div class="text-left space-y-3 md:pl-12">
             <div class="flex flex-col md:flex-row items-center justify-between">
               <h1
                 class="text-2xl font-medium leading-none md:text-4xl text-center md:text-left"
@@ -35,36 +45,33 @@ const description = "";
             <p
               class="mt-6 mb-8 lg:text-md font-light sm:mb-12 text-center lg:text-left"
             >
-              Je suis <strong>convaincu</strong> que l’art est bien plus qu’un simple
-              divertissement : c’est un <strong>levier puissant</strong> pour transformer
-              nos modes de travail et <strong
-                >renforcer la cohésion des équipes</strong
+              Je suis <strong class="font-bold">convaincu</strong> que l’art est
+              bien plus qu’un simple divertissement : c’est un <strong
+                class="font-bold"
+              >
+                levier puissant</strong
+              > pour transformer nos modes de travail et <strong
+                class="font-bold"
+              >
+                renforcer la cohésion des équipes</strong
               >. Avec un parcours mêlant performance artistique et conseil en
               entreprise, j’ai développé une approche unique qui allie
-              <strong>créativité, interactivité et impact durable</strong>.
+              <strong class="font-bold"
+                >créativité, interactivité et impact durable</strong
+              >.
               <br />Mon ambition ? Aider les entreprises et leurs collaborateurs
-              à se <strong
-                >reconnecter à leur potentiel créatif, à partager de nouveaux
-                savoirs et à vivre une expérience collective inédite</strong
+              à se reconnecter à leur potentiel créatif, à partager de nouveaux
+              savoirs et à <strong class="font-bold">
+                vivre une expérience collective inédite</strong
               >. <br />Pionnier dans l’univers du coaching culturel et
               artistique, je m’engage à accompagner chaque client avec empathie
               et expertise. Mon but est simple : faire de chaque intervention
-              <strong
-                >une rencontre marquante entre l’art et le monde du travail,
-                pour inspirer, fédérer et innover</strong
+              <strong class="font-bold">
+                une rencontre marquante entre l’art et le monde du travail, pour
+                inspirer, fédérer et innover</strong
               >.
             </p>
           </div>
-        </div>
-        <div
-          class="flex items-center pb-10 md:w-5/12 md:pb-30 md:pt-10 max-w-xl"
-        >
-          <Image
-            src={HeroIlust}
-            alt="Hero Ilustration"
-            loading="lazy"
-            class="rounded-xl"
-          />
         </div>
       </div>
     </SectionMotion>
