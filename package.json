@@ -28,6 +28,7 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.32",
     "tailwindcss-intersect": "^2.0.1",
     "tailwindcss-motion": "^1.0.1"
   }

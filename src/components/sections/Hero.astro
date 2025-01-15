@@ -166,12 +166,11 @@ const imgClass = `  object-fit ${sizeClass} `;
 ---
 
 <script>
-  $(document).ready(function () {
-    var screenWidth = $(window).width();
+  $(function () {
+    var screenWidth = $(window).width() || 0;
     // Smallest size of columns is 14rem
     var updateGap = () => {
       const widthDiff = screenWidth - 1600;
-      console.info(screenWidth, widthDiff, Math.round(widthDiff / 100));
       const gap = screenWidth / 6 / 16 - 9;
       console.info(gap);
       if (widthDiff >= 0) {
