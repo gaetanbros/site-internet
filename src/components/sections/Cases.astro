@@ -10,16 +10,18 @@ const allThemes: CollectionEntry<"blog">[] = await getCollection("blog");
 
 // I need to put the theme with the id 05creator.md in fifth position
 const creator = allThemes.find((theme) => theme.id === "creator.md");
-const creatorIndex = allThemes.indexOf(creator);
-allThemes.splice(creatorIndex, 1);
-allThemes.splice(0, 0, creator);
+if (creator) {
+  const creatorIndex = allThemes.indexOf(creator);
+  allThemes.splice(creatorIndex, 1);
+  allThemes.splice(0, 0, creator);
+}
 ---
 
 <!-- <div class="bg-purple w-full h-full absolute z-[-1]">
   <Image src={landscape} alt="landscape" class="w-full h-full object-cover" />
 </div>
  -->
-<Section id="cases" withMin noMaxWidth bgColor="bg-purple">
+<Section id="cases" withMin bgColor="bg-purple">
   <div class="pt-[4rem] relative justify-end bg-purple gap-4 lg:px-10">
     <SectionTitle
       sectionTitle="Les thèmes à succès"

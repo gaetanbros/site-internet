@@ -158,37 +158,13 @@ const paintings = [
   { src: warhol, alt: "warhol" },
 ];
  */
-const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
+const shuffle = (arr: any[]) => [...arr].sort(() => Math.random() - 0.5);
 const sizeClass =
   " rounded-full lg:min-h-[auto] lg:min-w-[14rem] lg:max-h-[auto] lg:max-w-[14rem]  ";
 const imgContainerClass = `my-12  bg-dark ${sizeClass} `;
 const imgClass = `  object-fit ${sizeClass} `;
 ---
 
-<!-- <script>
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-  $(document).ready(function () {
-    var screenHeight = $(window).height();
-    $(window).on("scroll", function () {
-      //.05 is a multiplier for the font size
-      //14 is the default font size
-      $("#mainText").css(
-        "font-size",
-        Math.min(
-          (isMobile && 16) || 160 + $(this).scrollTop() * (1 + 0.0001),
-          1000
-        )
-      );
-      // I need to hide the section if we scroll past the height of the screen
-      if ($(this).scrollTop() > screenHeight) {
-        $("#homeContainer").css("display", "none");
-      } else {
-        $("#homeContainer").css("display", "flex");
-      }
-    });
-  });
-</script> -->
 <section id="home2" class="min-h-screen w-full bg-purple overflow-hidden">
   <div
     class="fixed inset-0 flex items-center justify-center [mask-image:_linear-gradient(to_top,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)]"
@@ -210,7 +186,7 @@ const imgClass = `  object-fit ${sizeClass} `;
             >
               {/* Duplicated content for seamless scrolling */}
 
-              {shuffle(paintings).map((_, k) => (
+              {shuffle(paintings).map((_) => (
                 <div class={imgContainerClass}>
                   <Image
                     src={_.src}
@@ -230,7 +206,7 @@ const imgClass = `  object-fit ${sizeClass} `;
             >
               {/* Duplicated content for seamless scrolling */}
 
-              {shuffle(paintings).map((_, k) => (
+              {shuffle(paintings).map((_) => (
                 <div class={imgContainerClass}>
                   <Image
                     src={_.src}

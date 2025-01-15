@@ -1,5 +1,5 @@
 ---
-import { Astronav, StickyHeader } from "astro-navbar";
+import { Astronav } from "astro-navbar";
 const base = "/projet-gb/";
 const menuitems = [
   { id: "home", href: "#home", label: "À propos" },
@@ -13,42 +13,6 @@ const menuitems = [
 // Get me the selected button according to the route
 ---
 
-<!-- <script>
-  var previous = null;
-  var displayActive = () => {
-    // Get all the steps
-    const steps = document.querySelectorAll("section");
-
-    // Calculate the viewport height
-    const viewportHeight = window.innerHeight;
-
-    steps.forEach((step, index) => {
-      const stepPosition = step.getBoundingClientRect().top;
-      // If the step is within the viewport, make it visible and draw the line
-      const idPrefix = step.id;
-      const navId = idPrefix + "-active";
-      const navItem = document.getElementById(navId);
-      if (stepPosition < viewportHeight * 0.8) {
-        if (navItem) {
-          // You can adjust the trigger point
-          navItem.classList.remove("hidden");
-          navItem.classList.add("text-black"); /* 
-          navItem.classList.add("rounded-2xl");
-          navItem.classList.add("motion-translate-x-in-100");
-          navItem.classList.add("motion-duration-[2s]");
-          navItem.classList.add("motion-ease-spring-smooth"); */
-        }
-        if (!previous || previous !== navItem) {
-          navItem.classList.add("hidden");
-          navItem.classList.remio("text-black");
-        }
-        previous = navItem;
-      }
-    });
-  };
-  displayActive();
-  window.addEventListener("scroll", displayActive);
-</script> -->
 <div class="">
   <nav
     class="z-10 w-full justify-center top-0 left-0 absolute bg-opacity-95 lg:px-10 motion-preset-slide-down-lg motion-duration-2000"

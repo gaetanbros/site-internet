@@ -1,70 +1,13 @@
 ---
-import Cases from "@/components/sections/Cases.astro";
 import Business from "@/components/sections/Business.astro";
+import Cases from "@/components/sections/Cases.astro";
 import Hero from "@/components/sections/Hero.astro";
-import Paintings from "@/components/sections/Paintings.astro";
 import Parallax from "@/components/sections/Parallax.astro";
-import Process from "@/components/sections/Process.astro";
 import Services from "@/components/sections/Services.astro";
-import Sponsors from "@/components/sections/Sponsors.astro";
 import Team from "@/components/sections/Team.astro";
 import Testimonials from "@/components/sections/Testimonials.astro";
-import Navbar from "@/components/ui/Navbar.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 ---
-
-<script>
-  var landscapes = [
-    { section: "home2", pos: 10 },
-    { section: "home", pos: 1 },
-    { section: "services", pos: 2 },
-    { section: "cases", pos: 3 },
-    { section: "process", pos: 4 },
-    { section: "team", pos: 5 },
-    { section: "testimonials", pos: 5 },
-  ];
-  var previousPos = 0;
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-  var displayActive = () => {
-    // Get all the steps
-    const sections = document.querySelectorAll("section");
-    const viewportHeight = window.outerHeight;
-    var lastVisibleSection = null;
-
-    for (let i = 0; i < sections.length; i++) {
-      const section = sections[i];
-      const sectionPosition = section.getBoundingClientRect().bottom;
-      const multiplier = (!isMobile && 0.9) || 1;
-      if (sectionPosition <= viewportHeight * multiplier) {
-        lastVisibleSection = section;
-      }
-    }
-    const lastVisibleSectionId = lastVisibleSection?.id;
-    const lastVisibleSectionPos =
-      landscapes.find((l) => l.section === lastVisibleSectionId)?.pos || 0;
-    if (lastVisibleSectionPos === 10) {
-      return;
-    }
-
-    //document.getElementById("home2")?.classList.add("hidden");
-    if (lastVisibleSection) {
-      const px1 = document.getElementById(`px${lastVisibleSectionPos}`);
-      px1?.classList.remove("hidden");
-    }
-    if (previousPos && previousPos !== lastVisibleSectionPos) {
-      const px1 = document.getElementById(`px${previousPos}`);
-      px1?.classList.add("hidden");
-    }
-
-    previousPos = lastVisibleSectionPos;
-  };
-
-  //displayActive();
-
-  //document.addEventListener("DOMContentLoaded", snapHome);
-  // window.addEventListener("scroll", displayActive);
-</script>
 
 <MainLayout title="Artésémys" description="">
   <Hero />
