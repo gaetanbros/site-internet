@@ -162,7 +162,6 @@ const chunkedPaintings = splitIntoChunks(
     var updateGap = () => {
       const widthDiff = screenWidth - 1600;
       const gap = screenWidth / 6 / 16 - 9;
-      console.info(gap);
       if (widthDiff >= 0) {
         $("#background-grid").css("gap", `${gap}rem`);
       }
