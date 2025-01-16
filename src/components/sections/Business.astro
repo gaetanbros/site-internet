@@ -26,7 +26,7 @@ import Section from "./Section.astro";
           </div>
         </div>
         <div
-          class="shadow-2xl bg-purple text-white lg:rounded-xl lg:w-full lg:min-h-[12rem] p-4 lg:p-4 text-xl lg:font-light"
+          class="lg:shadow-2xl lg:bg-purple lg:text-white lg:rounded-xl lg:w-full lg:min-h-[12rem] p-4 lg:p-4 text-xl lg:font-light"
         >
           <h1 class="font-bold text-xl lg:text-2xl pb-3 lg:pb-6">
             Nos conférences
@@ -40,7 +40,7 @@ import Section from "./Section.astro";
           >
         </div>
         <div
-          class="hidden lg:block pl-4 pt-10 text-lg font-light text-center lg:text-left"
+          class="hidden lg:block pl-4 pb-16 text-lg font-light text-center lg:text-left"
         >
           <button
             onclick="window.location.href='#services'"
@@ -89,20 +89,22 @@ import Section from "./Section.astro";
         </p>
       </div>
     </div>
-    <div class="lg:hidden pl-4 text-base font-light text-left inline-flex pb-4">
+    <div
+      class="lg:hidden pl-4 text-base font-light text-left inline-flex pb-12 items-center justify-center"
+    >
       <button
         onclick="window.location.href='#services'"
-        class="bg-purple text-white font-bold py-4 px-8 rounded-full"
+        class="bg-purple text-xs text-white font-bold py-4 px-8 rounded-full"
       >
         Nos services
       </button>
       <button
         onclick="window.location.href='#contact'"
-        class="bg-gray-300 text-gray-800 font-bold py-4 px-8 rounded-full inline-flex items-left"
+        class="bg-gray-300 text-xs text-gray-800 font-bold py-4 px-8 rounded-full inline-flex items-left"
       >
         <span>Contactez-nous</span>
         <svg
-          class="w-6 h-6 ml-2 text-dark"
+          class="w-4 h-4 ml-2 text-dark"
           width="800px"
           height="800px"
           viewBox="0 0 24 24"
