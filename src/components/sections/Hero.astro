@@ -159,9 +159,10 @@ const paintings = [
 ];
  */
 const shuffle = (arr: any[]) => [...arr].sort(() => Math.random() - 0.5);
-const sizeClass = " rounded-full lg:min-h-[auto]  lg:max-h-[auto]   ";
+const sizeClass =
+  " rounded-full min-h-[14rem]  max-h-[14rem]  lg:min-h-[20rem]  lg:max-h-[20rem]   ";
 const imgContainerClass = `my-12  bg-dark  ${sizeClass} `;
-const imgClass = `   min-w-full ${sizeClass} `;
+const imgClass = `object-cover   min-w-full ${sizeClass} `;
 ---
 
 <script>
@@ -246,7 +247,7 @@ const imgClass = `   min-w-full ${sizeClass} `;
     </div>
   </div>
   <div
-    class="absolute flex flex-col items-center h-full justify-center w-full motion-preset-fade-lg motion-preset-blur-down motion-duration-2000"
+    class="backdrop-blur-sm absolute flex flex-col items-center h-full justify-center w-full motion-preset-fade-lg motion-preset-blur-down motion-duration-2000"
   >
     <h6
       id="mainText"

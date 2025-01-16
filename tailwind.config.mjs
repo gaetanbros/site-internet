@@ -35,8 +35,8 @@ export default {
         "infinite-scroll": "infinite-scroll 40s linear infinite",
         "reverse-infinite-scroll":
           "reverse-infinite-scroll 25s linear infinite",
-        "scroll-up": "scroll 40s linear infinite",
-        "scroll-down": "reverseScroll 40s linear infinite",
+        "scroll-up": "scroll 30s linear infinite",
+        "scroll-down": "reverseScroll 30s linear infinite",
       },
       keyframes: {
         blink: {
