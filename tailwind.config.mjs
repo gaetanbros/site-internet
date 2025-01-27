@@ -32,7 +32,7 @@ export default {
           "reveal-center-outward-right 2s ease-out forwards",
         blink: "blink 4s  cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite",
         blink2: "blink2 4s  cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite",
-        "infinite-scroll": "infinite-scroll 120s linear infinite",
+        "infinite-scroll": "infinite-scroll 90s linear infinite",
         "reverse-infinite-scroll":
           "reverse-infinite-scroll 25s linear infinite",
         "scroll-up": "scroll 30s linear infinite",
