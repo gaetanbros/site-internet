@@ -1,321 +1,60 @@
 ---
 import { Image } from "astro:assets";
-import portrait66 from "../../assets/paintings/portraits/portrait66.jpg";
-import portrait65 from "../../assets/paintings/portraits/portrait65.jpg";
-import portrait64 from "../../assets/paintings/portraits/portrait64.jpg";
-import portrait63 from "../../assets/paintings/portraits/portrait63.jpg";
-import portrait62 from "../../assets/paintings/portraits/portrait62.jpg";
-import portrait61 from "../../assets/paintings/portraits/portrait61.jpg";
-import portrait60 from "../../assets/paintings/portraits/portrait60.jpg";
-import portrait59 from "../../assets/paintings/portraits/portrait59.jpg";
-import portrait58 from "../../assets/paintings/portraits/portrait58.jpg";
-import portrait57 from "../../assets/paintings/portraits/portrait57.jpg";
-import portrait56 from "../../assets/paintings/portraits/portrait56.jpg";
-import portrait55 from "../../assets/paintings/portraits/portrait55.jpg";
-import portrait54 from "../../assets/paintings/portraits/portrait54.jpg";
-import portrait53 from "../../assets/paintings/portraits/portrait53.jpg";
-import portrait52 from "../../assets/paintings/portraits/portrait52.jpg";
-import portrait51 from "../../assets/paintings/portraits/portrait51.jpg";
-import portrait50 from "../../assets/paintings/portraits/portrait50.jpg";
-import portrait49 from "../../assets/paintings/portraits/portrait49.jpg";
-import portrait48 from "../../assets/paintings/portraits/portrait48.jpg";
-import portrait47 from "../../assets/paintings/portraits/portrait47.jpg";
-import portrait46 from "../../assets/paintings/portraits/portrait46.jpg";
-import portrait45 from "../../assets/paintings/portraits/portrait45.jpg";
-import portrait44 from "../../assets/paintings/portraits/portrait44.jpg";
-import portrait43 from "../../assets/paintings/portraits/portrait43.jpg";
-import portrait42 from "../../assets/paintings/portraits/portrait42.jpg";
-import portrait41 from "../../assets/paintings/portraits/portrait41.jpg";
-import portrait40 from "../../assets/paintings/portraits/portrait40.jpg";
-import portrait39 from "../../assets/paintings/portraits/portrait39.jpg";
-import portrait38 from "../../assets/paintings/portraits/portrait38.jpg";
-import portrait37 from "../../assets/paintings/portraits/portrait37.jpg";
-import portrait36 from "../../assets/paintings/portraits/portrait36.jpg";
-import portrait35 from "../../assets/paintings/portraits/portrait35.jpg";
-import portrait34 from "../../assets/paintings/portraits/portrait34.jpg";
-import portrait33 from "../../assets/paintings/portraits/portrait33.jpg";
-import portrait32 from "../../assets/paintings/portraits/portrait32.jpg";
-import portrait31 from "../../assets/paintings/portraits/portrait31.jpg";
-import portrait30 from "../../assets/paintings/portraits/portrait30.jpg";
-import portrait29 from "../../assets/paintings/portraits/portrait29.jpg";
-import portrait28 from "../../assets/paintings/portraits/portrait28.jpg";
-import portrait27 from "../../assets/paintings/portraits/portrait27.jpg";
-import portrait26 from "../../assets/paintings/portraits/portrait26.jpg";
-import portrait25 from "../../assets/paintings/portraits/portrait25.jpg";
-import portrait24 from "../../assets/paintings/portraits/portrait24.jpg";
-import portrait23 from "../../assets/paintings/portraits/portrait23.jpg";
-import portrait22 from "../../assets/paintings/portraits/portrait22.jpg";
-import portrait21 from "../../assets/paintings/portraits/portrait21.jpg";
-import portrait20 from "../../assets/paintings/portraits/portrait20.jpg";
-import portrait19 from "../../assets/paintings/portraits/portrait19.jpg";
-import portrait18 from "../../assets/paintings/portraits/portrait18.jpg";
-import portrait17 from "../../assets/paintings/portraits/portrait17.jpg";
-import portrait16 from "../../assets/paintings/portraits/portrait16.jpg";
-import portrait15 from "../../assets/paintings/portraits/portrait15.jpg";
-import portrait14 from "../../assets/paintings/portraits/portrait14.jpg";
-import portrait13 from "../../assets/paintings/portraits/portrait13.jpg";
-import portrait12 from "../../assets/paintings/portraits/portrait12.jpg";
-import portrait11 from "../../assets/paintings/portraits/portrait11.jpg";
-import portrait10 from "../../assets/paintings/portraits/portrait10.jpg";
-import portrait9 from "../../assets/paintings/portraits/portrait9.jpg";
-import portrait8 from "../../assets/paintings/portraits/portrait8.jpg";
-import portrait7 from "../../assets/paintings/portraits/portrait7.jpg";
-import portrait6 from "../../assets/paintings/portraits/portrait6.jpg";
-import portrait5 from "../../assets/paintings/portraits/portrait5.jpg";
-import portrait4 from "../../assets/paintings/portraits/portrait4.jpg";
-import portrait3 from "../../assets/paintings/portraits/portrait3.jpg";
-import portrait2 from "../../assets/paintings/portraits/portrait2.jpg";
-import portrait1 from "../../assets/paintings/portraits/portrait1.jpg";
+import auto3 from "../../assets/hero/jeunefile_auto.jpeg";
+import auto1 from "../../assets/hero/joconde_auto.jpg";
+import auto2 from "../../assets/hero/vangogh.jpeg";
 
-const paintings = [
-  { src: portrait1, alt: "portrait67" },
-  { src: portrait2, alt: "portrait66" },
-  { src: portrait3, alt: "portrait65" },
-  { src: portrait4, alt: "portrait64" },
-  { src: portrait5, alt: "portrait63" },
-  { src: portrait6, alt: "portrait62" },
-  { src: portrait7, alt: "portrait61" },
-  { src: portrait8, alt: "portrait60" },
-  { src: portrait9, alt: "portrait59" },
-  { src: portrait10, alt: "portrait58" },
-  { src: portrait11, alt: "portrait57" },
-  { src: portrait12, alt: "portrait56" },
-  { src: portrait13, alt: "portrait55" },
-  { src: portrait14, alt: "portrait54" },
-  { src: portrait15, alt: "portrait53" },
-  { src: portrait16, alt: "portrait52" },
-  { src: portrait17, alt: "portrait51" },
-  { src: portrait18, alt: "portrait50" },
-  { src: portrait19, alt: "portrait49" },
-  { src: portrait20, alt: "portrait48" },
-  { src: portrait21, alt: "portrait47" },
-  { src: portrait22, alt: "portrait46" },
-  { src: portrait23, alt: "portrait45" },
-  { src: portrait24, alt: "portrait44" },
-  { src: portrait25, alt: "portrait43" },
-  { src: portrait26, alt: "portrait42" },
-  { src: portrait27, alt: "portrait41" },
-  { src: portrait28, alt: "portrait40" },
-  { src: portrait29, alt: "portrait39" },
-  { src: portrait30, alt: "portrait38" },
-  { src: portrait31, alt: "portrait37" },
-  { src: portrait32, alt: "portrait36" },
-  { src: portrait33, alt: "portrait35" },
-  { src: portrait34, alt: "portrait34" },
-  { src: portrait35, alt: "portrait33" },
-  { src: portrait36, alt: "portrait32" },
-  { src: portrait37, alt: "portrait31" },
-  { src: portrait38, alt: "portrait30" },
-  { src: portrait39, alt: "portrait29" },
-  { src: portrait40, alt: "portrait28" },
-  { src: portrait41, alt: "portrait27" },
-  { src: portrait42, alt: "portrait26" },
-  { src: portrait43, alt: "portrait25" },
-  { src: portrait44, alt: "portrait24" },
-  { src: portrait45, alt: "portrait23" },
-  { src: portrait46, alt: "portrait22" },
-  { src: portrait47, alt: "portrait21" },
-  { src: portrait48, alt: "portrait20" },
-  { src: portrait49, alt: "portrait19" },
-  { src: portrait50, alt: "portrait18" },
-  { src: portrait51, alt: "portrait17" },
-  { src: portrait52, alt: "portrait16" },
-  { src: portrait53, alt: "portrait15" },
-  { src: portrait54, alt: "portrait14" },
-  { src: portrait55, alt: "portrait13" },
-  { src: portrait56, alt: "portrait12" },
-  { src: portrait57, alt: "portrait11" },
-  { src: portrait58, alt: "portrait10" },
-  { src: portrait59, alt: "portrait9" },
-  { src: portrait60, alt: "portrait8" },
-  { src: portrait61, alt: "portrait7" },
-  { src: portrait62, alt: "portrait6" },
-  { src: portrait63, alt: "portrait5" },
-  { src: portrait64, alt: "portrait4" },
-  { src: portrait65, alt: "portrait3" },
-  { src: portrait66, alt: "portrait2" },
-];
-
-const sizeClass =
-  " rounded-full min-h-[14rem]  max-h-[14rem]  lg:min-h-[20rem]  lg:max-h-[20rem]   ";
-const imgContainerClass = `my-12  bg-dark  ${sizeClass} `;
+const sizeClass = " w-screen h-full ";
+const imgContainerClass = `my-12  bg-dark  ${sizeClass} image-slider`;
 const imgClass = `object-cover   min-w-full ${sizeClass} `;
-
-const splitIntoChunks = (arr: any[], chunkSize: number) => {
-  const result = [];
-  for (let i = 0; i < arr.length; i += chunkSize) {
-    result.push(arr.slice(i, i + chunkSize));
-  }
-  return result;
-};
-
-const chunkedPaintings = splitIntoChunks(
-  paintings,
-  Math.ceil(paintings.length / 6)
-);
 ---
 
 <script>
   $(function () {
-    var screenWidth = $(window).width() || 0;
     // Smallest size of columns is 14rem
-    var updateGap = () => {
-      const widthDiff = screenWidth - 1600;
-      const gap = screenWidth / 6 / 16 - 9;
-      if (widthDiff >= 0) {
-        $("#background-grid").css("gap", `${gap}rem`);
+    var hideTitle = () => {
+      const top = window.scrollY;
+      const height = window.innerHeight;
+      console.log(top > height);
+
+      if (top > height) {
+        $("#mainText").css("display", "none");
+      } else {
+        $("#mainText").css("display", "flex");
       }
     };
-    $(window).on("resize", function () {
+    $(window).on("scroll", function () {
       //.05 is a multiplier for the font size
       //14 is the default font size
-      updateGap();
+      hideTitle();
     });
-    updateGap();
+    hideTitle();
   });
 </script>
-<section id="home2" class="min-h-screen w-full bg-purple overflow-hidden">
+<section id="home2" class="min-h-screen w-full overflow-hidden">
   <div
-    class="fixed inset-0 flex items-center justify-center [mask-image:_linear-gradient(to_top,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)]"
+    class="fixed inset-0 flex items-center justify-center"
     id="homeContainer"
-    style={{
-      background:
-        "linear-gradient(to top, #554194, #7e6eb0, #a79ccb, #d2cde5, #ffffff),linear-gradient(to top, #554194, #7e6eb0, #a79ccb, #d2cde5, #ffffff)",
-    }}
   >
-    <div
-      id="background-grid"
-      class="z-[-1] grid grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-12 2xl:gap-28 bg-purple
-      [mask-image:linear-gradient(to_top,_transparent_0%,rgba(85,65,131,1.0)_128px,rgba(85,65,131,0.5)_0%)]"
-    >
-      {
-        Array.from({ length: 6 }).map((_, i) => (
-          <div class={"relative overflow-hidden"}>
-            <div
-              class={i % 2 === 0 ? "animate-scroll-up" : "animate-scroll-down"}
-            >
-              {/* Duplicated content for seamless scrolling */}
-
-              {chunkedPaintings[i].map((_) => (
-                <div class={imgContainerClass}>
-                  <Image
-                    src={_.src}
-                    alt={_.alt}
-                    class={imgClass}
-                    priority
-                    loading="eager"
-                    width={400}
-                    height={400}
-                  />
-                </div>
-              ))}
-            </div>
-            <div
-              aria-hidden="true"
-              class={i % 2 === 0 ? "animate-scroll-up" : "animate-scroll-down"}
-            >
-              {/* Duplicated content for seamless scrolling */}
-
-              {chunkedPaintings[i].map((_) => (
-                <div class={imgContainerClass}>
-                  <Image
-                    src={_.src}
-                    alt={_.alt}
-                    class={imgClass}
-                    priority
-                    loading="eager"
-                    width={400}
-                    height={400}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        ))
-      }
+    <div id="background-grid" class="z-[-1] flex">
+      <div class={imgContainerClass}>
+        <Image class={imgClass} src={auto1} alt={"auto1"} loading={"eager"} />
+        <Image class={imgClass} src={auto2} alt={"auto2"} loading={"eager"} />
+        <Image class={imgClass} src={auto3} alt={"auto3"} loading={"eager"} />
+      </div>
+      <divs
+        id="mainText"
+        class="absolute top-0 flex flex-col items-center h-full w-full justify-center motion-preset-fade-lg motion-preset-blur-down motion-duration-2000"
+      >
+        <h6
+          class="font-allenoire text-[4rem] lg:text-[10rem] font-light text-white"
+        >
+          Gaëtan Bros
+        </h6>
+        <h6 class="font-allenoire text-[1rem] lg:text-[3rem] text-white">
+          Les séances d’art et d’histoire en entreprise
+        </h6>
+      </divs>
     </div>
-  </div>
-  <div
-    class="backdrop-blur-sm absolute flex flex-col items-center h-full justify-center w-full motion-preset-fade-lg motion-preset-blur-down motion-duration-2000"
-  >
-    <h6
-      id="mainText"
-      class="font-allenoire text-[4rem] lg:text-[10rem] font-light text-white"
-    >
-      <!--  style={{
-          background: "url('/public/video/anim_2k.gif')",
-          "background-size": "cover",
-          "-webkit-background-clip": "text",
-          "-webkit-text-fill-color": "transparent",
-        }} -->
-      Artésémys
-    </h6>
-    <h6
-      class="font-allenoire text-[1rem] lg:text-[3rem] text-white text-center w-3/4"
-    >
-      <strong>Stimuler la créativité</strong> de vos équipes avec du coaching culturel
-    </h6>
   </div>
 </section>
-
-<!-- BG REVEAL -->
-<!-- <html>
-  <head>
-    <style>
-      body {
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #000;
-      }
-
-      .container {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-      }
-
-      .reveal {
-        position: absolute;
-        width: 0;
-        height: 100vh;
-        background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-        left: 50%;
-        top: 0;
-        transform: translateX(-50%);
-        animation: revealBackground 2s ease-in-out forwards;
-      }
-
-      @keyframes revealBackground {
-        0% {
-          width: 0;
-        }
-        100% {
-          width: 100%;
-        }
-      }
-
-      .content {
-        position: relative;
-        color: white;
-        text-align: center;
-        font-family: Arial, sans-serif;
-        font-size: 2em;
-        z-index: 1;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="reveal"></div>
-      <div class="content">
-        <h1>Background Reveal</h1>
-        <p>Click refresh to see the animation again</p>
-      </div>
-    </div>
-  </body>
-</html>
- -->

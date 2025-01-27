@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import HeroIlust from "../../assets/business/portrait.jpeg";
+import HeroIlust from "../../assets/business/assemblee.jpeg";
 import SectionMotion from "../ui/SectionMotion.astro";
 import SectionTitle from "../ui/SectionTitle.astro";
 import Section from "./Section.astro";
@@ -18,7 +18,7 @@ const description = "";
         class="mt-8 lg:mt-0 lg:pt-0 relative flex flex-col items-center md:flex-row"
       >
         <div
-          class="flex items-center pb-10 md:w-6/12 md:pb-30 md:pt-10 lg:max-w-2xl"
+          class="flex items-center pb-10 md:w-7/12 md:pb-30 md:pt-10 lg:max-w-4xl"
         >
           <Image
             src={HeroIlust}
@@ -27,7 +27,7 @@ const description = "";
             class="lg:rounded-xl"
           />
         </div>
-        <div class="row items-center pb-10 md:w-6/12 md:pb-30">
+        <div class="row items-center pb-10 md:w-5/12 md:pb-30">
           <div class="text-left space-y-3 md:pl-12">
             <div class="flex flex-col md:flex-row items-center justify-between">
               <h1
@@ -52,12 +52,19 @@ const description = "";
                 levier puissant</strong
               > pour <strong class="font-bold">
                 renforcer la cohésion des équipes</strong
-              >. Pionnier dans le domaine du coaching culturel depuis plus de
-              dix ans, j’ai façonné une expertise nourrie par des études en
-              histoire de l’art, en histoire et des compétences théâtrales, que
-              je mets au service des entreprises et de leurs équipes. Mon
-              ambition est simple : faire de chaque rencontre une intervention
-              nourrissant à la fois l’esprit et le collectif.
+              >. Pionnier dans le domaine du coaching culturel <strong
+                class="font-bold"
+                >depuis plus de dix ans
+              </strong>, j’ai façonné une expertise nourrie par <strong
+                class="font-bold"
+                te
+                >des études en histoire de l’art, en histoire et des compétences
+                théâtrales</strong
+              >, que je mets au service des entreprises et de leurs équipes. Mon
+              ambition est simple :<strong class="font-bold">
+                faire de chaque rencontre une intervention nourrissant à la fois
+                l’esprit et le collectif.</strong
+              >
             </p>
           </div>
         </div>

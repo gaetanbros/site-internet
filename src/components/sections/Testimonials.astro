@@ -3,64 +3,69 @@ import { Image } from "astro:assets";
 import Section from "./Section.astro";
 //increment the logo import to 6
 import clients from "../../assets/clients.jpeg";
-import companyLogo1 from "../../assets/company/company-logo1.svg";
-import companyLogo3 from "../../assets/company/company-logo11.svg";
-import companyLogo5 from "../../assets/company/company-logo12.svg";
-import companyLogo2 from "../../assets/company/company-logo2.svg";
-import companyLogo4 from "../../assets/company/company-logo4.svg";
-import companyLogo6 from "../../assets/company/company-logo6.svg";
+
 import Quotes from "../../assets/shapes/Quotes.svg";
 import SectionMotion from "../ui/SectionMotion.astro";
 
 const testimonials = [
   {
-    company: "Suez",
-    description:
-      "L'érudition et l'art oratoire de Gaëtan Bros à éclairé notre séminaire.",
-    logo: companyLogo6,
+    company: "",
+    description: `Il vous fera partager sa passion.
+L’art, la peinture, la sculpture, toutes les formes d’expression, ils les arpentent et les
+étudient depuis toujours
+On pourrait presque dire qu’il pratique la religion de l’art, faite de curiosité,
+d’émotions, de recherche, d’émerveillement, de découvertes, et du désir
+d’appréhender tout ce qui contribue à la Beauté.
+`,
     employee: "M. L.",
     position: "Directeur des opérations",
   },
 
   {
-    company: "Total",
-    description:
-      "Nous cherchions une activité qui ait de l’impact, et Artésémys a dépassé nos attentes : au-delà du simple team building, ce fut expérience humaine mémorable.",
-    logo: companyLogo2,
+    company: "",
+    description: `Il vous captivera et répondra à toute vos interrogations
+Chaque conférence raconte un artiste, une période historique ou plusieurs œuvres
+autour d’un thème
+Il aborde les œuvres, leur époque, leur genèse, leur construction et comment les
+regarder, comment en comprendre les secrets,
+Il se demande comment fabriquer un chef d’œuvre à partir des techniques des
+grands maitres, de l’acuité de leur vision, de leur travail, mais aussi des différentes
+modes et des influences qui fondent les grandes écoles de création.
+`,
     employee: "P. A.",
     position: "Responsable des ressources humaines",
   },
   {
-    company: "Novartis",
-    description:
-      "J’ai été impressionné par la qualité et la pertinence du coaching individuel proposé. Les parallèles avec l’art m’ont permis d’aborder mes défis managériaux sous un angle complètement neuf.",
-    logo: companyLogo1,
-    employee: "Julien Charrier",
+    company: "",
+    description: `Il vous fera voyager dans l’univers des oeuvres
+Il s’agit d’explorer la richesse de l’imaginaire artistique, les sources d’inspiration
+comme les grands mythes, les portraits, les batailles, les objets, les paysages …
+l’utilisation et la transformation des formes et des couleurs. Il tentera d’élucider les
+mystères de la représentation , tout ce qui fait la richesse des œuvres d’art, leur
+complexité, leur vivacité.
+Comment une œuvre nous parle ? nous rend joyeux ou triste parfois, ou même nous
+dérange.
+Les grandes réactions et les questions que les œuvres ont suscité à leur époque .
+`,
+    employee: "J. H.",
     position: "Directeur financier",
   },
   {
-    company: "Groupama",
-    description:
-      "Qui aurait cru qu’une performance théâtralisée pourrait autant motiver mes développeurs ? Aujourd’hui, ils parlent encore des enseignements tirés de cette expérience.",
-    logo: companyLogo3,
-    employee: "Sophie Bernard",
+    company: "",
+    description: `Il vous incitera à vous mettre à leur place, dans leur tête et leur cœur
+Il vous raconte leur vie, leurs envies, leur idéal, leurs doutes, leurs manies, pour
+certains leur terrible désespoir, mais aussi leur moment de grâce, leur enthousiasme,
+leur révélation …
+Comment ont t’ils percer ? leurs premières années, les rencontres déterminantes
+pour leur réussite, les écoles dont ils ont fait partie, ce qu’ils ont apporté.
+Leur entourage les a-t-il aidés ou non ? Comment ont-ils surmonté les critiques et les
+périodes de vache maigre ? Comment ont-ils vécu leur célébrité ?
+Les artistes sont des êtres complexes, attachants, passionnant, une fois qu’on
+commence à les connaitre, on a envie d’en savoir plus, de les accompagner, D’être
+proche d’eux.
+`,
+    employee: "S. B.",
     position: "Directrice de la communication",
-  },
-  {
-    company: "IBM",
-    description:
-      "Grâce à Artésémys, nous avons découvert comment l’art peut renforcer l’esprit d’équipe et la fierté d’appartenance à l’entreprise. Un moment chaleureux et instructif.",
-    logo: companyLogo4,
-    employee: "Émilie Roux",
-    position: "Responsable de la stratégie",
-  },
-  {
-    company: "AXA",
-    description:
-      "La méthodologie en quatre étapes est limpide et efficace. Nous savions exactement à quoi nous attendre et le résultat final a été un véritable catalyseur de cohésion.",
-    logo: companyLogo5,
-    employee: "Claire Martin",
-    position: "Chef de projet innovation",
   },
 ];
 ---
@@ -115,7 +120,7 @@ const testimonials = [
                     <div class=" flex-shrink-0 w-full  lg:w-1/2 rounded-lg bg-white  lg:p-5 text-gray-800 font-light mb-6">
                       <div class="w-full flex flex-row items-center justify-around ">
                         <Image src={Quotes} alt="" class="size-6 lg:size-8" />
-                        <p class="x-auto text-sm  lg:text-lg leading-none italic font-bold text-gray-400 w-3/4 pl-3">
+                        <p class="x-auto text-sm  lg:text-sm leading-none italic font-bold text-gray-400 w-3/4 pl-3">
                           {testimonial.description}
                         </p>{" "}
                         <Image
@@ -125,18 +130,11 @@ const testimonials = [
                         />
                       </div>{" "}
                       <div class="flex flex-col lg:flex-row pt-1 justify-center w-full">
-                        <div class="relative lg:w-1/3 flex justify-center items-center py-4">
-                          <Image
-                            src={testimonial.logo}
-                            alt=""
-                            loading={"eager"}
-                            class="max-w-[100px] lg:max-w-[150px]"
-                          />
-                        </div>
+                        <div class="relative lg:w-1/3 flex justify-center items-center py-4" />
                         <div class=" lg:p-3 text-start lg:w-1/2 text-xs lg:text-sm">
                           <h6 class="text-dark ">{testimonial.employee}</h6>{" "}
                           <h6 class="font-bold  text-gray-600">
-                            {testimonial.position}, {testimonial.company}
+                            {testimonial.position}
                           </h6>
                         </div>
                       </div>
