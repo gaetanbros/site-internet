@@ -73,7 +73,7 @@ export function Slider({ themes }) {
                 />
                 <div
                   className={classNames(
-                    "max-h-[10rem] bottom-8 w-full p-4 transition-[opacity] absolute  bg-dark bg-opacity-50 backdrop-blur-xl",
+                    "max-h-[15rem] bottom-8 w-full p-4 transition-[opacity] absolute  bg-transparent bg-opacity-15 backdrop-blur-md",
                     activeItem === index
                       ? "opacity-100 motion-preset-fade-lg motion-duration-2000"
                       : " opacity-0"
