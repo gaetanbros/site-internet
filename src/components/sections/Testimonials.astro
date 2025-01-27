@@ -10,60 +10,26 @@ import SectionMotion from "../ui/SectionMotion.astro";
 const testimonials = [
   {
     company: "",
-    description: `Il vous fera partager sa passion.
-L’art, la peinture, la sculpture, toutes les formes d’expression, ils les arpentent et les
-étudient depuis toujours
-On pourrait presque dire qu’il pratique la religion de l’art, faite de curiosité,
-d’émotions, de recherche, d’émerveillement, de découvertes, et du désir
-d’appréhender tout ce qui contribue à la Beauté.
-`,
+    description: `Il vous captivera et répondra à toute vos interrogations. Chaque conférence raconte un artiste, une période historique ou plusieurs œuvres autour d’un thème. Il aborde les œuvres, leur époque, leur genèse, leur construction et comment les regarder, comment en comprendre les secrets. Il se demande comment fabriquer un chef d’œuvre à partir des techniques des grands maitres, de l’acuité de leur vision, de leur travail, mais aussi des différentes modes et des influences qui fondent les grandes écoles de création.`,
+    employee: "P. A.",
+    position: "Responsable des ressources humaines",
+  },
+  {
+    company: "",
+    description: `Il vous fera partager sa passion. L’art, la peinture, la sculpture, toutes les formes d’expression, ils les arpentent et les étudient depuis toujours. On pourrait presque dire qu’il pratique la religion de l’art, faite de curiosité, d’émotions, de recherche, d’émerveillement, de découvertes, et du désir d’appréhender tout ce qui contribue à la Beauté.`,
     employee: "M. L.",
     position: "Directeur des opérations",
   },
 
   {
     company: "",
-    description: `Il vous captivera et répondra à toute vos interrogations
-Chaque conférence raconte un artiste, une période historique ou plusieurs œuvres
-autour d’un thème
-Il aborde les œuvres, leur époque, leur genèse, leur construction et comment les
-regarder, comment en comprendre les secrets,
-Il se demande comment fabriquer un chef d’œuvre à partir des techniques des
-grands maitres, de l’acuité de leur vision, de leur travail, mais aussi des différentes
-modes et des influences qui fondent les grandes écoles de création.
-`,
-    employee: "P. A.",
-    position: "Responsable des ressources humaines",
-  },
-  {
-    company: "",
-    description: `Il vous fera voyager dans l’univers des oeuvres
-Il s’agit d’explorer la richesse de l’imaginaire artistique, les sources d’inspiration
-comme les grands mythes, les portraits, les batailles, les objets, les paysages …
-l’utilisation et la transformation des formes et des couleurs. Il tentera d’élucider les
-mystères de la représentation , tout ce qui fait la richesse des œuvres d’art, leur
-complexité, leur vivacité.
-Comment une œuvre nous parle ? nous rend joyeux ou triste parfois, ou même nous
-dérange.
-Les grandes réactions et les questions que les œuvres ont suscité à leur époque .
-`,
+    description: `Il vous fera voyager dans l’univers des oeuvres. Il s’agit d’explorer la richesse de l’imaginaire artistique, les sources d’inspiration comme les grands mythes, les portraits, les batailles, les objets, les paysages … l’utilisation et la transformation des formes et des couleurs. Il tentera d’élucider les mystères de la représentation , tout ce qui fait la richesse des œuvres d’art, leur complexité, leur vivacité. Comment une œuvre nous parle ? nous rend joyeux ou triste parfois, ou même nous dérange. Les grandes réactions et les questions que les œuvres ont suscité à leur époque.`,
     employee: "J. H.",
     position: "Directeur financier",
   },
   {
     company: "",
-    description: `Il vous incitera à vous mettre à leur place, dans leur tête et leur cœur
-Il vous raconte leur vie, leurs envies, leur idéal, leurs doutes, leurs manies, pour
-certains leur terrible désespoir, mais aussi leur moment de grâce, leur enthousiasme,
-leur révélation …
-Comment ont t’ils percer ? leurs premières années, les rencontres déterminantes
-pour leur réussite, les écoles dont ils ont fait partie, ce qu’ils ont apporté.
-Leur entourage les a-t-il aidés ou non ? Comment ont-ils surmonté les critiques et les
-périodes de vache maigre ? Comment ont-ils vécu leur célébrité ?
-Les artistes sont des êtres complexes, attachants, passionnant, une fois qu’on
-commence à les connaitre, on a envie d’en savoir plus, de les accompagner, D’être
-proche d’eux.
-`,
+    description: `Il vous incitera à vous mettre à leur place, dans leur tête et leur cœur. Il vous raconte leur vie, leurs envies, leur idéal, leurs doutes, leurs manies, pour certains leur terrible désespoir, mais aussi leur moment de grâce, leur enthousiasme, leur révélation … Comment ont t’ils percer ? leurs premières années, les rencontres déterminantes pour leur réussite, les écoles dont ils ont fait partie, ce qu’ils ont apporté. Leur entourage les a-t-il aidés ou non ? Comment ont-ils surmonté les critiques et les périodes de vache maigre ? Comment ont-ils vécu leur célébrité ? Les artistes sont des êtres complexes, attachants, passionnant, une fois qu’on commence à les connaitre, on a envie d’en savoir plus, de les accompagner, D’être proche d’eux.    `,
     employee: "S. B.",
     position: "Directrice de la communication",
   },
@@ -120,9 +86,12 @@ proche d’eux.
                     <div class=" flex-shrink-0 w-full  lg:w-1/2 rounded-lg bg-white  lg:p-5 text-gray-800 font-light mb-6">
                       <div class="w-full flex flex-row items-center justify-around ">
                         <Image src={Quotes} alt="" class="size-6 lg:size-8" />
-                        <p class="x-auto text-sm  lg:text-sm leading-none italic font-bold text-gray-400 w-3/4 pl-3">
-                          {testimonial.description}
-                        </p>{" "}
+                        <p
+                          set:html={testimonial.description
+                            .split(". ")
+                            .join(".<br/>")}
+                          class="x-auto text-sm  lg:text-sm leading-none italic font-bold text-gray-400 w-3/4 pl-3"
+                        />
                         <Image
                           src={Quotes}
                           alt=""
