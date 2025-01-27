@@ -45,19 +45,20 @@ export function Slider({ themes }) {
               onClick={() => setActiveItem(index)}
               aria-current={activeItem === index}
               className={classNames(
+                "group/item",
                 "snap-center",
                 "relative cursor-pointer w-[35%] md:w-[8%]  [&[aria-current='true']]:w-[100%] [&[aria-current='true']]:max-w-[1280px]",
                 "[transition:width_var(--transition,200ms_ease-in)]",
                 "before-block before:absolute before:bottom-0 before:left-[-10px] before:right-[-10px] before:top-0 before:hidden before:bg-white",
-                " md:hover:w-[15%]"
+                " md:hover:w-[15%] "
               )}
               key={theme.data.title}
             >
-              <div className="relative h-full w-full overflow-hidden rounded-2xl bg-[#c9c6c7]">
+              <div className=" relative h-full w-full overflow-hidden rounded-2xl bg-[#c9c6c7]">
                 <img
                   aria-current={activeItem === index}
                   style={{ transition: "transform 0.15s ease-in" }}
-                  className="translate-x-[-35%] [&[aria-current='true']]:translate-x-[0%] max-w-none object-scale-down lg:object-cover h-[22rem]  md:h-[640px] w-auto"
+                  className="translate-x-[-35%]  [&[aria-current='true']]:translate-x-[0%] max-w-none object-scale-down lg:object-cover h-[22rem]  md:h-[640px] w-auto"
                   src={"/projet-gb/themes-full/" + theme.data.authImage}
                   alt={theme.data.title}
                   loading="eager"
