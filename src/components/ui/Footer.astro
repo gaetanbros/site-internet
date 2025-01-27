@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import Facebook from "../../assets/facebook.svg";
 import Linkedin from "../../assets/linkedin.svg";
 import Twitter from "../../assets/twitter.svg";
@@ -54,37 +53,13 @@ const links = [
               })
             }
           </ul>
-          <ul class="flex gap-5">
-            {
-              logos.map((logo) => {
-                return (
-                  <li>
-                    <a href={logo.link} target="_blank">
-                      <picture>
-                        <Image
-                          src={logo.src}
-                          alt={logo.name}
-                          loading={"eager"}
-                        />
-                      </picture>
-                    </a>
-                  </li>
-                );
-              })
-            }
-          </ul>
-        </div>
-
-        <div class="flex flex-col lg:flex-row mt-[1.75rem] lg:mt-[66px]">
-          <div
-            class="flex text-center lg:text-start flex-col w-full lg:w-[30%]"
-          >
-            <h3 class="mb-5 text-center md:text-left text-2xl text-dark">
-              Nous contacter
+          <div class="flex text-center lg:text-start flex-col">
+            <h3 class="text-center font-bold md:text-left text-2xl text-dark">
+              Me contacter
             </h3>
-            <div class="flex flex-col justify-between">
-              <span> Email: gaetanbros.pro@gmail.com </span>
-              <span> Phone: +33 6 63 05 92 01 </span>
+            <div class="flex flex-col">
+              <span> <strong>Email:</strong> gaetanbros.pro@gmail.com </span>
+              <span> <strong>Téléphone:</strong> +33 6 63 05 92 01 </span>
             </div>
           </div>
         </div>
