@@ -50,10 +50,10 @@ const animate = isReversed
   : "flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll";
 ---
 
-<div class="p-4 bg-white grid items-center h-[12rem]">
+<div class="p-4 bg-white grid items-center h-[8rem] lg:h-[12rem]">
   <div class="col-span-2 lg:col-span-1 bg-white">
     <p class="text-md leading-3 lg:leading-none lg:text-sm font-light bg-white">
-      Nos partenaires qui nous ont fait confiance
+      Mes partenaires qui m'ont fait confiance
     </p>
   </div>
   <div class="col-span-4 lg:col-span-5 bg-white">
@@ -67,7 +67,7 @@ const animate = isReversed
               <li class="p-4  transition duration-2000 hover:grayscale-0 ">
                 <Image
                   src={sponsor.logo}
-                  class="h-20 w-auto mx-1 max-w-3 lg:max-w-8 lg:min-w-30"
+                  class="h-12 lg:h-20 w-auto mx-1 max-w-3 lg:max-w-8 lg:min-w-30"
                   alt={sponsor.alt}
                   loading="lazy"
                 />
@@ -83,7 +83,7 @@ const animate = isReversed
               <li class="p-4  transition duration-2000 hover:grayscale-0">
                 <Image
                   src={sponsor.logo}
-                  class="h-20 w-auto mx-1 max-w-3 lg:max-w-8 lg:min-w-30"
+                  class="h-12 lg:h-20 w-auto mx-1 max-w-3 lg:max-w-8 lg:min-w-30"
                   alt={sponsor.alt}
                   loading="lazy"
                 />
