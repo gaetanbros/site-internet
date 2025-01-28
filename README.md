@@ -1,4 +1,3 @@
-
 # Gaëtan Bros
 
 A modern landing page designed using cutting-edge web technologies to ensure responsiveness and a sleek design.
@@ -11,8 +10,8 @@ The primary objective of **Gaëtan Bros** is to create an elegant and lightweigh
 
 ## 🛠️ Technologies Used
 
-- **[Astro](https://astro.build/):** A modern, fast framework for building static websites.  
-- **[React](https://react.dev/):** A JavaScript library for building user interfaces.  
+- **[Astro](https://astro.build/):** A modern, fast framework for building static websites.
+- **[React](https://react.dev/):** A JavaScript library for building user interfaces.
 - **[Tailwind CSS](https://tailwindcss.com/):** A utility-first CSS framework for rapid UI development.
 
 ---
@@ -22,22 +21,25 @@ The primary objective of **Gaëtan Bros** is to create an elegant and lightweigh
 To set up the project locally, follow these steps:
 
 1. Clone the repository:
+
    ```bash
-   git clone https://github.com/your-username/gaetan-bros.git
+   git clone git@github.com:AlessandroMA/projet-gb.git
    cd gaetan-bros
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Run the development server:
+
    ```bash
    npm run dev
    ```
 
-4. Visit `http://localhost:3000` in your browser to view the project.
+4. Visit `http://localhost:4322/` in your browser to view the project.
 
 ---
 
@@ -54,11 +56,12 @@ The project uses GitHub Actions to automate deployment to GitHub Pages. Below is
 1. **Trigger Events**:  
    The workflow is triggered on every push to the `main` branch or manually through GitHub Actions.
 
-2. **Build Job**:  
-   - **Checkout Code**: The `actions/checkout@v4` action clones the repository.  
+2. **Build Job**:
+
+   - **Checkout Code**: The `actions/checkout@v4` action clones the repository.
    - **Install, Build, and Upload**: The `withastro/action@v3` action builds the Astro project.
 
-3. **Deploy Job**:  
+3. **Deploy Job**:
    - After a successful build, the `actions/deploy-pages@v4` action publishes the site to GitHub Pages.
 
 The `yaml` file looks like this:
