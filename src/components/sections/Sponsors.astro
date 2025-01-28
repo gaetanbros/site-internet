@@ -30,11 +30,11 @@ const majors = [
 ];
 const sponsors = [
   { logo: s1, alt: "KERING logo" },
+  { logo: s17, alt: "Twitter logo" },
   { logo: s21, alt: "ETAM logo" },
   { logo: s20, alt: "Shopify logo" },
   { logo: s19, alt: "Spotify logo" },
   { logo: s18, alt: "Twitch logo" },
-  { logo: s17, alt: "Twitter logo" },
   { logo: s16, alt: "Uber logo" },
   { logo: s15, alt: "WhatsApp logo" },
   { logo: s14, alt: "YouTube logo" },
@@ -49,7 +49,7 @@ const { isReversed } = Astro.props;
 
 const animate = isReversed
   ? "animate-reverse-infinite-scroll"
-  : "flex items-center justify-center md:justify-start lg:[&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll";
+  : "flex items-center justify-center md:justify-start lg:[&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll";
 ---
 
 <div class="p-4 bg-white flex flex-col items-center">
@@ -84,12 +84,12 @@ const animate = isReversed
     >
       <ul class={animate}>
         {
-          sponsors.map((sponsor) => {
+          [...sponsors, ...sponsors].map((sponsor) => {
             return (
               <li class="p-4  transition  duration-2000 hover:grayscale-0 ">
                 <Image
                   src={sponsor.logo}
-                  class="h-7 lg:h-7  w-[8rem] lg:w-auto   lg:max-w-8 lg:min-w-30"
+                  class="h-7 lg:h-12 w-[8rem] lg:w-auto   lg:max-w-8 lg:min-w-30"
                   alt={sponsor.alt}
                   loading="lazy"
                 />
@@ -100,12 +100,12 @@ const animate = isReversed
       </ul>
       <ul class={animate} aria-hidden="true">
         {
-          sponsors.map((sponsor) => {
+          [...sponsors, ...sponsors].map((sponsor) => {
             return (
               <li class="p-4  transition  duration-2000 hover:grayscale-0">
                 <Image
                   src={sponsor.logo}
-                  class="h-7 lg:h-7  w-[8rem] lg:w-auto lg:max-w-8 lg:min-w-30"
+                  class="h-7 lg:h-12  w-[8rem] lg:w-auto lg:max-w-8 lg:min-w-30"
                   alt={sponsor.alt}
                   loading="lazy"
                 />
