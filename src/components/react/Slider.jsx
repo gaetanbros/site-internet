@@ -59,7 +59,7 @@ export function Slider({ themes }) {
                   aria-current={activeItem === index}
                   style={{ transition: "transform 0.15s ease-in" }}
                   className="translate-x-[-35%]  [&[aria-current='true']]:translate-x-[0%] max-w-none object-scale-down lg:object-cover h-[22rem]  md:h-[640px] w-auto"
-                  src={"/projet-gb/themes-full/" + theme.data.authImage}
+                  src={"/themes-full/" + theme.data.authImage}
                   alt={theme.data.title}
                   loading="eager"
                   height="300px"

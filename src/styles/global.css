@@ -8,8 +8,7 @@
   }
   @font-face {
     font-family: "Grotesk";
-    src: url("/projet-gb/fonts/grotesk/SpaceGrotesk-Regular.woff"),
-      format("woff");
+    src: url("/fonts/grotesk/SpaceGrotesk-Regular.woff"), format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -17,8 +16,7 @@
 
   @font-face {
     font-family: "Grotesk";
-    src: url("/projet-gb/fonts/grotesk/SpaceGrotesk-Medium.woff"),
-      format("woff");
+    src: url("/fonts/grotesk/SpaceGrotesk-Medium.woff"), format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -26,7 +24,7 @@
 
   @font-face {
     font-family: "Bricolage";
-    src: url("/projet-gb/fonts/bricolage/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf"),
+    src: url("/fonts/bricolage/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf"),
       format("truetype");
     font-weight: 500;
     font-style: normal;
@@ -35,7 +33,7 @@
 
   @font-face {
     font-family: "Bricolage";
-    src: url("/projet-gb/fonts/bricolage/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf"),
+    src: url("/fonts/bricolage/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf"),
       format("truetype");
     font-weight: 300;
     font-style: normal;
@@ -44,7 +42,7 @@
 
   @font-face {
     font-family: "Bricolage";
-    src: url("/projet-gb/fonts/bricolage/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf"),
+    src: url("/fonts/bricolage/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf"),
       format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -53,7 +51,7 @@
 
   @font-face {
     font-family: "Allenoire";
-    src: url("/projet-gb/fonts/allenoire/allenoire-allenoire-regular-400.ttf"),
+    src: url("/fonts/allenoire/allenoire-allenoire-regular-400.ttf"),
       format("truetype");
     font-weight: 400;
     font-style: normal;

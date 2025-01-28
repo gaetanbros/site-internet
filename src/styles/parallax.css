@@ -12,19 +12,19 @@
   z-index: -10;
 }
 .bg-img1::before {
-  background-image: url("/projet-gb/landscapes/landscape1.jpg");
+  background-image: url("/landscapes/landscape1.jpg");
 }
 .bg-img2:before {
-  background-image: url("/projet-gb/landscapes/landscape2.jpg");
+  background-image: url("/landscapes/landscape2.jpg");
 }
 
 .bg-img3::before {
-  background-image: url("/projet-gb/landscapes/landscape3.jpg");
+  background-image: url("/landscapes/landscape3.jpg");
 }
 
 .bg-img4::before {
-  background-image: url("/projet-gb/landscapes/landscape2.jpg");
+  background-image: url("/landscapes/landscape2.jpg");
 }
 .bg-img5:before {
-  background-image: url("/projet-gb/landscapes/landscape1.jpg");
+  background-image: url("/landscapes/landscape1.jpg");
 }
