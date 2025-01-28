@@ -11,10 +11,7 @@ const links = [
 <section id="contact" class="px-5 bg-white relative">
   <div class="w-full">
     <div
-      class="px-[15px] text-dark py-[55px] lg:px-[60px] rounded-t-[45px]"
-      style={{
-        "background-color": "#fdf7ff",
-      }}
+      class="px-[15px] text-white py-[55px] lg:px-[60px] rounded-t-[45px] bg-purple"
     >
       <div>
         <div
@@ -23,7 +20,7 @@ const links = [
           <picture>
             <a href="#home">
               <img
-                src={"/projet-gb/gb-black.png"}
+                src={"/projet-gb/gb-white.png"}
                 alt="Hero Ilustration"
                 loading="eager"
                 class="pb-5 h-20"
@@ -34,7 +31,7 @@ const links = [
             {
               links.map((link) => {
                 return (
-                  <li class="text-center text-dark">
+                  <li class="text-center text-white">
                     <a class="underline" href={link.href}>
                       {link.name}
                     </a>
@@ -44,7 +41,7 @@ const links = [
             }
           </ul>
           <div class="flex text-center lg:text-start flex-col">
-            <h3 class="text-center font-bold md:text-left text-2xl text-dark">
+            <h3 class="text-center font-bold md:text-left text-2xl text-white">
               Me contacter
             </h3>
             <div class="flex flex-col">

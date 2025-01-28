@@ -9,7 +9,7 @@ import SectionMotion from "../ui/SectionMotion.astro";
 
 <Section id="home">
   <div
-    class="w-screen pt-[2rem] lg:pt-[1rem] relative flex flex-col lg:grid lg:grid-flow-col lg:grid-col-5 lg:grid-rows-4 justify-end bg-white gap-4 lg:max-h-screen px-0 lg:px-5"
+    class="w-full lg:w-screen pt-[2rem] lg:pt-[1rem] relative flex flex-col lg:grid lg:grid-flow-col lg:grid-col-5 lg:grid-rows-4 justify-end bg-white gap-4 lg:max-h-screen px-0 lg:px-5"
   >
     <div
       class="flex flex-col lg:p-4 lg:row-span-4 lg:col-span-2 lg:grid pb-0 lg:pb-4 intersect-once intersect:motion-preset-slide-right intersect:motion-duration-2000"
@@ -29,18 +29,14 @@ import SectionMotion from "../ui/SectionMotion.astro";
         <div
           class="lg:shadow-2xl lg:bg-purple lg:text-white lg:rounded-xl lg:w-full lg:min-h-[12rem] p-4 lg:p-4 text-xl lg:font-light"
         >
-          <span class="text-base lg:text-lg">
-            Offrez des expériences uniques qui allient <strong
-              >art, culture et cohésion d’équipe.
-            </strong>
-            <br />Qu’il s’agisse de <strong
-              >conférences interactives, de séances immersives ou d’un
-              accompagnement personnalisé</strong
-            >, chaque intervention est pensée pour <strong
-              >enrichir les connaissances, stimuler la créativité et renforcer
-              les liens au sein de vos équipes.
-            </strong><br /> En présentiel ou à distance, l’art devient un outil puissant
-            pour créer <strong>des moments inoubliables et fédérateurs.</strong>
+          <span class="text-base lg:text-lg text-justify">
+            Offrez des expériences uniques qui allient art, culture et cohésion
+            d’équipe. <br /> Qu’il s’agisse de conférences interactives, de séances
+            immersives ou d’un accompagnement personnalisé, chaque intervention est
+            pensée pour enrichir les connaissances, stimuler la créativité et renforcer
+            les liens au sein de vos équipes.<br /> En présentiel ou à distance,
+            l’art devient un outil puissant pour créer des moments inoubliables et
+            fédérateurs.
           </span>
         </div>
         <div
@@ -85,7 +81,7 @@ import SectionMotion from "../ui/SectionMotion.astro";
             loading={"eager"}
           />
           <p
-            class="px-2 lg:px-0 pt-4 text-xs lg:text-sm text-bold bottom-0 text-slate-600"
+            class="text-justify px-2 lg:px-0 pt-4 text-xs lg:text-sm text-bold bottom-0 text-slate-600"
           >
             Découvrez comment l'art et l'histoire peuvent transformer vos
             séminaires et évènements en moments inoubliables, renforçant
@@ -108,7 +104,7 @@ import SectionMotion from "../ui/SectionMotion.astro";
           onclick="window.location.href='#contact'"
           class="bg-gray-300 text-xs text-gray-800 font-bold py-4 px-8 rounded-full inline-flex items-left"
         >
-          <span>Contactez-nous</span>
+          <span>Contactez-moi</span>
           <svg
             class="w-4 h-4 ml-2 text-dark"
             width="800px"

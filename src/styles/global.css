@@ -79,11 +79,11 @@
     --green: #7b7485;
     --black: rgb(0, 0, 0);
     --dark: #191a23;
-    --gray: #fff;
+    --gray: #f3f3f3;
     --white: #fff;
     --purple: #7b7485;
     --purple-light: #8971b8;
-    --purple-flash: hsl(281.853, 100%, 68%);
+    --purple-flash: #fff;
   }
 
   /* @layer base {
