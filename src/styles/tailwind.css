@@ -1656,7 +1656,7 @@ body {
 
 @keyframes infinite-scroll {
   from {
-    transform: translateX(1%);
+    transform: translateX(0%);
   }
 
   to {
@@ -2916,12 +2916,12 @@ body {
     height: 2rem;
   }
 
-  .lg\:h-14 {
-    height: 3.5rem;
+  .lg\:h-12 {
+    height: 3rem;
   }
 
-  .lg\:h-7 {
-    height: 1.75rem;
+  .lg\:h-14 {
+    height: 3.5rem;
   }
 
   .lg\:h-\[25rem\] {
@@ -3254,8 +3254,8 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .lg\:\[\&_li\]\:mx-8 li {
-    margin-left: 2rem;
-    margin-right: 2rem;
+  .lg\:\[\&_li\]\:mx-4 li {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
