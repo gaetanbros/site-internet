@@ -1,6 +1,5 @@
 ---
 import Footer from "@/components/ui/Footer.astro";
-import Navbar from "@/components/ui/Navbar.astro";
 import "../styles/global.css";
 import "../styles/gradients.css";
 import "../styles/parallax.css";
@@ -38,7 +37,7 @@ const { ...props } = Astro.props;
         class="hidden lg:block z-[11] absolute top-0 left-[50%] w-[50%] h-full bg-white transform translate-x-0 origin-left animate-reveal-center-right"
       >
       </div> -->
-      <Navbar />
+      <!-- <Navbar /> -->
       <slot />
       <Footer />
     </main>

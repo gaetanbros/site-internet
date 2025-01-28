@@ -3,10 +3,12 @@ import { Image } from "astro:assets";
 import auto3 from "../../assets/hero/pearl.jpeg";
 import auto1 from "../../assets/hero/joc.jpeg";
 import auto2 from "../../assets/hero/vg.jpeg";
+import auto4 from "../../assets/hero/venus.jpeg";
 
 import autoMob3 from "../../assets/hero-mobile/pearl-vert.jpeg";
 import autoMob1 from "../../assets/hero-mobile/joc-vert.jpeg";
 import autoMob2 from "../../assets/hero-mobile/vg-vert.jpeg";
+import autoMob4 from "../../assets/hero-mobile/venus-vert.jpeg";
 
 const sizeClass = " w-screen h-full ";
 const imgContainerClass = `my-12  bg-dark  ${sizeClass} image-slider`;
@@ -42,9 +44,15 @@ const imgClass = `object-cover   min-w-full ${sizeClass} `;
   >
     <div id="background-grid" class="z-[-1] flex">
       <div class={imgContainerClass + " hidden lg:block"}>
-        <Image class={imgClass} src={auto1} alt={"auto1"} loading={"eager"} />
-        <Image class={imgClass} src={auto2} alt={"auto2"} loading={"eager"} />
+        <Image
+          class={imgClass + " opacity-100"}
+          src={auto1}
+          alt={"auto1"}
+          loading={"eager"}
+        />
         <Image class={imgClass} src={auto3} alt={"auto3"} loading={"eager"} />
+        <Image class={imgClass} src={auto4} alt={"auto"} loading={"eager"} />
+        <Image class={imgClass} src={auto2} alt={"auto2"} loading={"eager"} />
       </div>
       <div class={imgContainerClass + " block lg:hidden"}>
         <Image
@@ -53,16 +61,23 @@ const imgClass = `object-cover   min-w-full ${sizeClass} `;
           alt={"auto1"}
           loading={"eager"}
         />
-        <Image
-          class={imgClass}
-          src={autoMob2}
-          alt={"auto2"}
-          loading={"eager"}
-        />
+
         <Image
           class={imgClass}
           src={autoMob3}
           alt={"auto3"}
+          loading={"eager"}
+        />
+        <Image
+          class={imgClass}
+          src={autoMob4}
+          alt={"auto4"}
+          loading={"eager"}
+        />
+        <Image
+          class={imgClass}
+          src={autoMob2}
+          alt={"auto2"}
           loading={"eager"}
         />
       </div>
