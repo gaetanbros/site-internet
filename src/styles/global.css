@@ -76,12 +76,12 @@
   }
 
   :root {
-    --green: #554183;
+    --green: #7b7485;
     --black: rgb(0, 0, 0);
     --dark: #191a23;
-    --gray: #f3f3f3;
+    --gray: #fff;
     --white: #fff;
-    --purple: #554183;
+    --purple: #7b7485;
     --purple-light: #8971b8;
     --purple-flash: hsl(281.853, 100%, 68%);
   }

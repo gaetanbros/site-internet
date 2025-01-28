@@ -9,12 +9,7 @@ import SectionTitle from "../ui/SectionTitle.astro";
 const allThemes: CollectionEntry<"blog">[] = await getCollection("blog");
 
 // I need to put the theme with the id 05creator.md in fifth position
-const creator = allThemes.find((theme) => theme.id === "creator.md");
-if (creator) {
-  const creatorIndex = allThemes.indexOf(creator);
-  allThemes.splice(creatorIndex, 1);
-  allThemes.splice(0, 0, creator);
-}
+allThemes.sort((a, b) => (a.id > b.id ? 1 : -1));
 ---
 
 <!-- <div class="bg-purple w-full h-full absolute z-[-1]">
