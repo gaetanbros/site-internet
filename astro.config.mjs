@@ -8,7 +8,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://wwww.gaetanbros.fr",
+  site: "https://www.gaetanbros.fr",
   integrations: [tailwind(), react(), sitemap()],
   /*   server: {
     port: 4321,
