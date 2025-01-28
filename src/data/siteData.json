@@ -1,8 +1,8 @@
 {
-  "title": "Projet GB",
-  "description": "Projet GB.",
+  "title": "Gaëtan Bros",
+  "description": "Gaëtan Bros.",
   "image": {
-    "src": "https://github.com/AlessandroMA/raw/main/public/gb-black.jpg",
-    "alt": "Projet GB"
+    "src": "https://github.com/AlessandroMA/raw/main/public/landscapes/landing.png",
+    "alt": "Gaëtan Bros"
   }
 }
