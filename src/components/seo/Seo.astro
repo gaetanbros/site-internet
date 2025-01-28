@@ -6,24 +6,15 @@ type Props = {
   // Pass title and description for internal pages
   // If not given, this defaults to site data
   // Url is automatic
-  // Robots are optional
   // Frontmatter triggers a CMS post type
   title: string;
   description: string;
   url: string;
   image?: { src: string; alt: string };
-  robots?: boolean;
   frontmatter?: any;
 };
 
-const {
-  title,
-  description,
-  url = Astro.url,
-  image,
-  frontmatter,
-  robots,
-} = Astro.props;
+const { title, description, url = Astro.url, image, frontmatter } = Astro.props;
 
 // Again, frontmatter triggers CMS post type
 const jsonLD = jsonLDGenerator({

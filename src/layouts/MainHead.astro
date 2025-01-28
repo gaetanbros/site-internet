@@ -3,7 +3,7 @@ import ScrollObserver from "../components/observers/ScrollObserver.astro";
 import Seo from "../components/seo/Seo.astro";
 
 // Pass the contents to create SEO for the page
-const { title, description, image, frontmatter, robots } = Astro.props;
+const { title, description, image, frontmatter } = Astro.props;
 ---
 
 <head>
@@ -21,13 +21,6 @@ const { title, description, image, frontmatter, robots } = Astro.props;
   <meta name="description" content={description} />
   <ScrollObserver />
 
-  <Seo
-    {title}
-    {description}
-    url={Astro.url.toString()}
-    {image}
-    {frontmatter}
-    {robots}
-  />
+  <Seo {title} {description} url={Astro.url.toString()} {image} {frontmatter} />
   <!-- Preconnect fonts, images... -->
 </head>
