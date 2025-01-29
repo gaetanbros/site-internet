@@ -43,6 +43,13 @@ To set up the project locally, follow these steps:
 
 ---
 
+## 📦 Deployment
+
+To deploy the website, push on the main branch.
+Cloudflare will build and deploy the website automatically.
+
+---
+
 ## ⚙️ Configuration and Prerequisites
 
 - No additional configuration or prerequisites are required. The project is ready to go out of the box.
