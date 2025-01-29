@@ -39,7 +39,7 @@ To set up the project locally, follow these steps:
    npm run dev
    ```
 
-4. Visit `http://localhost:4322/` in your browser to view the project.
+4. Visit `http://localhost:4321/` in your browser to view the project.
 
 ---
 
