@@ -6,7 +6,7 @@ import Section from "./Section.astro";
 import { Slider } from "../react/Slider";
 import SectionMotion from "../ui/SectionMotion.astro";
 import SectionTitle from "../ui/SectionTitle.astro";
-const allThemes: CollectionEntry<"blog">[] = await getCollection("blog");
+const allThemes: CollectionEntry<"theme">[] = await getCollection("theme");
 
 // I need to put the theme with the id 05creator.md in fifth position
 allThemes.sort((a, b) => (a.id > b.id ? 1 : -1));
