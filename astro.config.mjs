@@ -9,7 +9,7 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.gaetanbros.fr",
-  integrations: [tailwind(), react(), sitemap()],
+  integrations: [tailwind(), react(), sitemap({ lastmod: new Date() })],
   /*   server: {
     port: 4321,
     host: "192.168.1.15",
